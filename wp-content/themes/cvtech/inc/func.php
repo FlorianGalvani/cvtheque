@@ -12,8 +12,6 @@ function debug($var)
     echo '</pre>';
 }
 
-
-
 // Fonction FORMULAIRE 
 
 function ValidationText($errors,$data,$key,$min,$max)
