@@ -16,15 +16,12 @@
 get_header();
 ?>
 
-
+<!-- BLOBS START -->
 <img src="wp-content/themes/cvtech/asset/img/blobs1.svg" alt="" class="blobs1">
 <img src="wp-content/themes/cvtech/asset/img/blobs2.svg" alt="" class="blobs2">
-<!-- <div class="dashboard-img"> -->
-    <!-- <img src="wp-content/themes/cvtech/asset/img/img-banner-1.svg" alt="">
-    <img src="wp-content/themes/cvtech/asset/img/img-banner-2.svg" alt="">
-    <img src="wp-content/themes/cvtech/asset/img/img-banner-3.svg" alt=""> -->
-    <img src="" alt="">
-<!-- </div> -->
+<!-- BLOBS END -->
+
+<!-- BANNER START -->
 <section class="banner">
     <div class="info-banner">
     <img src="wp-content/themes/cvtech/asset/img/img-banner-1.svg" alt="" class="vector first">
@@ -42,6 +39,7 @@ get_header();
         <div class="img-info"><img src="wp-content/themes/cvtech/asset/img/undraw_cv.svg" alt=""></div>
     </div>
 </section>
+<!-- BANNER END -->
 
 
  <!-- SECTION 1-->
@@ -98,7 +96,7 @@ get_header();
                 <p>Envoyer sa candidature n'a jamaiss été aussi facile grâce à notre créateur de CV en ligne. Suivez ces 3 étapes et augmentez vos chances de trouver un emploi.</p>
                 <div class="img-3cv">
                     <img src="<?php echo get_template_directory_uri() . '/asset/img/cv-download.png'; ?>" alt="">
-                    <div class="link-seemore"><a href=""><p>En savoir plus</p><i class="fas fa-arrow-right"></i></a></div>
+                    <div class="link-seemore"><a href="">En savoir plus<i class="fas fa-arrow-right"></i></a></div>
                 </div>
 
             </div>
