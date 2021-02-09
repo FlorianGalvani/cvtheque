@@ -7,19 +7,28 @@ function add_js_scripts() {
     wp_enqueue_script( 'script', get_stylesheet_directory_uri().'/js/script.js', array('jquery'), '1.0', true );
 
     // pass Ajax Url to script.js
-    wp_localize_script('script', 'ajaxurl', array( 'ajax_url' => 'ajax/ajax_candidate.php'));
+    wp_localize_script('script', 'ajaxurl', array( 'ajax_url' => admin_url('admin-ajax.php')));
 }
 add_action('wp_enqueue_scripts', 'add_js_scripts');
 
-// TECHNIQUE 2
-// add_action( 'wp_ajax_my_action', 'my_action' );
-// add_action( 'wp_ajax_nopriv_my_action', 'my_action' );
+add_action( 'wp_ajax_load_comments', 'capitaine_load_comments' );
+add_action( 'wp_ajax_nopriv_load_comments', 'capitaine_load_comments' );
+function capitaine_load_comments() {
+  
+  $post_id = $_POST['post_id'];
+  
+  $comments = get_comments(array(
+    'post_id' => $post_id,
+    'status' => 'approve'
+  ));
 
-// function my_action() {
-//     $param = $_POST['param'];
-//     echo $param;
-//     die();
-// }
+  wp_list_comments(array(
+    'per_page' => -1,
+    'avatar_size' => 76
+  ), $comments );
+
+	wp_die();
+}
 
 
 

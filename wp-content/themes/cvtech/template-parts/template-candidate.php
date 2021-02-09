@@ -7,8 +7,8 @@ Template Name: Candidat
 
 get_header(); ?>
 
-<div class="form_1">
-    <form  method="POST" class="form_1" id="form_1">
+<div class="form_1_div">
+    <form class="form_1" id="form_1">
         <div class="form_1_input">
             <label for="nom">Nom :</label>
             <input type="text" name="nom" id="nom">
