@@ -70,13 +70,15 @@ table {
 /* COMMUN CSS START */
 body {
 	font-family: 'Montserrat', sans-serif;
+	height: 100vh;
+	line-height: 1.6;
 }
 
 a {
 	text-decoration: none;
 }
-
-
+p{opacity: 60%;}
+h2{font-size: 35px;color: #333333;font-weight: bold;margin-top: 15px;}
 /* COMMUN CSS END  */
 
 
@@ -88,7 +90,82 @@ a {
 /* HEADER END */
 
 
-/* HOME START */
+/* ==================
+HOME START
+================== */
+
+/* ==================
+SECTION 1
+================== */
+h3{font-size: 18px;font-weight: bold;color: #333333}
+.intro-box-container{
+	display: flex;
+	justify-content: space-evenly;
+
+	max-width: 80vw;
+	width: 100%;
+	margin: 0 auto;
+}
+.box-intro{
+	width: 25%;
+	position: relative;
+	text-align: center;
+}
+.box-intro img{
+	width: 50%;
+}
+.box-image2{
+	position: absolute;
+	top: 0;
+	left: 2%;
+	right: 2%;
+	opacity: 90%;
+}
+.icon-box{
+	font-size: 4vw;
+	color: #ffffff;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	margin-top: 12%;
+}
+.box-text{margin-top: 45px;}
+.box-text p{margin-top: 25px;}
+.bi2{transform: rotate(-123deg);}
+.bi3{transform: rotate(-165deg);}
+
+/* ==================
+SECTION 2
+================== */
+.section-grey{background-color: #F3F3F3; padding: 100px 0;}
+.container-grey{
+	max-width: 80vw;
+	width: 100%;
+	margin: 0 auto;
+
+	display: flex;
+	justify-content: space-between;
+}
+.left-container{
+	width: 28%;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+.left-container p{margin-top: 25px;}
+
+.right-container{width: 68%;}
+
+.right-container img{width: 100%}
+.img-3cv{margin-top: 25px}
+.link-seemore  a{
+	color: #4BEE6F;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 60%;
+}
 
 /* HOME END */
 
@@ -97,3 +174,25 @@ a {
 /* FOOTER START */
 
 /* FOOTER END */
+
+
+/* ==================
+RESPONSIVE
+================== */
+@media only screen and (max-width: 1000px) {
+	.intro-box-container{
+		display: flex;
+		flex-direction: column;
+	}
+	.box-intro{
+		width: 90%;
+		margin: 20px auto;
+	}
+	.icon-box{
+		font-size: 10vw;
+		margin-top: 15%;
+	}
+}
+@media only screen and (max-width: 400px) {
+	h3{font-size: 14px}
+}
