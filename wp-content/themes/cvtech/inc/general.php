@@ -64,3 +64,15 @@ function cvtech_scripts() {
 	wp_style_add_data( 'cvtech-style', 'rtl', 'replace' );
 }
 add_action( 'wp_enqueue_scripts', 'cvtech_scripts' );
+
+function cvtheque_assets()
+{
+    wp_deregister_script('jquery');
+    // Jquery
+    wp_enqueue_script('jquery', 'https://code.jquery.com/jquery-3.5.1.js', array(), null, true);
+    // Jquery Modal
+    wp_enqueue_style('jquerymodal','https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css');
+    wp_enqueue_script('jquerymodal', 'https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js', array(), null, true);
+}
+add_action('wp_enqueue_scripts', 'cvtheque_assets');
+
