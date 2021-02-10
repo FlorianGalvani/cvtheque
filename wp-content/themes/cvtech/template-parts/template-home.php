@@ -121,9 +121,6 @@ if(!empty($_POST['submitinscription'])) {
 <p><a href="#ex1" rel="modal:open">Inscription</a></p>
 <p><a href="#ex2" rel="modal:open">Connexion</a></p>
 
-=======
-
-get_header(); ?>
 
 
 
