@@ -3,6 +3,7 @@
 Template Name: Home
 */
 
+
 session_start();
 get_header(); ?>
 
@@ -119,6 +120,28 @@ if(!empty($_POST['submitinscription'])) {
 <!-- Link to open the modal -->
 <p><a href="#ex1" rel="modal:open">Inscription</a></p>
 <p><a href="#ex2" rel="modal:open">Connexion</a></p>
+
+=======
+
+get_header(); ?>
+
+
+
+<div id="ex1" class="modal">
+  <p>Thanks for clicking. That felt good.</p>
+  <a href="#" rel="modal:close">Close</a>
+</div>
+
+<!-- Link to open the modal -->
+<p><a href="#ex1" rel="modal:open">Open Modal</a></p>
+
+
+<script>
+
+$("#ex1").modal({
+  fadeDuration: 100
+});
+</script>
 
 
 <?php get_footer();
