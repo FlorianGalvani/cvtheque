@@ -328,7 +328,7 @@ HOME START
 /* ==================
 SECTION 1
 ================== */
-.section-white {padding: 250px 0 150px 0;}
+.section-white {padding: 100px 0;}
 
 h3 {
 	font-size: 18px;
@@ -389,42 +389,39 @@ h3 {
 }
 
 /* ==================
-SECTION 2
+SECTION 2 & 3
 ================== */
 
 .section-grey {
 	background-color: #F3F3F3;
-	padding-top: 50px;
+	padding: 100px 0;
 }
 
-.container-grey {
-	max-width: 80vw;
-	width: 100%;
-	height: 667px;
+.container-grey, .container-avantage {
+	max-width: 1400px;
+	width: 95%;
 	margin: 0 auto;
 	display: flex;
 	justify-content: space-between;
-	align-items: flex-start;
+	align-items: center;
 }
 
-.left-container {
-	width: 402px;
-	height: 470px;
+.left-container, .right-avantage {
+	width: 30%;
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
 }
 
-.left-container p {
+.left-container p, .right-avantage p {
 	margin-top: 25px;
 }
 
-.right-container {
-	width: 669px;
-	margin-top: 100px;
+.right-container, .left-avantage {
+	width: 55%;
 }
 
-.right-container img {
+.right-container img, .left-avantage img {
 	width: 100%
 }
 
@@ -438,8 +435,16 @@ SECTION 2
 	justify-content: space-between;
 	align-items: center;
 	width: 60%;
+	margin-top: 30px;
 }
-
+.right-avantage a {
+	color: #4BEE6F;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 30%;
+	margin-top: 30px;
+}
 /* HOME END */
 
 /* FOOTER START */
@@ -449,7 +454,45 @@ SECTION 2
 /* ==================
 RESPONSIVE
 ================== */
+@media only screen and (max-width: 1800px) {
+	.container-grey, .container-avantage {
+		max-width: 80vw;
+		width: 100%;
+	}
+}
+@media only screen and (max-width: 1500px){
+	.left-container, .right-avantage{
+		width: 35%;
+	}
+}
+@media only screen and (max-width: 1400px){
+	.right-avantage a{
+		width: 35%;
+	}
+}
+@media only screen and (max-width: 1220px) {
 
+	.container-grey, .container-avantage {
+		position: relative;
+	}
+	.left-container, .right-avantage {
+		width: 50%;
+		z-index: 1;
+		margin: 0 auto;
+
+	}
+	.right-container, .left-avantage {
+		position: absolute;
+		filter: blur(4px);
+		left: 0;
+		right: 0;
+		top: 0;
+		width: 100%;
+	}
+	.right-avantage a{
+		width: 30%;
+	}
+}
 @media only screen and (max-width: 1000px) {
 	.intro-box-container {
 		display: flex;
@@ -462,6 +505,18 @@ RESPONSIVE
 	.icon-box {
 		font-size: 10vw;
 		margin-top: 15%;
+	}
+
+	.container-grey {
+		flex-direction: column;
+	}
+	.img-3cv {
+		width: 100%;
+		text-align: center;
+	}
+	.link-seemore a {
+		width: 40%;
+		margin: auto;
 	}
 }
 

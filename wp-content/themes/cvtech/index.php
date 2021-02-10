@@ -93,7 +93,7 @@ get_header();
 
                 <img src="<?php echo get_template_directory_uri() . '/asset/img/eclipse.png'; ?>" alt="">
                 <h2>Télécharger votre CV en ligne en quelques clics</h2>
-                <p>Envoyer sa candidature n'a jamaiss été aussi facile grâce à notre créateur de CV en ligne. Suivez ces 3 étapes et augmentez vos chances de trouver un emploi.</p>
+                <p>Envoyer sa candidature n'a jamais été aussi facile grâce à notre créateur de CV en ligne. Suivez ces 3 étapes et augmentez vos chances de trouver un emploi.</p>
                 <div class="img-3cv">
                     <img src="<?php echo get_template_directory_uri() . '/asset/img/cv-download.png'; ?>" alt="">
                     <div class="link-seemore"><a href="">En savoir plus<i class="fas fa-arrow-right"></i></a></div>
@@ -109,7 +109,29 @@ get_header();
         </div>
     </div>
 
+<!-- SECTION 3-->
+    <div class="section-white">
 
+        <div class="container-avantage">
+            <div class="left-avantage">
+
+                <img src="<?php echo get_template_directory_uri() . '/asset/img/avantage.png'; ?>" alt="">
+
+            </div>
+            <div class="right-avantage">
+
+                <img src="<?php echo get_template_directory_uri() . '/asset/img/eclipse2.png'; ?>" alt="">
+                <h2>Les 3 avantages d'utiliser CV&toi pour créer le CV parfait</h2>
+                <p>Créez votre CV en quelques minutes sur n’importe quel appareil : ordinateur, portable, tablette. Nous nous adaptons à vos besoins !</p>
+                <p>Nos modèles sont approuvés par nos experts pour vous aider à passer la première étape du processus de sélection, même si le logiciel ATS est utilisé.</p>
+                <p>Grâce à cet outil interactif, vous pourrez créer un CV efficace facilement et rapidement, sans avoir à vous préoccuper du format ou de la mise en page de votre CV.</p>
+
+                <a href="">En savoir plus<i class="fas fa-arrow-right"></i></a>
+
+            </div>
+        </div>
+
+    </div>
 
 
 
