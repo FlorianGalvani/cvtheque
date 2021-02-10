@@ -20,9 +20,9 @@ function ValidationText($errors,$data,$key,$min,$max)
 {
   if(!empty($data)) {
     if(mb_strlen($data) < $min) {
-      $errors[$key] = 'Min '.$min.' caractères';
+      $errors[$key] = 'Minimum '.$min.' caractères';
     } elseif(mb_strlen($data) > $max) {
-      $errors[$key] = 'Max '.$max.' caractères';
+      $errors[$key] = 'Maximum '.$max.' caractères';
     }
   } else {
     $errors[$key] = 'Veuillez renseigner ce champ';
@@ -39,13 +39,35 @@ function emailValidation($err,$mail,$key)
 {
     if(!empty($mail)) {
         if (!filter_var($mail, FILTER_VALIDATE_EMAIL)) {
-            $err[$key] = 'Email non valide';
+            $err[$key] = 'E-mail invalide.';
         }
     } else {
         $err[$key] = 'Veuillez renseigner ce champ';
     }
     return $err;
 }
+
+function validPass($errors,$password1,$key1,$password2,$min,$max){
+    if(!empty($password1 && $password2)) {
+      if($password1 == $password2){
+        if(mb_strlen($password1) < $min) {
+          $errors[$key1] = 'Minimum' .$min . 'caractères';
+        }
+        elseif(mb_strlen($password1) > $max) {
+          $errors[$key1] =  'Maximum ' .$max . 'caractères';
+        }
+      }
+      else {
+        $errors[$key1] = 'Veuilez renseigner le même mot de passe';
+      }
+    }
+    else {
+      $errors[$key1] = 'Veuillez remplir les champs';
+    }
+  
+    return $errors;
+}
+
 
 //////////// FIN DE FONCTION FORMULAIRE ///////////////////
 
