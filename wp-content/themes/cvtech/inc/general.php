@@ -60,19 +60,61 @@ add_action( 'widgets_init', 'cvtech_widgets_init' );
  * Enqueue scripts and styles.
  */
 function cvtech_scripts() {
+	// STYLE
 	wp_enqueue_style( 'cvtech-style', get_stylesheet_uri(), array(), _S_VERSION );
-	wp_style_add_data( 'cvtech-style', 'rtl', 'replace' );
-}
-add_action( 'wp_enqueue_scripts', 'cvtech_scripts' );
+	// wp_style_add_data( 'cvtech-style', 'rtl', 'replace' );
+	wp_enqueue_style('jquerymodal','/wp-content/themes/cvtech/asset/css/jquery.modal.min.css');
 
-function cvtheque_assets()
-{
-    wp_deregister_script('jquery');
     // Jquery
+    wp_deregister_script('jquery');
     wp_enqueue_script('jquery', 'https://code.jquery.com/jquery-3.5.1.js', array(), null, true);
     // Jquery Modal
-    wp_enqueue_style('jquerymodal','https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css');
-    wp_enqueue_script('jquerymodal', 'https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js', array(), null, true);
-}
-add_action('wp_enqueue_scripts', 'cvtheque_assets');
+    wp_enqueue_script('jquerymodal', '/wp-content/themes/cvtech/asset/js/jquery.modal.min.js', array(), null, true);
 
+	// JS
+	wp_enqueue_script( 'script', get_stylesheet_directory_uri().'/js/script.js', array('jquery'), '1.0', true );
+    // pass Ajax Url to script.js
+    wp_localize_script('script', 'ajaxurl', array( 'ajax_url' => admin_url('admin-ajax.php')));
+}
+add_action( 'wp_enqueue_scripts', 'cvtech_scripts' );
+add_action( 'wp_ajax_load_comments', 'capitaine_load_comments' );
+add_action( 'wp_ajax_nopriv_load_comments', 'capitaine_load_comments' );
+
+// function cvtheque_assets()
+// {
+// 	wp_enqueue_style('jquerymodal','/wp-content/themes/cvtech/asset/css/jquery.modal.min.css');
+//     // Jquery
+//     wp_deregister_script('jquery');
+//     wp_enqueue_script('jquery', 'https://code.jquery.com/jquery-3.5.1.js', array(), null, true);
+//     // Jquery Modal
+//     wp_enqueue_script('jquerymodal', '/wp-content/themes/cvtech/asset/js/jquery.modal.min.js', array(), null, true);
+// }
+// add_action('wp_enqueue_scripts', 'cvtheque_assets');
+
+
+// function add_js_scripts() {
+//     wp_enqueue_script( 'script', get_stylesheet_directory_uri().'/js/script.js', array('jquery'), '1.0', true );
+
+//     // pass Ajax Url to script.js
+//     wp_localize_script('script', 'ajaxurl', array( 'ajax_url' => admin_url('admin-ajax.php')));
+// }
+// add_action('wp_enqueue_scripts', 'add_js_scripts');
+
+// add_action( 'wp_ajax_load_comments', 'capitaine_load_comments' );
+// add_action( 'wp_ajax_nopriv_load_comments', 'capitaine_load_comments' );
+function capitaine_load_comments() {
+  
+  $post_id = $_POST['post_id'];
+  
+  $comments = get_comments(array(
+    'post_id' => $post_id,
+    'status' => 'approve'
+  ));
+
+  wp_list_comments(array(
+    'per_page' => -1,
+    'avatar_size' => 76
+  ), $comments );
+
+	wp_die();
+}
