@@ -36,8 +36,8 @@
 						<li><a href="#">À propos</a></li>
 						<li><a href="#">Contact</a></li>
 						|
-						<li><a href="#" class="upper">Login</a></li>
-						<li><a href="#" class="btn upper color-1">Sign up</a></li>
+						<li><a href="#ex2" class="upper" rel="modal:open">Login</a></li>
+						<li><a href="#ex1" class="btn upper color-1" rel="modal:open">Sign up</a></li>
 					</ul>
 				</nav>
 			</div>
