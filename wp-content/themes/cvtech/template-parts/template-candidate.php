@@ -2,9 +2,6 @@
 /*
 Template Name: Candidat
 */
-
-
-
 get_header(); ?>
 
 <div class="form_1_div">
