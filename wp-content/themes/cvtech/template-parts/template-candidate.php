@@ -4,12 +4,14 @@ Template Name: Candidat
 */
 get_header(); ?>
 <div class="form_candidate_box">
-    <div class="form_candidat_div_1">
+    <div class="form_candidat_loading">
+
+    </div>
+    <div class="form_div form_candidat_div_1">
         <form class="form_1" id="form_1">
             <div class="form_1_input">
                 <label for="nom">Nom :</label>
                 <input type="text" name="nom" id="nom">
-                <span class="errors" id="error_nom"></span>
             </div>
             <!-- <div class="form_1_input">
             <label for="photo"></label>
@@ -18,22 +20,19 @@ get_header(); ?>
             <div class="form_1_input">
                 <label for="prenom">Prenom :</label>
                 <input type="text" name="prenom" id="prenom">
-                <span class="errors" id="error_prenom"></span>
             </div>
             <div class="form_1_input">
                 <label for="naissance">Naissance :</label>
                 <input type="text" name="naissance" id="naissance">
-                <span class="errors" id="error_naissance"></span>
             </div>
             <div class="form_1_input">
                 <label for="adresse">Adresse :</label>
                 <input type="text" name="adresse" id="adresse">
-                <span class="errors" id="error_adresse"></span>
             </div>
             <div class="form_1_input">
                 <label for="telephone">Telephone :</label>
                 <input type="tel" name="telephone" id="telephone" pattern="[0-9]{2}[0-9]{2}[0-9]{2}[0-9]{2}[0-9]{2}">
-                <span class="errors" id="error_telephone"></span>
+            
             </div>
             <div class="form_1_input">
                 <label for="permis">Permis :</label>
@@ -41,21 +40,27 @@ get_header(); ?>
                     <option value="">Choix</option>
                     <option value="permis_B">Permis B</option>
                 </select>
-                <span class="errors" id="error_permis"></span>
-                <div class="form_1_input">
-                    <input type="submit" id="submit_form_1">
-                </div>
+            </div>
+            <div class="form_1_input">
+                <input type="submit" id="submit_form_1">
+                <span class="errors" id="error_form_1"></span>
             </div>
         </form>
     </div>
-    <div class="form_candidat_div_2">
+    <div class="form_div form_candidat_div_2">
         <form class="form_2" id="form_2">
-
-                <div class="form_input">
-                    <input type="submit" id="submit_form_2">
-                </div>
+            <div class="form_input">
+                <label for="nom">Nom :</label>
+                <input type="text" name="nom" id="">
+                <span class="errors" id="error_"></span>
+            </div>
+            <div class="form_input">
+                <input type="submit" id="submit_form_2">
+                <span class="errors" id="error_form_2"></span>
+            </div>
         </form>
     </div>
+
 
 </div>
 <!-- <div class="form_2">

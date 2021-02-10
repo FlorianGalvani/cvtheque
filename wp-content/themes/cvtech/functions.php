@@ -19,7 +19,7 @@ add_action('wp_ajax_nopriv_candidate_info', 'candidate_info');
 function candidate_info()
 {
     $errors = array();
-    $success = true;
+    $success = false;
 
     $nom = cleanXss($_POST['info']['nom']);
     $prenom = cleanXss($_POST['candidate_info']['prenom']);
@@ -40,7 +40,6 @@ function candidate_info()
     }
 
     $data = array(
-        'errors' => $errors,
         'success' => $success
     );
     showJson($data);

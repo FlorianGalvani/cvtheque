@@ -1,14 +1,13 @@
 function ajax_errors_check(success, errors) {
   if (success == true) {
-    $('#form_candidat_div_1').css('display','none');
-    $('#form_candidat_div_2').css('display','block');
+    console.log('success true !')
+    $('.form_candidat_div_1').fadeOut();
+    $('.form_candidat_div_2').fadeIn();
   } else {
-    for (const [key, value] of Object.entries(errors)) {
-      console.log(key, value);
-
-    }
+    $('#error_form_1').html('Des erreurs ont été detectées ')
   }
 }
+
 $(document).ready(function () {
   $('#form_1').submit(function (e) {
     e.preventDefault();
@@ -28,8 +27,15 @@ $(document).ready(function () {
         'info': candidate_info
       },
       dataType: 'json',
+      beforeSend: function () {
+
+      },
       success: function (response) {
+        console.log(response)
         ajax_errors_check(response['success'],response['errors']);
+      },
+      error: function (response) {
+        console.log(response)
       }
     })
   });
