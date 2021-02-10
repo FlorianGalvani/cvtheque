@@ -235,11 +235,49 @@ if (!empty($_POST['submitconnexion'])) {
                 <p>Nos modèles sont approuvés par nos experts pour vous aider à passer la première étape du processus de sélection, même si le logiciel ATS est utilisé.</p>
                 <p>Grâce à cet outil interactif, vous pourrez créer un CV efficace facilement et rapidement, sans avoir à vous préoccuper du format ou de la mise en page de votre CV.</p>
 
-                <a href="">En savoir plus<i class="fas fa-arrow-right"></i></a>
+
+                    <div class="link-seemore2"><a href="">En savoir plus<i class="fas fa-arrow-right"></i></a></div>
+
+
 
             </div>
         </div>
 
+    </div>
+
+    <div class="section-grey">
+        <div class="container-blob">
+            <h3>Nous aidons des milliers de personnes</h3>
+            <div class="box-blob">
+                <div class="blob blob1"><img src="<?php echo get_template_directory_uri() . '/asset/img/human.png'; ?>" alt=""></div>
+                <div class="blob blob2"><img src="<?php echo get_template_directory_uri() . '/asset/img/human.png'; ?>" alt=""></div>
+                <div class="blob blob3"><img src="<?php echo get_template_directory_uri() . '/asset/img/human.png'; ?>" alt=""></div>
+                <div class="blob blob4"><img src="<?php echo get_template_directory_uri() . '/asset/img/human.png'; ?>" alt=""></div>
+                <div class="blob blob5"><img src="<?php echo get_template_directory_uri() . '/asset/img/human.png'; ?>" alt=""></div>
+                <div class="blob blob6"><img src="<?php echo get_template_directory_uri() . '/asset/img/human.png'; ?>" alt=""></div>
+                <div class="blob blob7"><img src="<?php echo get_template_directory_uri() . '/asset/img/human.png'; ?>" alt=""></div>
+                <div class="blob blob8"><img src="<?php echo get_template_directory_uri() . '/asset/img/human.png'; ?>" alt=""></div>
+                <div class="blob blob9"><img src="<?php echo get_template_directory_uri() . '/asset/img/human.png'; ?>" alt=""></div>
+            </div>
+            <div class="container-ent">
+                <a href=""><div class="box-ent">
+                    <img src="<?php echo get_template_directory_uri() . '/asset/img/digiworks.png'; ?>" alt="">
+                </div></a>
+                <a href=""><div class="box-ent">
+                    <img src="<?php echo get_template_directory_uri() . '/asset/img/siqual.png'; ?>" alt="">
+                </div></a>
+                <a href=""><div class="box-ent">
+                    <img src="<?php echo get_template_directory_uri() . '/asset/img/attineos.png'; ?>" alt="">
+                </div></a>
+                <a href=""><div class="box-ent">
+                    <img src="<?php echo get_template_directory_uri() . '/asset/img/torisystem.png'; ?>" alt="">
+                </div></a>
+                <a href=""><div class="box-ent">
+                    <img src="<?php echo get_template_directory_uri() . '/asset/img/foreachcode.png'; ?>" alt="">
+                </div></a>
+
+            </div>
+        </div>
     </div>
 
 
