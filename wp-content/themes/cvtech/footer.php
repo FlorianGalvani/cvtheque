@@ -12,8 +12,9 @@
 ?>
 <!-- footer -->
 </div><!-- #page -->
-
 <footer>
+    <!-- <img src="wp-content/themes/cvtech/asset/img/wave1.svg" alt="" class="imgFooter">
+    <img src="wp-content/themes/cvtech/asset/img/wave2.svg" alt="" class="imgFooter"> -->
 
         <div class="contenu-footer">
 
@@ -30,8 +31,8 @@
 
             <div class="bloc footer-contact">
                 <h3>Restons en contact</h3>
-                <p>55-55-55-55-55</p>
-                <p>supportclient@contact.com</p>
+                <a href="tel:55-55-55-55-55">55-55-55-55-55</a>
+                <a href="mailto:supportclient@contact.com">supportclient@contact.com</a>
                 <p>XX rue de la république, 76000 Rouen</p>
             </div>
 
@@ -51,10 +52,10 @@
             <div class="bloc footer-medias">
                 <h3>Nos réseaux</h3>
                 <ul class="liste-media">
-                    <li><a href="#" class="fa fa-facebook"></a></li>
-                    <li><a href="#" class="fa fa-instagram"></a></li>
-                    <li><a href="#" class="fa fa-twitter"></a></li>
-                    <li><a href="#" class="fa fa-youtube"></a></li>
+                    <li><a href="#" class=""><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="#" class=""><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="#" class=""><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="#" class=""><i class="fab fa-youtube"></i></a></li>
                 </ul>
             </div>
           
