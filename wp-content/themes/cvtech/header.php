@@ -27,7 +27,7 @@
 	<?php wp_body_open(); ?>
 	<div id="page" class="site">
 		<header id="header">
-			<div class="logo"><img src="wp-content/themes/cvtech/asset/img/logo.svg" alt="logo cv & toi"></div>
+			<div class="logo"><img src="wp-content/themes/cvtech/asset/img/cv-logo.svg" alt="logo cv & toi"></div>
 			<div class="nav">
 				<nav>
 					<ul>
