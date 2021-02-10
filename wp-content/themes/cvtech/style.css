@@ -263,6 +263,10 @@ h2 {
 	background-color: #34CACA;
 }
 
+/* Formulaire Candidat */
+.form_candidat_div_2 {
+	display: none;
+}
 /* HEADER START */
 
 #header {

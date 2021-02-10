@@ -7,10 +7,9 @@ require get_template_directory() . '/inc/func.php';
 function ajax_assets()
 {
     // Charger notre script
-    wp_enqueue_script('candidat_ajax_js', get_template_directory_uri() . '/js/script.js', array('jquery'), '1.0', true);
 
     // Envoyer une variable de PHP à JS proprement
-    wp_localize_script('candidat_ajax_php', 'ajaxurl', array('ajax_url' => get_admin_url('admin-ajax.php')));
+    wp_localize_script('ajax', 'ajaxurl', array('ajax_url' => get_admin_url('admin-ajax.php')));
 }
 add_action('wp_enqueue_scripts', 'ajax_assets');
 
@@ -20,22 +19,32 @@ add_action('wp_ajax_nopriv_candidate_info', 'candidate_info');
 function candidate_info()
 {
     $errors = array();
-    $success = false;
+    $success = true;
 
-    $nom = $_POST['candidate_info']['nom'];
+    $nom = cleanXss($_POST['info']['nom']);
+    $prenom = cleanXss($_POST['candidate_info']['prenom']);
+    $naissance = cleanXss($_POST['candidate_info']['naissance']);
+    $adresse = cleanXss($_POST['candidate_info']['adresse']);
+    $telephone = cleanXss($_POST['candidate_info']['telephone']);
+    $permis = cleanXss($_POST['candidate_info']['permis']);
 
     $errors = ValidationText($errors,$nom,'nom',2,10);
+    $errors = ValidationText($errors,$prenom,'prenom',2,10);
+    $errors = ValidationText($errors,$naissance,'naissance',2,10);
+    $errors = ValidationText($errors,$adresse,'adresse',2,10);
+    $errors = ValidationText($errors,$telephone,'telephone',2,10);
+    $errors = ValidationText($errors,$permis,'permis',2,10);
     
     if (count($errors) == 0) {
         $success = true;
     }
-    
+
     $data = array(
         'errors' => $errors,
         'success' => $success
     );
-
     showJson($data);
+
 }
 
 /////// FIN AJAX ///////
