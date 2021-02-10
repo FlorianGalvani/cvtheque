@@ -12,8 +12,9 @@
 ?>
 <!-- footer -->
 </div><!-- #page -->
-
 <footer>
+    <!-- <img src="wp-content/themes/cvtech/asset/img/wave1.svg" alt="" class="imgFooter">
+    <img src="wp-content/themes/cvtech/asset/img/wave2.svg" alt="" class="imgFooter"> -->
 
         <div class="contenu-footer">
 
