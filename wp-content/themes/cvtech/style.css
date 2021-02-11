@@ -56,11 +56,11 @@ table {
 }
 
 /* FORMULAIRE D'INSCRIPTION */
+
 .single {
 	display: flex;
 	justify-content: center;
 }
-
 
 /* clear */
 
@@ -136,7 +136,6 @@ h2 {
 
 /* FORMULAIRE D'INSCRIPTION MODAL */
 
-
 #forminscription {
 	font-family: 'Open Sans Condensed', arial, sans;
 	width: 500px;
@@ -147,8 +146,6 @@ h2 {
 	-moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
 	-webkit-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
 }
-
-
 
 #forminscription h2 {
 	display: flex;
@@ -277,6 +274,18 @@ h2 {
 #formconnexion input[type="submit"]:hover {
 	background: linear-gradient(to bottom, #34CACA 5%, #30C9C9 100%);
 	background-color: #34CACA;
+}
+
+.register {
+	margin: 0 0 300px 0;
+	position: relative;
+	z-index: 4;
+}
+
+.login {
+	margin: 100px 0 300px 0;
+	position: relative;
+	z-index: 4;
 }
 
 /* HEADER START */
@@ -726,6 +735,13 @@ SECTION 4
 	max-width: 1353px;
 	width: 100%;
 	margin: 0 auto;
+	position: relative;
+}
+
+.intersect {
+	position: absolute;
+	bottom: 0;
+	left: -150px;
 }
 
 .info-about {
@@ -735,6 +751,7 @@ SECTION 4
 	z-index: 3;
 	position: relative;
 	margin-top: 130px;
+	padding-bottom: 210px;
 }
 
 .text-info-about {
@@ -746,7 +763,7 @@ SECTION 4
 
 .text-info-about h1 {
 	width: 667px;
-	height: 215px;
+	height: 140px;
 	font-size: 40px;
 	font-weight: 400;
 	line-height: 60.95px;
@@ -760,7 +777,7 @@ SECTION 4
 
 .text-info-about p {
 	font-size: 20px;
-	font-weight: 40;
+	font-weight: 400;
 	line-height: 34.94px;
 	color: #333333;
 }
@@ -768,7 +785,6 @@ SECTION 4
 .img-info-about {
 	width: 500px;
 	height: 428.89px;
-	/* margin-right: 20px; */
 }
 
 /* banner about end */
@@ -782,7 +798,6 @@ SECTION 4
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	margin-top: 250px;
 	position: relative;
 	z-index: -1;
 }
@@ -802,8 +817,9 @@ SECTION 4
 }
 
 .three {
-	bottom: -220px;
-	left: 10px;
+	width: 30%;
+	bottom: -70px;
+	left: 40px;
 	z-index: 1;
 }
 
@@ -838,6 +854,8 @@ SECTION 4
 }
 
 .section1-content {
+	position: relative;
+	z-index: 4;
 	width: 886px;
 	height: 374px;
 	/* border: 1px solid #000000; */
@@ -873,11 +891,11 @@ SECTION 4
 	width: 100%;
 	margin-top: 250px;
 	position: relative;
-	padding-bottom: 250px;
+	padding-bottom: 100px;
 }
 
 .section2-box {
-	width: 886px;
+	width: 850px;
 	height: 226px;
 	margin: 0 auto;
 	display: flex;
@@ -898,7 +916,6 @@ SECTION 4
 }
 
 .section2-title p {
-	font-family: Roboto;
 	font-style: normal;
 	font-weight: 500;
 	font-size: 18px;
@@ -924,10 +941,9 @@ SECTION 4
 }
 
 .section2-content p {
-	font-family: Roboto;
 	font-style: normal;
 	font-weight: 500;
-	font-size: 16px;
+	font-size: 13px;
 }
 
 .four {
