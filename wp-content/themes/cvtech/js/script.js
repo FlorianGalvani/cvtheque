@@ -16,6 +16,7 @@ $(document).ready(function () {
       prenom: $('#prenom').val(),
       naissance: $('#naissance').val(),
       adresse: $('#adresse').val(),
+      email: $('#email').val(),
       telephone: $('#telephone').val(),
       permis: $('#permis').val()
     }

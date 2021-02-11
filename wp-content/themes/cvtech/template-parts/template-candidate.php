@@ -30,6 +30,10 @@ get_header(); ?>
                 <input type="text" name="adresse" id="adresse">
             </div>
             <div class="form_1_input">
+                <label for="email">Email :</label>
+                <input type="text" name="email" id="email">
+            </div>
+            <div class="form_1_input">
                 <label for="telephone">Telephone :</label>
                 <input type="tel" name="telephone" id="telephone" pattern="[0-9]{2}[0-9]{2}[0-9]{2}[0-9]{2}[0-9]{2}">
             

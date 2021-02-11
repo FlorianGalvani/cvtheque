@@ -22,25 +22,37 @@ function candidate_info()
     $success = false;
 
     $nom = cleanXss($_POST['info']['nom']);
-    $prenom = cleanXss($_POST['candidate_info']['prenom']);
-    $naissance = cleanXss($_POST['candidate_info']['naissance']);
-    $adresse = cleanXss($_POST['candidate_info']['adresse']);
-    $telephone = cleanXss($_POST['candidate_info']['telephone']);
-    $permis = cleanXss($_POST['candidate_info']['permis']);
+    $prenom = cleanXss($_POST['info']['prenom']);
+    $naissance = cleanXss($_POST['info']['naissance']);
+    $adresse = cleanXss($_POST['info']['adresse']);
+    $telephone = cleanXss($_POST['info']['telephone']);
+    $permis = cleanXss($_POST['info']['permis']);
 
     $errors = ValidationText($errors,$nom,'nom',2,10);
     $errors = ValidationText($errors,$prenom,'prenom',2,10);
-    $errors = ValidationText($errors,$naissance,'naissance',2,10);
-    $errors = ValidationText($errors,$adresse,'adresse',2,10);
-    $errors = ValidationText($errors,$telephone,'telephone',2,10);
+    $errors = ValidationText($errors,$naissance,'naissance',2,20);
+    $errors = ValidationText($errors,$adresse,'adresse',2,100);
+    $errors = ValidationText($errors,$telephone,'telephone',2,20);
     $errors = ValidationText($errors,$permis,'permis',2,10);
     
     if (count($errors) == 0) {
         $success = true;
+        // global $wpdb;
+        // $wpdb->insert('cv', array(
+        //     'id_user' => '1',
+        // ));
+        // $wpdb->insert('cv_info_perso', array(
+        //     'nom' => $nom,
+        //     'prenom' => $prenom,
+        //     'naissance' => $naissance,
+        //     'adresse' => $adresse,
+        //     'telephone' => $telephone,
+        //     'permis' => $permis
+        // ));
     }
 
     $data = array(
-        'success' => $success
+        'success' => $success,
     );
     showJson($data);
 
