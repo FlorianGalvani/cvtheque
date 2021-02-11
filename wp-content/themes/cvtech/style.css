@@ -54,145 +54,14 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
 /* FORMULAIRE D'INSCRIPTION */
 .single {
 	display: flex;
 	justify-content: center;
 }
 
-#forminscription {
-	font-family: 'Open Sans Condensed', arial, sans;
-	width: 500px;
-	padding: 30px;
-	background: #FFFFFF;
-	margin: 50px auto;
-	box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
-	-moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
-	-webkit-box-shadow:  0px 0px 15px rgba(0, 0, 0, 0.22);
-}
 
-#forminscription h2{
-	display: flex;
-	justify-content: center;
-	background: #4D4D4D;
-	text-transform: uppercase;
-	font-family: 'Open Sans Condensed', sans-serif;
-	color: #FFFFFF;
-	font-size: 18px;
-	font-weight: 100;
-	padding: 20px;
-	margin: -30px -30px 30px -30px;
-}
-
-#forminscription input[type="text"], #forminscription input[type="email"], #forminscription input[type="password"] {
-	box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	outline: none;
-	display: block;
-	width: 100%;
-	padding: 7px;
-	border: none;
-	border-bottom: 1px solid #ddd;
-	background: transparent;
-	margin-bottom: 10px;
-	font: 16px Arial, Helvetica, sans-serif;
-	height: 45px;
-}
-#forminscription textarea{
-	resize:none;
-	overflow: hidden;
-}
-#forminscription input[type="submit"]{
-	-moz-box-shadow: inset 0px 1px 0px 0px #45D6D6;
-	-webkit-box-shadow: inset 0px 1px 0px 0px #45D6D6;
-	box-shadow: inset 0px 1px 0px 0px #45D6D6;
-	background-color: #2CBBBB;
-	border: 1px solid #27A0A0;
-	display: inline-block;
-	cursor: pointer;
-	color: #FFFFFF;
-	font-family: 'Open Sans Condensed', sans-serif;
-	font-size: 14px;
-	padding: 8px 18px;
-	text-decoration: none;
-	text-transform: uppercase;
-}
-#forminscription input[type="submit"]:hover {
-	background:linear-gradient(to bottom, #34CACA 5%, #30C9C9 100%);
-	background-color:#34CACA;
-}
-#forminscription span.error {
-	color: #ee5253;
-	font-family: 'Roboto', sans-serif;
-	font-weight: 400;
-}
-/* FORMULAIRE DE CONNEXION */
-#formconnexion {
-	font-family: 'Open Sans Condensed', arial, sans;
-	width: 500px;
-	padding: 30px;
-	background: #FFFFFF;
-	margin: 50px auto;
-	box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
-	-moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
-	-webkit-box-shadow:  0px 0px 15px rgba(0, 0, 0, 0.22);
-}
-
-
-#formconnexion h2 {
-	display: flex;
-	justify-content: center;
-	background: #4D4D4D;
-	text-transform: uppercase;
-	font-family: 'Open Sans Condensed', sans-serif;
-	color: #FFFFFF;
-	font-size: 18px;
-	font-weight: 100;
-	padding: 20px;
-	margin: -30px -30px 30px -30px;
-}
-
-#formconnexion input[type="text"], #formconnexion input[type="password"] {
-	box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	outline: none;
-	display: block;
-	width: 100%;
-	padding: 7px;
-	border: none;
-	border-bottom: 1px solid #ddd;
-	background: transparent;
-	margin-bottom: 10px;
-	font: 16px Arial, Helvetica, sans-serif;
-	height: 45px;
-}
-#formconnexion textarea{
-	resize:none;
-	overflow: hidden;
-}
-#formconnexion input[type="submit"]{
-	-moz-box-shadow: inset 0px 1px 0px 0px #45D6D6;
-	-webkit-box-shadow: inset 0px 1px 0px 0px #45D6D6;
-	box-shadow: inset 0px 1px 0px 0px #45D6D6;
-	background-color: #2CBBBB;
-	border: 1px solid #27A0A0;
-	display: inline-block;
-	cursor: pointer;
-	color: #FFFFFF;
-	font-family: 'Open Sans Condensed', sans-serif;
-	font-size: 14px;
-	padding: 8px 18px;
-	text-decoration: none;
-	text-transform: uppercase;
-}
-#formconnexion input[type="submit"]:hover {
-	background:linear-gradient(to bottom, #34CACA 5%, #30C9C9 100%);
-	background-color:#34CACA;
-}
-/* rootage couleur */
-=======
 /* clear */
 
 .clear:before, .clear:after {
@@ -215,14 +84,6 @@ table {
 	/* Firefox, other Gecko */
 	box-sizing: border-box;
 	/* Opera/IE 8+ */
-}
-
-/* rootage couleur */
-
-/* Style form Candidat */
-
-.form_1 {
-	background-color: rgb(241, 233, 217);
 }
 
 /* FONT */
@@ -265,6 +126,159 @@ h2 {
 
 /* COMMUN CSS END  */
 
+/* Style form Candidat */
+
+.form_1 {
+	background-color: rgb(241, 233, 217);
+}
+
+/* FORMULAIRE D'INSCRIPTION MODAL */
+
+
+#forminscription {
+	font-family: 'Open Sans Condensed', arial, sans;
+	width: 500px;
+	padding: 30px;
+	background: #FFFFFF;
+	margin: 50px auto;
+	box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+	-moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+	-webkit-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+}
+
+
+#forminscription h2{
+	display: flex;
+	justify-content: center;
+
+#forminscription h2 {
+
+	background: #4D4D4D;
+	text-transform: uppercase;
+	font-family: 'Open Sans Condensed', sans-serif;
+	color: #FFFFFF;
+	font-size: 18px;
+	font-weight: 100;
+	padding: 20px;
+	margin: -30px -30px 30px -30px;
+}
+
+#forminscription input[type="text"], #forminscription input[type="email"], #forminscription input[type="password"] {
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	outline: none;
+	display: block;
+	width: 100%;
+	padding: 7px;
+	border: none;
+	border-bottom: 1px solid #ddd;
+	background: transparent;
+	margin-bottom: 10px;
+	font: 16px Arial, Helvetica, sans-serif;
+	height: 45px;
+}
+
+#forminscription textarea {
+	resize: none;
+	overflow: hidden;
+}
+
+#forminscription input[type="submit"] {
+	-moz-box-shadow: inset 0px 1px 0px 0px #45D6D6;
+	-webkit-box-shadow: inset 0px 1px 0px 0px #45D6D6;
+	box-shadow: inset 0px 1px 0px 0px #45D6D6;
+	background-color: #2CBBBB;
+	border: 1px solid #27A0A0;
+	display: inline-block;
+	cursor: pointer;
+	color: #FFFFFF;
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-size: 14px;
+	padding: 8px 18px;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+#forminscription input[type="submit"]:hover {
+	background: linear-gradient(to bottom, #34CACA 5%, #30C9C9 100%);
+	background-color: #34CACA;
+}
+
+#forminscription span.error {
+	color: #ee5253;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+}
+
+/* FORMULAIRE DE CONNEXION MODAL */
+
+#formconnexion {
+	font-family: 'Open Sans Condensed', arial, sans;
+	width: 500px;
+	padding: 30px;
+	background: #FFFFFF;
+	margin: 50px auto;
+	box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+	-moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+	-webkit-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+}
+
+#formconnexion h2 {
+	display: flex;
+	justify-content: center;
+	background: #4D4D4D;
+	text-transform: uppercase;
+	font-family: 'Open Sans Condensed', sans-serif;
+	color: #FFFFFF;
+	font-size: 18px;
+	font-weight: 100;
+	padding: 20px;
+	margin: -30px -30px 30px -30px;
+}
+
+#formconnexion input[type="text"], #formconnexion input[type="password"] {
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	outline: none;
+	display: block;
+	width: 100%;
+	padding: 7px;
+	border: none;
+	border-bottom: 1px solid #ddd;
+	background: transparent;
+	margin-bottom: 10px;
+	font: 16px Arial, Helvetica, sans-serif;
+	height: 45px;
+}
+
+#formconnexion textarea {
+	resize: none;
+	overflow: hidden;
+}
+
+#formconnexion input[type="submit"] {
+	-moz-box-shadow: inset 0px 1px 0px 0px #45D6D6;
+	-webkit-box-shadow: inset 0px 1px 0px 0px #45D6D6;
+	box-shadow: inset 0px 1px 0px 0px #45D6D6;
+	background-color: #2CBBBB;
+	border: 1px solid #27A0A0;
+	display: inline-block;
+	cursor: pointer;
+	color: #FFFFFF;
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-size: 14px;
+	padding: 8px 18px;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+#formconnexion input[type="submit"]:hover {
+	background: linear-gradient(to bottom, #34CACA 5%, #30C9C9 100%);
+	background-color: #34CACA;
+}
+
 /* HEADER START */
 
 #header {
@@ -275,6 +289,14 @@ h2 {
 	justify-content: space-between;
 	align-items: center;
 	padding-top: 20px;
+}
+
+.logo {
+	width: auto;
+}
+
+.logo img {
+	width: 40%;
 }
 
 .nav {
@@ -328,13 +350,6 @@ h2 {
 	background-image: linear-gradient(to right, #6D678E 0%, #F6B5CC 100%);
 	box-shadow: 0 4px 15px 0 #F6B5CC;
 }
-
-/* .btn {
-	border: 1px solid;
-	padding: 10px;
-	border-radius: 50px;
-} 
-*/
 
 /* HEADER END */
 
@@ -466,7 +481,14 @@ HOME START
 /* ==================
 SECTION 1
 ================== */
-.section-white {padding: 250px 0 150px 0;}
+
+.sw1 {
+	margin-top: 150px;
+}
+
+.section-white {
+	padding: 100px 0;
+}
 
 h3 {
 	font-size: 18px;
@@ -527,66 +549,304 @@ h3 {
 }
 
 /* ==================
-SECTION 2
+SECTION 2 & 3
 ================== */
 
 .section-grey {
 	background-color: #F3F3F3;
-	padding-top: 50px;
+	padding: 100px 0;
 }
 
-.container-grey {
-	max-width: 80vw;
-	width: 100%;
-	height: 667px;
+.container-grey, .container-avantage {
+	max-width: 1400px;
+	width: 95%;
 	margin: 0 auto;
 	display: flex;
 	justify-content: space-between;
-	align-items: flex-start;
+	align-items: center;
 }
 
-.left-container {
-	width: 402px;
-	height: 470px;
+.left-container, .right-avantage {
+	width: 30%;
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
 }
 
-.left-container p {
+.left-container p, .right-avantage p {
 	margin-top: 25px;
 }
 
-.right-container {
-	width: 669px;
-	margin-top: 100px;
+.right-container, .left-avantage {
+	width: 55%;
 }
 
-.right-container img {
+.right-container img, .left-avantage img {
 	width: 100%
 }
 
 .img-3cv {
 	margin-top: 25px
 }
-
-.link-seemore a {
+.link-seemore2{
+	width: 65%;
+	margin-top: 30px;
+}
+.link-seemore a, .link-seemore2 a{
 	color: #4BEE6F;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	width: 60%;
+	margin-top: 30px;
+}
+
+/* ==================
+SECTION 4
+================== */
+.container-blob{
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	align-items: center;
+}
+.box-blob{
+	max-width: 957px;
+	width: 100%;
+	height: 557px;
+	margin: 60px auto 100px;
+	position: relative;
+}
+.blob{
+	position: absolute;
+	width: 120px;height: 120px;
+	border-radius: 50%;
+	background-color: #fff;
+	box-shadow: 0 50px 50px rgba(195, 176, 169, 0.3);
+}
+.blob1{top: 15%;left: 0;}
+.blob2{top: 8%;left: 40%;}
+.blob3{top: 0;right: 10%;}
+.blob4{top: 60%;left: 10%;}
+.blob5{top: 40%;left: 30%;}
+.blob6{top: 35%;right: 25%;}
+.blob7{top: 30%;right: 0;}
+.blob8{bottom: 0;left: 45%;}
+.blob9{bottom: 5%;right: 8%;}
+.blob img{
+	width: 100%;
+	border-radius: 50%;
+}
+.container-ent{
+	display: flex;
+	justify-content: space-between;
+	max-width: 75vw;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.container-ent a{width: 18%;transition: .3s;filter: grayscale(1);}
+.container-ent a:hover{filter: grayscale(0);}
+.box-ent{
+	height: 150px;
+	box-shadow: 0 10px 20px rgba(153, 151, 151, 0.5);
+	background-color: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 /* HOME END */
 
 /* FOOTER START */
 
+footer {
+	position: relative;
+	/* flex-shrink: 0; */
+	/* max-width: 100%; */
+	/* width: 100%; */
+	/* margin: 0 auto; */
+	/* background: #fff; */
+	/* color: #333; */
+	margin-top: 100px;
+	background-image: url(asset/img/wave3.svg);
+	background-size: cover;
+	height: auto;
+}
+
+/* SMOOTH CSS TRICKS solutions + https://stackoverflow.com/questions/55147116/how-to-scale-links-when-hovering
+.grow { transition: all .2s ease-in-out; } 
+.grow:hover { transform: scale(1.1); } */
+
+.footer-services a, .footer-articles a, .footer-contact a {
+	color: #000;
+	display: inline-block;
+	transition: all .2s ease-in-out;
+}
+
+.footer-services a:hover, .footer-articles a:hover, .footer-contact a:hover {
+	color: rgb(3, 3, 3);
+	transform: scale(.9);
+}
+
+.contenu-footer {
+	max-width: 1200px;
+	margin: 0 auto;
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	align-items: flex-start;
+	font-size: 18px;
+	padding: 50px 0px 50px 0px;
+
+}
+
+.bloc {
+	width: 23%;
+}
+
+/* =============== Contact =============== */
+
+.footer-contact h3, .footer-services h3, .footer-articles h3, .footer-medias h3 {
+	font-size: 18px;
+	padding-bottom: 20px;
+}
+
+.footer-contact p {
+	padding: 5px 0;
+	opacity: 1;
+}
+
+/* =============== Services =============== */
+
+.liste-services, .liste-articles, .liste-media {
+	list-style-type: none;
+}
+
+.liste-services li {
+	padding: 2px 0;
+	margin-bottom: 5px;
+}
+
+/* =============== Articles =============== */
+
+.liste-articles li {
+	padding: 2px 0;
+	margin-bottom: 5px;
+}
+
+/* Medias */
+
+.liste-media {
+	display: flex;
+	justify-content: space-between;
+}
+
+.liste-media {
+	width: 100%;
+}
+
+.liste-media a i {
+	color: #fff;
+	background-color: #6D678E;
+	width: 35px;
+	height: 35px;
+	padding: 20px 20px;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: background-color .4s;
+}
+
+.liste-media a i:hover {
+	background-color: #F6B5CC;
+	box-shadow: 0 4px 15px 0 #F6B5CC;
+	transition: all .4s ease-in-out;
+}
+/* .imgFooter {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 200px;
+} */
+
+/* =============== Responsive =============== */
+
+@media screen and (max-width: 1200px) {
+	.contenu-footer {
+		width: auto;
+		flex-wrap: wrap;
+		height: auto;
+	}
+	.bloc {
+		width: 40%;
+		margin-right: 20px;
+	}
+	.bloc:nth-child(1), .bloc:nth-child(2) {
+		margin-bottom: 50px;
+	}
+}
+
+@media screen and (max-width: 800px) {
+	.bloc {
+		width: 300px;
+		margin-right: 20px;
+	}
+	.bloc:nth-child(1), .bloc:nth-child(2) {
+		margin-bottom: 30px;
+	}
+	.bloc:nth-child(1) {
+		margin-top: 0;
+	}
+}
+
 /* FOOTER END */
 
 /* ==================
 RESPONSIVE
 ================== */
+
+@media only screen and (max-width: 1800px) {
+	.container-grey, .container-avantage {
+		max-width: 80vw;
+		width: 100%;
+	}
+}
+
+@media only screen and (max-width: 1500px) {
+	.left-container, .right-avantage {
+		width: 35%;
+	}
+}
+
+@media only screen and (max-width: 1400px) {
+	.right-avantage a {
+		width: 35%;
+	}
+}
+
+@media only screen and (max-width: 1220px) {
+	.container-grey, .container-avantage {
+		position: relative;
+	}
+	.left-container, .right-avantage {
+		width: 50%;
+		z-index: 1;
+		margin: 0 auto;
+	}
+	.right-container, .left-avantage {
+		position: absolute;
+		filter: blur(4px);
+		left: 0;
+		right: 0;
+		top: 0;
+		width: 100%;
+	}
+	.right-avantage a {
+		width: 30%;
+	}
+}
 
 @media only screen and (max-width: 1000px) {
 	.intro-box-container {
@@ -601,6 +861,17 @@ RESPONSIVE
 		font-size: 10vw;
 		margin-top: 15%;
 	}
+	.container-grey {
+		flex-direction: column;
+	}
+	.img-3cv {
+		width: 100%;
+		text-align: center;
+	}
+	.link-seemore a {
+		width: 40%;
+		margin: auto;
+	}
 }
 
 @media only screen and (max-width: 400px) {
@@ -608,10 +879,3 @@ RESPONSIVE
 		font-size: 14px
 	}
 }
-
-/* FOOTER END */
-
-/* MODAL START */
-
-
-/* MODAL END */
