@@ -55,18 +55,25 @@ table {
 	border-spacing: 0;
 }
 /* FORMULAIRE D'INSCRIPTION */
+.single {
+	display: flex;
+	justify-content: center;
+}
+
 #forminscription {
 	font-family: 'Open Sans Condensed', arial, sans;
-	width: 410px;
+	width: 500px;
 	padding: 30px;
 	background: #FFFFFF;
-	margin: 10px auto;
+	margin: 50px auto;
 	box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
 	-moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
 	-webkit-box-shadow:  0px 0px 15px rgba(0, 0, 0, 0.22);
 }
 
 #forminscription h2{
+	display: flex;
+	justify-content: center;
 	background: #4D4D4D;
 	text-transform: uppercase;
 	font-family: 'Open Sans Condensed', sans-serif;
@@ -123,10 +130,10 @@ table {
 /* FORMULAIRE DE CONNEXION */
 #formconnexion {
 	font-family: 'Open Sans Condensed', arial, sans;
-	width: 410px;
+	width: 500px;
 	padding: 30px;
 	background: #FFFFFF;
-	margin: 10px auto;
+	margin: 50px auto;
 	box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
 	-moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
 	-webkit-box-shadow:  0px 0px 15px rgba(0, 0, 0, 0.22);
@@ -134,6 +141,8 @@ table {
 
 
 #formconnexion h2 {
+	display: flex;
+	justify-content: center;
 	background: #4D4D4D;
 	text-transform: uppercase;
 	font-family: 'Open Sans Condensed', sans-serif;

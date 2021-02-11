@@ -35,9 +35,14 @@
 						<li><a href="#">Créer Cv</a></li>
 						<li><a href="#">À propos</a></li>
 						<li><a href="#">Contact</a></li>
-						|
-						<li><a href="#ex2" class="upper" rel="modal:open">Login</a></li>
-						<li><a href="#ex1" class="btn upper color-1" rel="modal:open">Sign up</a></li>
+						<?php $user = wp_get_current_user(); ?>
+						<?php if($user->ID == 0): ?>
+						<li><a href="<?php echo bloginfo('url'); ?>/login" class="upper" >Connexion</a></li>
+						<li><a href="<?php echo bloginfo('url'); ?>/register" class="btn upper color-1">S'inscrire</a></li>
+						<?php else: ?>
+						<li><a href="<?php echo bloginfo('url'); ?>/profil" class="upper">Profil</a></li>
+						<li><a href="<?php echo bloginfo('url'); ?>/logout" class="btn upper color-1" >Déconnexion</a></li>
+						<?php endif; ?>
 					</ul>
 				</nav>
 			</div>
