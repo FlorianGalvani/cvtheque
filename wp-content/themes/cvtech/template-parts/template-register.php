@@ -105,6 +105,5 @@ if (!empty($_POST['submitinscription'])) {
     </form>
     <?php } ?>
 </div>
-
 <?php
 get_footer(); ?>

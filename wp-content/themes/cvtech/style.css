@@ -147,12 +147,10 @@ h2 {
 }
 
 
-#forminscription h2{
-	display: flex;
-	justify-content: center;
 
 #forminscription h2 {
-
+	display: flex;
+	justify-content: center;
 	background: #4D4D4D;
 	text-transform: uppercase;
 	font-family: 'Open Sans Condensed', sans-serif;
@@ -336,6 +334,8 @@ h2 {
 
 .btn:hover {
 	background-position: 100% 0;
+	-webkitz-transition: all .4s ease-in-out;
+	-webkit-transition: all .4s ease-in-out;
 	-webkit-transition: all .4s ease-in-out;
 	-o-transition: all .4s ease-in-out;
 	-webkit-transition: all .4s ease-in-out;
