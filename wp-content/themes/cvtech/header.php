@@ -51,7 +51,7 @@ $the_query = new WP_Query($args); ?>
 					<ul>
 						<li><a href="<?php echo esc_url(home_url('/')); ?>">Accueil</a></li>
 						<li><a href="#">Créer Cv</a></li>
-						<li><a href="#">À propos</a></li>
+						<li><a href="<?php echo esc_url(home_url('a-propos')); ?>">À propos</a></li>
 						<li><a href="#">Contact</a></li>
 						<?php $user = wp_get_current_user(); ?>
 						<?php if($user->ID == 0): ?>
