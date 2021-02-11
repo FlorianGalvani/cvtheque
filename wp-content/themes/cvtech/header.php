@@ -42,7 +42,7 @@ $the_query = new WP_Query($args); ?>
 			?>
 
 					<div class="logo">
-						<a href="<?php echo esc_url(home_url('/')); ?>"><img src="<?php echo get_the_post_thumbnail_url(get_the_ID()); ?>" alt="logo cv & toi"></a>
+						<a href="<?php echo esc_url(home_url('/')); ?>"><img src="<?php echo get_template_directory_uri() . '/asset/img/cv-logo.svg'; ?>" alt="logo cv & toi"></a>
 					</div>
 				<?php } ?>
 			<?php    } ?>
@@ -53,13 +53,14 @@ $the_query = new WP_Query($args); ?>
 						<li><a href="#">Créer Cv</a></li>
 						<li><a href="<?php echo esc_url(home_url('a-propos')); ?>">À propos</a></li>
 						<li><a href="#">Contact</a></li>
+						|
 						<?php $user = wp_get_current_user(); ?>
-						<?php if($user->ID == 0): ?>
-						<li><a href="<?php echo bloginfo('url'); ?>/login" class="upper" >Connexion</a></li>
-						<li><a href="<?php echo bloginfo('url'); ?>/register" class="btn upper color-1">S'inscrire</a></li>
-						<?php else: ?>
-						<li><a href="<?php echo bloginfo('url'); ?>/profil" class="upper">Profil</a></li>
-						<li><a href="<?php echo bloginfo('url'); ?>/logout" class="btn upper color-1" >Déconnexion</a></li>
+						<?php if ($user->ID == 0) : ?>
+							<li><a href="<?php echo bloginfo('url'); ?>/login" class="upper">Connexion</a></li>
+							<li><a href="<?php echo bloginfo('url'); ?>/register" class="btn upper color-1">S'inscrire</a></li>
+						<?php else : ?>
+							<li><a href="<?php echo bloginfo('url'); ?>/profil" class="upper">Profil</a></li>
+							<li><a href="<?php echo bloginfo('url'); ?>/logout" class="btn upper color-1">Déconnexion</a></li>
 						<?php endif; ?>
 					</ul>
 				</nav>
