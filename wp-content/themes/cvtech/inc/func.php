@@ -45,13 +45,13 @@ function emailValidation($err,$mail,$key)
     return $err;
 }
 
-function validPass($errors,$password1,$key1,$password2,$min,$max){
-    if(!empty($password1 && $password2)) {
-      if($password1 == $password2){
-        if(mb_strlen($password1) < $min) {
+function validPass($errors,$user_pass,$key1,$user_pass2,$min,$max){
+    if(!empty($user_pass && $user_pass2)) {
+      if($user_pass == $user_pass2){
+        if(mb_strlen($user_pass) < $min) {
           $errors[$key1] = 'Minimum' .$min . 'caractères';
         }
-        elseif(mb_strlen($password1) > $max) {
+        elseif(mb_strlen($user_pass) > $max) {
           $errors[$key1] =  'Maximum ' .$max . 'caractères';
         }
       }
@@ -321,4 +321,26 @@ function ipfromHex($hex)
 {
     $ip = hexdec($hex[0].$hex[1]) .'.'. hexdec($hex[2].$hex[3]) .'.'. hexdec($hex[4].$hex[5]) .'.'. hexdec($hex[6].$hex[7]);
     return $ip;
+}
+
+add_action('send_headers', 'site_rooter');
+	function site_rooter(){
+		$root = str_replace('index.php','',$_SERVER['SCRIPT_NAME']);
+		$url = str_replace($root, '', $_SERVER['REQUEST_URI']);
+		$url = explode('/',$url);
+		if(count($url) == 1 && $url[0] == 'login'){
+			require 'wp-content\themes\cvtech\template-parts\template-login.php';
+			die();
+		} else if(count($url) == 1 && $url[0] == 'profil'){
+			require 'wp-content\themes\cvtech\template-parts\template-profil.php';
+			die();
+		} else if(count($url) == 1 && $url[0] == 'logout'){
+			wp_logout();
+			header('location:'.$root);
+			die();
+		} else if(count($url) == 1 && $url[0] == 'register'){
+			wp_logout();
+			require 'wp-content\themes\cvtech\template-parts\template-register.php';
+			die();
+		}
 }
