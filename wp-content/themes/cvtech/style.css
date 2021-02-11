@@ -334,11 +334,9 @@ h2 {
 
 .btn:hover {
 	background-position: 100% 0;
-<<<<<<< HEAD
 	-webkitz-transition: all .4s ease-in-out;
-=======
 	-webkit-transition: all .4s ease-in-out;
->>>>>>> 16eec2a0b69fa545c1958b004a080abe15fbcc0f
+	-webkit-transition: all .4s ease-in-out;
 	-o-transition: all .4s ease-in-out;
 	-webkit-transition: all .4s ease-in-out;
 	transition: all .4s ease-in-out;
