@@ -22,16 +22,34 @@
 
 	<?php wp_head(); ?>
 </head>
+<?php
+$args = array(
+	'post_type' => 'logo', // articles 
+	'post_status' => 'publish', // publiés 
+	'posts_per_page' => '1', //  4 posts 
+	'orderby' => 'title',
+	'order' => 'ASC',
+);
+$the_query = new WP_Query($args); ?>
 
 <body <?php body_class(); ?>>
 	<?php wp_body_open(); ?>
 	<div id="page" class="site">
 		<header id="header">
-			<div class="logo"><img src="wp-content/themes/cvtech/asset/img/cv-logo.svg" alt="logo cv & toi"></div>
+			<?php if ($the_query->have_posts()) {
+				while ($the_query->have_posts()) {
+					$the_query->the_post();
+			?>
+
+					<div class="logo">
+						<a href="<?php echo esc_url(home_url('/')); ?>"><img src="<?php echo get_the_post_thumbnail_url(get_the_ID()); ?>" alt="logo cv & toi"></a>
+					</div>
+				<?php } ?>
+			<?php    } ?>
 			<div class="nav">
 				<nav>
 					<ul>
-						<li><a href="#">Accueil</a></li>
+						<li><a href="<?php echo esc_url(home_url('/')); ?>">Accueil</a></li>
 						<li><a href="#">Créer Cv</a></li>
 						<li><a href="#">À propos</a></li>
 						<li><a href="#">Contact</a></li>
