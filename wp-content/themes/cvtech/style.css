@@ -767,10 +767,10 @@ SECTION 4
 
 .text-info-about h1 {
 	width: 667px;
-	height: 140px;
-	font-size: 40px;
-	font-weight: 400;
-	line-height: 60.95px;
+    height: 140px;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 60.95px;
 }
 
 .text-info-about h1 span {
