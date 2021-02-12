@@ -44,6 +44,7 @@ $the_query = new WP_Query($args); ?>
 					<div class="logo">
 						<a href="<?php echo esc_url(home_url('/')); ?>"><img src="<?php echo get_template_directory_uri() . '/asset/img/cv-logo.svg'; ?>" alt="logo cv & toi"></a>
 					</div>
+					
 				<?php } ?>
 			<?php    } ?>
 			<div class="nav">
