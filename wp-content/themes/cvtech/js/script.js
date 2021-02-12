@@ -1,11 +1,15 @@
-function ajax_errors_check(success, errors) {
-  if (success == true) {
-    console.log('success true !')
-    $('.form_candidat_div_1').fadeOut();
-    $('.form_candidat_div_2').fadeIn();
-  } else {
-    $('#error_form_1').html('Des erreurs ont été detectées ')
-  }
+function check_form(success, errors) {
+  
+  // if (success == true) {
+  //   $('.form_candidat_div_1').fadeOut();
+  //   $('.form_candidat_div_2').fadeIn();
+  // } else {
+  //   $('#error_form_1').html('Des erreurs ont été detectées ')
+  // }
+}
+function next_form(params) {
+    
+  $('#form_candidat_loading').css('display', 'none')
 }
 
 $(document).ready(function () {
@@ -29,14 +33,14 @@ $(document).ready(function () {
       },
       dataType: 'json',
       beforeSend: function () {
-
+        $('.form_div').css('display', 'none');
+        $('#form_candidat_loading').css('display', 'block');
       },
       success: function (response) {
-        console.log(response)
+        $('#form_candidat_loading').css('display', 'none')
         ajax_errors_check(response['success'],response['errors']);
       },
       error: function (response) {
-        console.log(response)
       }
     })
   });
