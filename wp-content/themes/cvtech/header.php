@@ -18,35 +18,16 @@
 	<meta charset="<?php bloginfo('charset'); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
-
-
 	<?php wp_head(); ?>
 </head>
-<?php
-$args = array(
-	'post_type' => 'logo', // articles 
-	'post_status' => 'publish', // publiés 
-	'posts_per_page' => '1', //  4 posts 
-	'orderby' => 'title',
-	'order' => 'ASC',
-);
-$the_query = new WP_Query($args); ?>
 
 <body <?php body_class(); ?>>
 	<?php wp_body_open(); ?>
 	<div id="page" class="site">
 		<header id="header">
-			<?php if ($the_query->have_posts()) {
-				while ($the_query->have_posts()) {
-					$the_query->the_post();
-			?>
-
-					<div class="logo">
-						<a href="<?php echo esc_url(home_url('/')); ?>"><img src="<?php echo get_template_directory_uri() . '/asset/img/cv-logo.svg'; ?>" alt="logo cv & toi"></a>
-					</div>
-					
-				<?php } ?>
-			<?php    } ?>
+			<div class="logo">
+				<a href="<?php echo esc_url(home_url('/')); ?>"><img src="<?php echo get_template_directory_uri() . '/asset/img/cv-logo.svg'; ?>" alt="logo cv & toi"></a>
+			</div>
 			<div class="nav">
 				<nav>
 					<ul>
