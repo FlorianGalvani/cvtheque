@@ -133,15 +133,15 @@ get_header(); ?>
         <div class="container-blob">
             <h3>Nous aidons des milliers de personnes</h3>
             <div class="box-blob">
-                <div class="blob blob1"><img src="<?php echo get_template_directory_uri() . '/asset/img/human.png'; ?>" alt=""></div>
-                <div class="blob blob2"><img src="<?php echo get_template_directory_uri() . '/asset/img/human.png'; ?>" alt=""></div>
-                <div class="blob blob3"><img src="<?php echo get_template_directory_uri() . '/asset/img/human.png'; ?>" alt=""></div>
-                <div class="blob blob4"><img src="<?php echo get_template_directory_uri() . '/asset/img/human.png'; ?>" alt=""></div>
-                <div class="blob blob5"><img src="<?php echo get_template_directory_uri() . '/asset/img/human.png'; ?>" alt=""></div>
-                <div class="blob blob6"><img src="<?php echo get_template_directory_uri() . '/asset/img/human.png'; ?>" alt=""></div>
-                <div class="blob blob7"><img src="<?php echo get_template_directory_uri() . '/asset/img/human.png'; ?>" alt=""></div>
-                <div class="blob blob8"><img src="<?php echo get_template_directory_uri() . '/asset/img/human.png'; ?>" alt=""></div>
-                <div class="blob blob9"><img src="<?php echo get_template_directory_uri() . '/asset/img/human.png'; ?>" alt=""></div>
+                <div class="blob blob1"><img src="<?php echo get_template_directory_uri() . '/asset/img/vector/vector-1.png'; ?>" alt=""></div>
+                <div class="blob blob2"><img src="<?php echo get_template_directory_uri() . '/asset/img/vector/vector-2.png'; ?>" alt=""></div>
+                <div class="blob blob3"><img src="<?php echo get_template_directory_uri() . '/asset/img/vector/vector-3.png'; ?>" alt=""></div>
+                <div class="blob blob4"><img src="<?php echo get_template_directory_uri() . '/asset/img/vector/vector-4.png'; ?>" alt=""></div>
+                <div class="blob blob5"><img src="<?php echo get_template_directory_uri() . '/asset/img/vector/vector-5.png'; ?>" alt=""></div>
+                <div class="blob blob6"><img src="<?php echo get_template_directory_uri() . '/asset/img/vector/vector-6.png'; ?>" alt=""></div>
+                <div class="blob blob7"><img src="<?php echo get_template_directory_uri() . '/asset/img/vector/vector-7.png'; ?>" alt=""></div>
+                <div class="blob blob8"><img src="<?php echo get_template_directory_uri() . '/asset/img/vector/vector-8.png'; ?>" alt=""></div>
+                <div class="blob blob9"><img src="<?php echo get_template_directory_uri() . '/asset/img/vector/vector-9.png'; ?>" alt=""></div>
             </div>
             <div class="container-ent">
                 <a href=""><div class="box-ent">

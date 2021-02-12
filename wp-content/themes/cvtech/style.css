@@ -643,11 +643,6 @@ SECTION 4
 
 .blob {
 	position: absolute;
-	width: 120px;
-	height: 120px;
-	border-radius: 50%;
-	background-color: #fff;
-	box-shadow: 0 50px 50px rgba(195, 176, 169, 0.3);
 }
 
 .blob1 {

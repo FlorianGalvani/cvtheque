@@ -7,7 +7,7 @@ require get_template_directory() . '/inc/func.php';
 
 
 // Custom 
-require get_template_directory() . '/inc/customs/custom-logo.php';
+// require get_template_directory() . '/inc/customs/custom-logo.php';
 
 
 // admin 
