@@ -5,7 +5,7 @@ Template Name: Candidat
 get_header(); ?>
 <div class="form_candidate_box">
     <div class="form_candidat_loading">
-
+        <img src="<?php echo get_stylesheet_directory_uri(); ?>/asset/img/load.gif" alt="">
     </div>
     <div class="form_div form_candidat_div_1">
         <form class="form_1" id="form_1">
