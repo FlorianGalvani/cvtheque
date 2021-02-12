@@ -130,7 +130,7 @@ h2 {
 
 /* Style form Candidat */
 
-.form_1 {
+.form_candidate_box {
 	background-color: rgb(241, 233, 217);
 }
 
@@ -288,6 +288,10 @@ h2 {
 	z-index: 4;
 }
 
+/* Formulaire Candidat */
+.form_candidat_div_2 {
+	display: none;
+}
 /* HEADER START */
 
 #header {
