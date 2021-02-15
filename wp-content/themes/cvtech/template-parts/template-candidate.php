@@ -294,7 +294,7 @@ get_header(); ?>
 
    <!-- <div class="form_candidate_box">
         <div class="form_candidat_loading" id="form_candidat_loading">
-            <img src="<?php echo get_stylesheet_directory_uri(); ?>/asset/img/load.gif" alt="">
+            <img src="<?php //echo get_stylesheet_directory_uri(); ?>/asset/img/load.gif" alt="">
         </div>
         <div class="form_div form_candidat_div_1">
             <form class="form_1" id="form_1">
@@ -353,14 +353,15 @@ get_header(); ?>
                     <span class="errors" id="error_form_2"></span>
                 </div>
             </form>
-        </div>
-
-
         </div> -->
+
+
+        </div>
 
 <!--FAIRE UNE FONCTION POUR CHOISIR LA TEMPLATE DU BON CV DANS LA SOURCE IFRAME-->
         <div class="template-cv">
-            <iframe id="myIframeCv" src="cv1.html" width="400" height="550"></iframe>
+            <iframe id="myIframeCv"
+                    src="<?php echo get_template_directory_uri() . '/inc/cv-template/cv-third/index.html'; ?>"></iframe>
         </div>
     </div>
 

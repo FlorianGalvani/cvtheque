@@ -50,9 +50,11 @@ table {
     outline: none;
 }
 
-.container-cvmaker{
+#cvmaker1{
     display: flex;
     flex-direction: column;
+    z-index: 5;
+    position: relative;
 }
 .progress-bar{
     display: flex;
@@ -73,7 +75,11 @@ table {
     width: 65%;
     overflow: scroll;
     text-align: center;
+    background: #fff;
+    display: flex;
+    justify-content: center;
 }
+
 
 .template-cv{
     width: 35%;
@@ -83,15 +89,9 @@ table {
     align-items: center;
 }
 
-form{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /*justify-content: center;*/
-    height: 100%;
-    width: 50%;
-    margin: 0 auto;
-}
+
+form{width: 50%;}
+#f-coordonnee{padding-bottom: 25px;}
 .formulaire{
     width: 100%;
 }

@@ -97,7 +97,7 @@ body {
 	font-family: 'Montserrat', sans-serif;
 	height: 100vh;
 	line-height: 1.6;
-	overflow-x: hidden;
+	/*overflow-x: hidden;*/
 }
 
 a {
@@ -1000,9 +1000,10 @@ SECTION 4
 .recruit {
 	position: absolute;
 	width: 100%;
-	right: -150px;
+	left: 0;
 	top: 0;
 	z-index: 2;
+	overflow: hidden;
 }
 
 #recruteur h1 {
