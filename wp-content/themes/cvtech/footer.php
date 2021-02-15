@@ -12,7 +12,7 @@
 ?>
 <!-- footer -->
 </div><!-- #page -->
-<footer>
+<footer id="footer">
     <!-- <img src="wp-content/themes/cvtech/asset/img/wave1.svg" alt="" class="imgFooter">
     <img src="wp-content/themes/cvtech/asset/img/wave2.svg" alt="" class="imgFooter"> -->
 

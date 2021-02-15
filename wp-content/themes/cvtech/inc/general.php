@@ -66,12 +66,17 @@ function cvtech_scripts() {
 	wp_enqueue_style( 'cvtech-style', get_stylesheet_uri(), array(), _S_VERSION );
 	// wp_style_add_data( 'cvtech-style', 'rtl', 'replace' );
 
+    // fancyBox CSS
+	wp_enqueue_style('jqueryfancybox','/wp-content/themes/cvtech/asset/css/jquery.fancybox.min.css');
+
 
     // Jquery
     wp_deregister_script('jquery');
     wp_enqueue_script('jquery', 'https://code.jquery.com/jquery-3.5.1.js', array(), null, true);
     // Jquery Modal
     wp_enqueue_script('jquerymodal', '/wp-content/themes/cvtech/asset/js/jquery.modal.min.js', array(), null, true);
+    // Jquery FancyBox
+    wp_enqueue_script('jqueryfancybox', '/wp-content/themes/cvtech/asset/js/jquery.fancybox.min.js', array(), null, true);
 
 	// JS
     wp_enqueue_script('js-candidat', '/wp-content/themes/cvtech/asset/js/main.js', array(), _S_VERSION, true);
@@ -80,44 +85,67 @@ function cvtech_scripts() {
     wp_localize_script('script', 'ajaxurl', array( 'ajax_url' => admin_url('admin-ajax.php')));
 }
 add_action( 'wp_enqueue_scripts', 'cvtech_scripts' );
-add_action( 'wp_ajax_load_comments', 'capitaine_load_comments' );
-add_action( 'wp_ajax_nopriv_load_comments', 'capitaine_load_comments' );
 
-// function cvtheque_assets()
-// {
-// 	wp_enqueue_style('jquerymodal','/wp-content/themes/cvtech/asset/css/jquery.modal.min.css');
-//     // Jquery
-//     wp_deregister_script('jquery');
-//     wp_enqueue_script('jquery', 'https://code.jquery.com/jquery-3.5.1.js', array(), null, true);
-//     // Jquery Modal
-//     wp_enqueue_script('jquerymodal', '/wp-content/themes/cvtech/asset/js/jquery.modal.min.js', array(), null, true);
-// }
-// add_action('wp_enqueue_scripts', 'cvtheque_assets');
+add_action( 'wp_mail_failed', 'onMailError', 10, 1 );
+function onMailError( $wp_error ) {
+	echo '<pre style="height:200px;overflow-y: scroll;font-size:.8em;padding: 10px; font-family: Consolas, Monospace; background-color: #000; color: #fff;">';
+	print_r($wp_error);
+    echo '</pre>';
+}    
+/////////// AJAX //////////////
+function ajax_assets()
+{
+    // Charger notre script
 
-
-// function add_js_scripts() {
-//     wp_enqueue_script( 'script', get_stylesheet_directory_uri().'/js/script.js', array('jquery'), '1.0', true );
-
-//     // pass Ajax Url to script.js
-//     wp_localize_script('script', 'ajaxurl', array( 'ajax_url' => admin_url('admin-ajax.php')));
-// }
-// add_action('wp_enqueue_scripts', 'add_js_scripts');
-
-// add_action( 'wp_ajax_load_comments', 'capitaine_load_comments' );
-// add_action( 'wp_ajax_nopriv_load_comments', 'capitaine_load_comments' );
-function capitaine_load_comments() {
-  
-  $post_id = $_POST['post_id'];
-  
-  $comments = get_comments(array(
-    'post_id' => $post_id,
-    'status' => 'approve'
-  ));
-
-  wp_list_comments(array(
-    'per_page' => -1,
-    'avatar_size' => 76
-  ), $comments );
-
-	wp_die();
+    // Envoyer une variable de PHP à JS proprement
+    wp_localize_script('ajax', 'ajaxurl', array('ajax_url' => get_admin_url('admin-ajax.php')));
 }
+add_action('wp_enqueue_scripts', 'ajax_assets');
+
+
+add_action('wp_ajax_candidate_info', 'candidate_info');
+add_action('wp_ajax_nopriv_candidate_info', 'candidate_info');
+function candidate_info()
+{
+    $errors = array();
+    $success = false;
+
+    $nom = cleanXss($_POST['info']['nom']);
+    $prenom = cleanXss($_POST['info']['prenom']);
+    $naissance = cleanXss($_POST['info']['naissance']);
+    $adresse = cleanXss($_POST['info']['adresse']);
+    $telephone = cleanXss($_POST['info']['telephone']);
+    $permis = cleanXss($_POST['info']['permis']);
+
+    $errors = ValidationText($errors,$nom,'nom',2,10);
+    $errors = ValidationText($errors,$prenom,'prenom',2,10);
+    $errors = ValidationText($errors,$naissance,'naissance',2,20);
+    $errors = ValidationText($errors,$adresse,'adresse',2,100);
+    $errors = ValidationText($errors,$telephone,'telephone',2,20);
+    $errors = ValidationText($errors,$permis,'permis',2,10);
+    
+    if (count($errors) == 0) {
+        $success = true;
+        // global $wpdb;
+        // $wpdb->insert('cv', array(
+        //     'id_user' => '1',
+        // ));
+        // $wpdb->insert('cv_info_perso', array(
+        //     'nom' => $nom,
+        //     'prenom' => $prenom,
+        //     'naissance' => $naissance,
+        //     'adresse' => $adresse,
+        //     'telephone' => $telephone,
+        //     'permis' => $permis
+        // ));
+    }
+
+    $data = array(
+        'success' => $success,
+    );
+    showJson($data);
+
+}
+
+
+/////// FIN AJAX ///////
