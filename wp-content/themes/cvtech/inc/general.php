@@ -61,9 +61,11 @@ add_action( 'widgets_init', 'cvtech_widgets_init' );
  */
 function cvtech_scripts() {
 	// STYLE
+    wp_enqueue_style('style-candidat','/wp-content/themes/cvtech/asset/css/style-candidat.css');
+    wp_enqueue_style('jquerymodal','/wp-content/themes/cvtech/asset/css/jquery.modal.min.css');
 	wp_enqueue_style( 'cvtech-style', get_stylesheet_uri(), array(), _S_VERSION );
 	// wp_style_add_data( 'cvtech-style', 'rtl', 'replace' );
-	wp_enqueue_style('jquerymodal','/wp-content/themes/cvtech/asset/css/jquery.modal.min.css');
+
 
     // Jquery
     wp_deregister_script('jquery');
@@ -72,6 +74,7 @@ function cvtech_scripts() {
     wp_enqueue_script('jquerymodal', '/wp-content/themes/cvtech/asset/js/jquery.modal.min.js', array(), null, true);
 
 	// JS
+    wp_enqueue_script('js-candidat', '/wp-content/themes/cvtech/asset/js/main.js', array(), _S_VERSION, true);
 	wp_enqueue_script( 'script', get_stylesheet_directory_uri().'/js/script.js', array('jquery'), '1.0', true );
     // pass Ajax Url to script.js
     wp_localize_script('script', 'ajaxurl', array( 'ajax_url' => admin_url('admin-ajax.php')));
