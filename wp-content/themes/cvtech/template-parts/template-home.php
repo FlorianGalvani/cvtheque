@@ -8,21 +8,20 @@ get_header(); ?>
 
 
 
-
 <!-- BLOBS START -->
-<img src="wp-content/themes/cvtech/asset/img/blobs1.svg" alt="" class="blobs1">
-<img src="wp-content/themes/cvtech/asset/img/blobs2.svg" alt="" class="blobs2">
+<img src="<?php echo get_template_directory_uri() . '/asset/img/blobs1.svg'; ?>" alt="" class="blobs1">
+<img src="<?php echo get_template_directory_uri() . '/asset/img/blobs2.svg'; ?>" alt="" class="blobs2">
 <!-- BLOBS END -->
 
 <!-- BANNER START -->
 <section class="banner">
   <div class="info-banner">
-    <img src="wp-content/themes/cvtech/asset/img/img-banner-1.svg" alt="" class="vector first">
-    <img src="wp-content/themes/cvtech/asset/img/img-banner-2.svg" alt="" class="vector second">
-    <img src="wp-content/themes/cvtech/asset/img/img-banner-3.svg" alt="" class="vector third">
-    <img src="wp-content/themes/cvtech/asset/img/search.svg" alt="" class="search">
-    <img src="wp-content/themes/cvtech/asset/img/menu-img-banner.svg" alt="" class="vector fourth">
-    <img src="wp-content/themes/cvtech/asset/img/img-banner-5.svg" alt="" class="vector fifth">
+    <img src="<?php echo get_template_directory_uri() . '/asset/img/img-banner-1.svg'; ?>" alt="" class="vector first">
+    <img src="<?php echo get_template_directory_uri() . '/asset/img/img-banner-2.svg'; ?>" alt="" class="vector second">
+    <img src="<?php echo get_template_directory_uri() . '/asset/img/img-banner-3.svg'; ?>" alt="" class="vector third">
+    <img src="<?php echo get_template_directory_uri() . '/asset/img/search.svg'; ?>" alt="" class="search">
+    <img src="<?php echo get_template_directory_uri() . '/asset/img/menu-img-banner.svg'; ?>" alt="" class="vector fourth">
+    <img src="<?php echo get_template_directory_uri() . '/asset/img/img-banner-5.svg'; ?>" alt="" class="vector fifth">
     <div class="text-info">
 
       <h1>Créateur de CV en ligne</h1>
@@ -35,7 +34,7 @@ get_header(); ?>
         </a>
       </div>
     </div>
-    <div class="img-info"><img src="wp-content/themes/cvtech/asset/img/undraw_cv.svg" alt=""></div>
+    <div class="img-info"><img src="<?php echo get_template_directory_uri() . '/asset/img/undraw_cv.svg'; ?>" alt=""></div>
   </div>
 </section>
 <!-- BANNER END -->
