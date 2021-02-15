@@ -47,5 +47,21 @@ $(document).ready(function () {
 });
 
 
+// Tableau Cv recruteur
+$(window).on("load resize ", function() {
+  var scrollWidth = $('.tbl-content').width() - $('.tbl-content table').width();
+  $('.tbl-header').css({'padding-right':scrollWidth});
+}).resize();
 
+// hover btn voir espace recruteur
+
+
+$('#see').hover(function() {
+  $( '#eye' ).css('display','inline');
+  $("#see").css('display','none');
+  $("#eye").on('mouseout', function(){
+    $("#eye").css('display','none');
+    $("#see").css('display','inline');
+  });
+})
 
