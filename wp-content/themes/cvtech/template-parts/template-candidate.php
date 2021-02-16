@@ -48,9 +48,9 @@ get_header(); ?>
 
                     <div class="form-group-little">
                         <div class="little-part">
-                            <label for="natio">Nationalité</label>
-                            <input id="natio" name="natio" type="text" onkeyup="swicthTxt('natio', 'Nationalité')"
-                                   placeholder="ex: Française" value="">
+                            <label for="ville">Ville</label>
+                            <input id="ville" name="ville" type="text" onkeyup="swicthTxt('ville', 'Ville')"
+                                   placeholder="ex: Paris" value="">
                         </div>
 
                         <div class="little-part">
@@ -357,7 +357,7 @@ get_header(); ?>
 <!--FAIRE UNE FONCTION POUR CHOISIR LA TEMPLATE DU BON CV DANS LA SOURCE IFRAME-->
         <div class="template-cv">
             <iframe id="myIframeCv"
-                    src="<?php echo get_template_directory_uri() . '/inc/cv-template/cv-third/index.html'; ?>"></iframe>
+                    src="<?php echo get_template_directory_uri() . '/inc/cv-template/cv-first/index.html'; ?>"></iframe>
         </div>
     </div>
 
