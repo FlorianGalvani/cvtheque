@@ -5,115 +5,132 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="cv-first.css" />
   </head>
   <body>
     <div id="wrapper">
-      <div class="wrapper-mid">
-        <div id="paper">
-          <div id="paper-mid">
-            <div class="entry">
-              <img class="portrait" src="images.jfif" alt="" id="photo"/>
-              <div class="self">
-                <h1 class="name" id="cv-nom">
-                  John Smith <br />
-                  <span id="">Interactive Designer</span>
-                </h1>
-                <ul>
-                  <li class="ad" id="cv-adresse">111 Lorem Street, 34785, Ipsum City</li>
-                  <li class="mail" id="cv-email">johnsmith@business.com</li>
-                  <li class="tel" id="cv-numero">+11 444 555 22 33</li>
-                  <li class="web" id="cv-site">www.businessweb.com</li>
-                </ul>
-              </div>
-            <div class="entry">
-              <h2>OBJECTIF</h2>
+      <div class="info">
+        <h1><span id="cv-prenom">Pierre</span> <span id="cv-nom"> Dupont</span></h1>
+        <h2 id="cv-metier">assistant marketing</h2>
+      </div>
+      <div class="container">
+        <div class="comp">
+          <div class="block data">
+            <h2>Coordonnées</h2>
+            <p id="cv-phone">01 23 45 89 00</p>
+            <p id="cv-email">bonjour@sitevraimentsuper.fr</p>
+            <p id="cv-link"></p> 
+            <p id="cv-address"></p> 
+          </div>
+          <div class="block pro">
+            <h2>compétences</h2>
+            <ul id="iframe-list-comp"></ul>
+          </div>
+      
+          <div class="block langue">
+            <h2>Langues</h2>
+            <div class="langue-perso">
+              <ul id="iframe-list-langue"></ul>
+            </div>
+          </div>
+        </div>
+        <div class="profil">
+          <div class="profilContent">
+            <div class="profilBlock obj">
+              <h2>profil</h2>
               <p id="cv-description">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
-                dignissim viverra nibh sed varius. Proin bibendum nunc in sem
-                ultrices posuere. Aliquam ut aliquam lacus.
+                Extrêmement motivé pour développer constamment mes compétences
+                et évoluer professionnellement. Je suis confiant vis-à-vis de ma
+                capacité à proposer des idées intéressantes pour des campagnes
+                publicitaires inoubliables.
               </p>
             </div>
-            <div class="entry">
-              <h2>EDUCATION</h2>
-              <div class="content">
-                <h3>Sep 2005 - Feb 2007</h3>
-                <p>
-                  Academy of Art University, London <br />
-                  <em>Master in Communication Design</em>
-                </p>
-              </div>
-              <div class="content">
-                <h3>Sep 2001 - Jun 2005</h3>
-                <p>
-                  University of Art &amp; Design, New York <br />
-                  <em>Bachelor of Science in Graphic Design</em>
-                </p>
-              </div>
+            <div class="ligne"></div>
+            <div class="profilBlock exp">
+              <h2>expérience professionnelle</h2>
+              <ul id="iframe-list-exp">
+                <li id="li-exp-' + idExp + '">
+                  <div class="container-list-exp">
+                    <div class="left-list">
+                      <div class="date-list">
+                        <p id="cv-date-begin-exp-' + idExp + '">
+                          <!-- ' + expInputDate1 + ' -->
+                          Avril 2012 
+                        </p>
+                        <p id="cv-date-end-exp-' + idExp + '">
+                          <!-- ' + expInputDate2 + ' -->
+                          Janvier 2013
+                        </p>
+                      </div>
+                      <div class="ville-list">
+                        <p id="cv-ville-exp-' + idExp + '">
+                          <!-- ' + expInputVille + ' -->
+                          Rouen
+                        </p>
+                      </div>
+                    </div>
+                    <div class="content-list">
+                      <div class="title-list">
+                        <p id="cv-title-' + idExp + '">
+                          <!-- ' + expInputRole + ' -->
+                          Assistant marketing et communications
+                        </p>
+                        <p id="cv-subtitle-' + idExp + '">
+                          <!-- ' + expInputEnt + ' -->
+                          Communications de Condorcet
+                        </p>
+                      </div>
+                      <div class="desc-list">
+                        <p id="cv-desc-exp-' + idExp + '">
+                          <!-- ' + expInputDesc + ' -->
+                          Maintenir et organiser de nombreux dossiers de bureau - Tenir constamment à jour les listes de contacts et les listes de diffusion de l'entreprise - Surveiller la couverture de presse
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
             </div>
-            <div class="entry">
-              <h2>EXPERIENCE</h2>
-              <div class="content">
-                <h3>May 2009 - Feb 2010</h3>
-                <p>
-                  Agency Creative, London <br />
-                  <em>Senior Web Designer</em>
-                </p>
-                <ul class="info">
-                  <li>Vestibulum eu ante massa, sed rhoncus velit.</li>
-                  <li>
-                    Pellentesque at lectus in
-                    <a href="#">libero dapibus</a> cursus. Sed arcu ipsum,
-                    varius at ultricies acuro, tincidunt iaculis diam.
-                  </li>
-                </ul>
-              </div>
-              <div class="content">
-                <h3>Jun 2007 - May 2009</h3>
-                <p>
-                  Junior Web Designer <br />
-                  <em>Bachelor of Science in Graphic Design</em>
-                </p>
-                <ul class="info">
-                  <li>
-                    Sed fermentum sollicitudin interdum. Etiam imperdiet sapien
-                    in dolor rhoncus a semper tortor posuere.
-                  </li>
-                  <li>
-                    Pellentesque at lectus in libero dapibus cursus. Sed arcu
-                    ipsum, varius at ultricies acuro, tincidunt iaculis diam.
-                  </li>
-                </ul>
-              </div>
+            <div class="ligne"></div>
+            <div class="profilBlock dip">
+              <h2>formation</h2>
+              <ul>
+                <li id="li-dip-' + idDip + '">
+                  <div class="container-list-dip">
+                    <div class="left-list">
+                      <div class="date-list">
+                        <p id="cv-date-begin-dip-' + idDip + '">
+                          ' + dipInputDate1 + '
+                        </p>
+                        <p id="cv-date-end-dip-' + idDip + '">
+                          ' + dipInputDate2 + '
+                        </p>
+                      </div>
+                      <div class="ville-list">
+                        <p id="cv-ville-dip-' + idDip + '">
+                          ' + dipInputVille + '
+                        </p>
+                      </div>
+                    </div>
+                    <div class="content-list">
+                      <div class="title-list">
+                        <p id="cv-title-' + idDip + '">' + dipInputRole + '</p>
+                        <p id="cv-subtitle-' + idDip + '">
+                          ' + dipInputEnt + '
+                        </p>
+                      </div>
+                      <div class="desc-list">
+                        <p id="cv-desc-dip-' + idDip + '">
+                          ' + dipInputDesc + '
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
             </div>
-            <div class="entry">
-              <h2>COMPETENCES</h2>
-              <div class="content" id="cv-competence">
-                <h3 id="cv-competence-title">Software Knowledge</h3>
-                <ul class="skills">
-                  <li>Photoshop</li>
-                  <li>Illustrator</li>
-                  <li>InDesign</li>
-                  <li>Flash</li>
-                  <li>Fireworks</li>
-                  <li>Dreamweaver</li>
-                  <li>After Effects</li>
-                  <li>Cinema 4D</li>
-                  <li>Maya</li>
-                </ul>
-              </div>
-              <div class="content">
-                <h3>Languages</h3>
-                <ul class="skills">
-                  <li>CSS/XHTML</li>
-                  <li>PHP</li>
-                  <li>JavaScript</li>
-                  <li>Ruby on Rails</li>
-                  <li>ActionScript</li>
-                  <li>C++</li>
-                </ul>
-              </div>
-            </div>
+            <div class="ligne"></div>
+
           </div>
         </div>
       </div>
