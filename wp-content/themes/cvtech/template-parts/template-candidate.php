@@ -66,9 +66,9 @@ get_header(); ?>
 
                     <div class="form-group-little">
                         <div class="little-part">
-                            <label for="natio">Nationalité</label>
-                            <input id="natio" name="natio" type="text" onkeyup="swicthTxt('natio', 'Nationalité')"
-                                   placeholder="ex: Française" value="">
+                            <label for="ville">Ville</label>
+                            <input id="ville" name="ville" type="text" onkeyup="swicthTxt('ville', 'Ville')"
+                                   placeholder="ex: Paris" value="">
                         </div>
 
                         <div class="little-part">
