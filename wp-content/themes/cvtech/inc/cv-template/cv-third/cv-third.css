@@ -57,6 +57,14 @@ h4 {
     align-items: center;
 }
 
+.name {
+    width: 30%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
 .content {
     width: 423.5px;
     height: 150px;
@@ -110,4 +118,17 @@ h4 {
 }
 .comp ul, .langue ul, .ref ul {
     margin-left: -40px;
+}
+
+#svg_f1 {
+    width: 40%;
+}
+
+#inputImg {
+    
+    opacity: .5;
+    position: relative;
+    height: 100%;
+    z-index: 1;
+
 }
