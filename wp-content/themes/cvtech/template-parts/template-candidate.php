@@ -105,7 +105,7 @@ get_header(); ?>
 
                     <div class="form-group">
                         <label for="link">Lien</label>
-                        <input id="link" name="link" type="text" onkeyup="swicthTxt('link', 'Lien')"
+                        <input id="link" name="link" type="text" onkeyup="swicthTxt('link', '')"
                                placeholder="ex: linkedin.com/watibogoss" value="">
                     </div>
 
@@ -375,7 +375,7 @@ get_header(); ?>
 <!--FAIRE UNE FONCTION POUR CHOISIR LA TEMPLATE DU BON CV DANS LA SOURCE IFRAME-->
         <div class="template-cv">
             <iframe id="myIframeCv"
-                    src="<?php echo get_template_directory_uri() . '/inc/cv-template/cv-third/index.html'; ?>"></iframe>
+                    src="<?php echo get_template_directory_uri() . '/inc/cv-template/cv-first/index.html'; ?>"></iframe>
         </div>
     </div>
 
