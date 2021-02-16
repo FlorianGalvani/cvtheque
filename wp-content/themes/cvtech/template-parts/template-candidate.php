@@ -17,7 +17,6 @@ get_header(); ?>
         <div class="progress prog3">3</div>
         <div class="progress prog4">4</div>
         <div class="progress prog5">5</div>
-        <div class="progress prog6">Terminer</div>
     </div>
 
     <div class="page-cv">
@@ -124,21 +123,30 @@ get_header(); ?>
                 <ul id="list-exp">
                     <li>
                         <div class="container-list">
+
                             <div class="list-preview">
                                 <span>Votre poste</span>
                                 <p>L'entreprise</p>
                             </div>
-                            <button>Modifier</button>
-                            <button>Supprimer</button>
+
+                            <div class="list-button">
+                                <button><i class="fas fa-pen"></i></button>
+                                <button><i class="fas fa-trash"></i></button>
+                            </div>
+
                         </div>
                     </li>
                 </ul>
-                <div class="add-list">
-                    <button id="btn-exp">+</button>
-                    <p>Add</p>
+                <div id="btn-exp" class="add-list">
+                    <span>Ajouter une nouvelle expérience</span>
                 </div>
 
-                <button id="next-exp">Suivant</button>
+                <div class="next-prev">
+                    <button class="prev-btn" id="prev-exp"><i class="fas fa-arrow-circle-left"></i></button>
+                    <button class="next-btn" id="next-exp"><i class="fas fa-arrow-circle-right"></i></button>
+                </div>
+
+
             </div>
 
             <form method="post" id="form_2">
@@ -195,26 +203,30 @@ get_header(); ?>
                 <ul id="list-dip">
                     <li>
                         <div class="container-list">
-                            <div class="list-preview">
 
-                                <span>diplome</span>
-                                <p>L'ecole</p>
+                            <div class="list-preview">
+                                <span>Diplôme</span>
+                                <p>Ecole</p>
                             </div>
 
-
-                            <button>delete</button>
-                            <button>modif</button>
-                            <button>Deplacer</button>
+                            <div class="list-button">
+                                <button><i class="fas fa-pen"></i></button>
+                                <button><i class="fas fa-trash"></i></button>
+                            </div>
 
                         </div>
                     </li>
                 </ul>
-                <div class="add-list">
-                    <button id="btn-dip">+</button>
-                    <p>Add</p>
+                <div id="btn-dip" class="add-list">
+                        <span>Ajouter une nouvelle formation</span>
                 </div>
 
-                <button id="next-dip">Suivant</button>
+
+                <div class="next-prev">
+                    <button class="prev-btn" id="prev-dip"><i class="fas fa-arrow-circle-left"></i></button>
+                    <button class="next-btn" id="next-dip"><i class="fas fa-arrow-circle-right"></i></button>
+                </div>
+
             </div>
 
             <form method="post" id="form_3">
@@ -302,6 +314,11 @@ get_header(); ?>
                     </div>
 
                 </form>
+
+                <div class="next-prev">
+                    <button class="prev-cl" id="prev-dip"><i class="fas fa-arrow-circle-left"></i></button>
+                    <button class="next-cl" id="next-dip"><i class="fas fa-arrow-circle-right"></i></button>
+                </div>
             </div>
 
 

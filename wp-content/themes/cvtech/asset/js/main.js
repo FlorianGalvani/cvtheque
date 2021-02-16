@@ -1,6 +1,7 @@
 $(document).ready(function () {
 
-    // BTN FORMULAIRE
+
+    // BTN FORMULAIRE NEXT
     $('#submitted-form_1').on('click', function (e) {
         e.preventDefault();
 
@@ -23,6 +24,29 @@ $(document).ready(function () {
         $('.prog4').css('backgroundColor', 'lightblue');
     })
 
+    // BTN FORMULAIRE PREV
+    $('#prev-exp').on('click', function (e) {
+        e.preventDefault();
+
+        $('#list-experience').css('display', 'none');
+        $('#form_1').css('display', 'flex');
+        $('.prog2').css('backgroundColor', 'pink');
+    })
+    $('#prev-dip').on('click', function (e) {
+        e.preventDefault();
+
+        $('#list-formation').css('display', 'none');
+        $('#list-experience').css('display', 'block');
+        $('.prog3').css('backgroundColor', 'pink');
+    })
+    $('#prev-cl').on('click', function (e) {
+        e.preventDefault();
+
+        $('#list-formation').css('display', 'none');
+        $('#list-experience').css('display', 'block');
+        $('.prog3').css('backgroundColor', 'pink');
+    })
+
 // COMPETENCES ******************************************************************************
     $('#submitted-form_4-comp').on('click', function (e) {
         e.preventDefault();
@@ -35,6 +59,8 @@ $(document).ready(function () {
     })
 
 // EXPERIENCES ******************************************************************************
+
+
     $('#btn-exp').on('click', function (e) {
         e.preventDefault();
 
@@ -53,6 +79,8 @@ $(document).ready(function () {
     })
 
     // FORMATIONS ******************************************************************************
+
+
     $('#btn-dip').on('click', function (e) {
         e.preventDefault();
 
@@ -94,7 +122,7 @@ function addDip() {
 
 
     if(dipInputRole !== '' && dipInputEnt !== '') {
-        $('#list-dip').append('<li id="li-dip-' + idDip + '"><div class="container-list"><div class="list-preview"><span>' + dipInputRole + '</span><p>' + dipInputEnt + '</p></div><div><button>Modifier</button><button onclick="deleteDip('+idDip+')">Supprimer</button></div></div></li>');
+        $('#list-dip').append('<li id="li-dip-' + idDip + '"><div class="container-list"><div class="list-preview"><span>' + dipInputRole + '</span><p>' + dipInputEnt + '</p></div><div class="list-button"><button><i class="fas fa-pen"></i></button><button onclick="deleteDip('+idDip+')"><i class="fas fa-trash"></i></button></div></div></li>');
         myIframe.append('<li id="li-dip-' + idDip + '"><div class="container-list-dip"><div class="left-list"><div class="date-list"><p id="cv-date-begin-dip-' + idDip + '">' + dipInputDate1 + '</p><p id="cv-date-end-dip-' + idDip + '">' + dipInputDate2 + '</p></div><div class="ville-list"><p id="cv-ville-dip-' + idDip + '">' + dipInputVille + '</p></div></div><div class="content-list"><div class="title-list"><p id="cv-diplome-' + idDip + '">' + dipInputRole + '</p><p id="cv-etablissement-' + idDip + '">' + dipInputEnt + '</p></div><div class="desc-list"><p id="cv-desc-dip-' + idDip + '">' + dipInputDesc + '</p></div></div></div></li>');
 
         $('#diplome').val('');
@@ -119,7 +147,7 @@ function addExp() {
 
 
     if (expInputRole !== '' && expInputEnt !== '') {
-        $('#list-exp').append('<li id="li-exp-' + idExp + '"><div class="container-list"><div class="list-preview"><span>' + expInputRole + '</span><p>' + expInputEnt + '</p></div><div><button>Modifier</button><button onclick="deleteExp('+idExp+')">Supprimer</button></div></div></li>');
+        $('#list-exp').append('<li id="li-exp-' + idExp + '"><div class="container-list"><div class="list-preview"><span>' + expInputRole + '</span><p>' + expInputEnt + '</p></div><div class="list-button"><button><i class="fas fa-pen"></i></button><button onclick="deleteExp('+idExp+')"><i class="fas fa-trash"></i></button></div></div></li>');
         myIframe.append('<li id="li-exp-' + idExp + '"><div class="container-list-exp"><div class="left-list"><div class="date-list"><p id="cv-date-begin-dip-' + idExp + '">' + expInputDate1 + '</p><p id="cv-date-end-dip-' + idExp + '">' + expInputDate2 + '</p></div><div class="ville-list"><p id="cv-ville-dip-' + idExp + '">' + expInputVille + '</p></div></div><div class="content-list"><div class="title-list"><p id="cv-diplome-' + idExp + '">' + expInputRole + '</p><p id="cv-etablissement-' + idExp + '">' + expInputEnt + '</p></div><div class="desc-list"><p id="cv-desc-dip-' + idExp + '">' + expInputDesc + '</p></div></div></div></li>');
 
         $('#title-exp').val('');

@@ -18,11 +18,13 @@ $(document).ready(function () {
     var candidate_info = {
       nom: $('#nom').val(),
       prenom: $('#prenom').val(),
+      metier: $('#metier').val(),
+      ville: $('#ville').val(),
       naissance: $('#naissance').val(),
-      adresse: $('#adresse').val(),
+      address: $('#adresse').val(),
       email: $('#email').val(),
-      telephone: $('#telephone').val(),
-      permis: $('#permis').val()
+      telephone: $('#phone').val(),
+      //permis: $('#permis').val()
     }
     $.ajax({
       url: ajaxurl['ajax_url'],
@@ -37,7 +39,7 @@ $(document).ready(function () {
         $('#form_candidat_loading').css('display', 'block');
       },
       success: function (response) {
-        $('#form_candidat_loading').css('display', 'none')
+        $('#form_candidat_loading').css('display', 'none');
         ajax_errors_check(response['success'],response['errors']);
       },
       error: function (response) {

@@ -50,18 +50,25 @@ table {
     outline: none;
 }
 
+button{
+    background: rgba(0,0,0,0);
+    border: none;
+    cursor: pointer;
+}
+
 #cvmaker1{
     display: flex;
     flex-direction: column;
     z-index: 5;
     position: relative;
+    color: #333333;
 }
 .progress-bar{
     display: flex;
     background-color: pink;
 }
 .progress{
-    width: 16.6666666666%;
+    width: 20%;
     text-align: center;
 }
 
@@ -151,16 +158,23 @@ form{
 }
 
 .form-cv input{
-    padding: 10px 35px 10px 20px;
-    border-radius: 5px;
+    padding: 9px 34px 9px 19px;
+    border-radius: 3px;
     background-color: #F3F3F3;
-    border: none;
+    border: 1px solid #f3F3F3;
+    transition: .3s;
+}
+.form-cv input:hover{
+    background-color: #fdfdfd;
 }
 .form-cv label{
     text-align: start;
     margin:0 0 5px 20px;
 }
-
+.form-cv input[type=submit]:hover{
+    cursor: pointer;
+    background-color: #333333;
+}
 
 /* ===============
 Container LIST
@@ -168,15 +182,33 @@ Container LIST
 #list-experience, #list-formation{
     width: 50%;
 }
-.container-list, .add-list{
+.container-list{
     display: flex;
     align-items: center;
-    /*justify-content: space-between;*/
+    justify-content: space-between;
     background-color: #F3F3F3;
     padding: 10px 35px;
     border-radius: 5px;
     height: 40px;
     margin-top: 30px;
+}
+.add-list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: 2px dashed #F3F3F3;
+    padding: 9px 34px;
+    border-radius: 3px;
+    height: 40px;
+    margin-top: 30px;
+    cursor: pointer;
+    transition: .3s;
+}
+.add-list:hover{
+    background: rgb(243, 243, 243);
 }
 .list-preview{
     display: flex;
@@ -184,14 +216,31 @@ Container LIST
     align-items: flex-start;
     width: 55%;
 }
-.list-btn{
-    display: flex;
-    justify-content: space-between;
-    width: 45%;
-}
-.add-list button{
+.list-button button{
     margin-right: 10px;
+    font-size: 20px;
+    transition: .3s;
+    color: #333333;
 }
+.list-button button:hover{
+    color: rgba(51,51,51, .5);
+    opacity: 50%;
+}
+.next-prev{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.next-btn, .prev-btn{
+    font-size: 35px;
+    color: #474747;
+    transition: .3s;
+}
+.next-btn:hover, .prev-btn:hover{
+    opacity: 60%;
+}
+
 #list-experience li:nth-child(even), #list-formation li:nth-child(even){
     margin: 25px 0;
 }
@@ -201,7 +250,15 @@ Container LIST
 .list-preview p{
     font-size: 12px;
 }
-
+.comp-langue{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+#form_4-comp{
+    width: 100%;
+}
 #form_2, #form_3, #comp-langue, #list-experience, #list-formation{
     display: none;
+    position: relative;
 }
