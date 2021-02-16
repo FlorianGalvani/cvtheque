@@ -57,6 +57,14 @@ h4 {
     align-items: center;
 }
 
+.name {
+    width: 30%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
 .content {
     width: 423.5px;
     height: 150px;
