@@ -32,7 +32,7 @@
 				<nav>
 					<ul>
 						<li><a href="<?php echo esc_url(home_url('/')); ?>">Accueil</a></li>
-						<li><a href="#">Créer Cv</a></li>
+						<li><a href="<?php echo esc_url(home_url('candidat')); ?>">Créer Cv</a></li>
 						<li><a href="<?php echo esc_url(home_url('a-propos')); ?>">À propos</a></li>
 						<li><a href="#footer">Contact</a></li>
 						|

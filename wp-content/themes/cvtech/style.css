@@ -1002,7 +1002,7 @@ SECTION 4
 	width: 100%;
 	left: 0;
 	top: 0;
-	z-index: 2;
+	z-index: -1;
 	overflow: hidden;
 }
 
