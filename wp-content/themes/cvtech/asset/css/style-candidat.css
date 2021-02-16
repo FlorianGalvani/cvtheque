@@ -121,7 +121,11 @@ table {
 }
 
 
-form{width: 50%;}
+form{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
 #f-coordonnee{padding-bottom: 25px;}
 .formulaire{
     width: 100%;
@@ -160,6 +164,9 @@ form{width: 50%;}
 /* ===============
 Container LIST
 =============== */
+#list-experience, #list-formation{
+    width: 50%;
+}
 .container-list, .add-list{
     display: flex;
     align-items: center;
@@ -168,6 +175,7 @@ Container LIST
     padding: 10px 35px;
     border-radius: 5px;
     height: 40px;
+    margin-top: 30px;
 }
 .list-preview{
     display: flex;

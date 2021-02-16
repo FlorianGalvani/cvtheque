@@ -107,15 +107,11 @@ get_header(); ?>
                     <li>
                         <div class="container-list">
                             <div class="list-preview">
-                                <span>Ce que la personne faisait</span>
+                                <span>Votre poste</span>
                                 <p>L'entreprise</p>
                             </div>
-
-
-                            <button>delete</button>
-                            <button>modif</button>
-                            <button>Deplacer</button>
-
+                            <button>Modifier</button>
+                            <button>Supprimer</button>
                         </div>
                     </li>
                 </ul>
