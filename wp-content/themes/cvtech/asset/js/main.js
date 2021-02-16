@@ -92,20 +92,19 @@ function addDip() {
 
     var myIframe = $('#myIframeCv').contents().find('#iframe-list-dip');
 
-    // CREATION SUR LE CV :
-    myIframe.append('<li id="li-exp-' + idDip + '"><div class="container-list-dip"><p id="cv-diplome-' + idDip + '">' + dipInputRole + '</p><p id="cv-etablissement-' + idDip + '">' + dipInputEnt + '</p><p id="cv-ville-dip-' + idDip + '">' + dipInputVille + '</p><p id="cv-date-begin-dip-' + idDip + '">' + dipInputDate1 + '</p><p id="cv-date-end-dip-' + idDip + '">' + dipInputDate2 + '</p><p id="cv-desc-dip-' + idDip + '">' + dipInputDesc + '</p></div></li>');
 
-    $('#list-dip').append('<li id="li-dip-' + idDip + '"><div class="container-list-dip"><span>' + dipInputRole + '</span><p>' + dipInputEnt + '</p></div></li>');
-// mettre un idDip dans p-id-iframe
+    if(dipInputRole !== '' && dipInputEnt !== '') {
+        $('#list-dip').append('<li id="li-dip-' + idDip + '"><div class="container-list"><div class="list-preview"><span>' + dipInputRole + '</span><p>' + dipInputEnt + '</p></div><div><button>Modifier</button><button onclick="deleteDip('+idDip+')">Supprimer</button></div></div></li>');
+        myIframe.append('<li id="li-dip-' + idDip + '"><div class="container-list-dip"><p id="cv-diplome-' + idDip + '">' + dipInputRole + '</p><p id="cv-etablissement-' + idDip + '">' + dipInputEnt + '</p><p id="cv-ville-dip-' + idDip + '">' + dipInputVille + '</p><p id="cv-date-begin-dip-' + idDip + '">' + dipInputDate1 + '</p><p id="cv-date-end-dip-' + idDip + '">' + dipInputDate2 + '</p><p id="cv-desc-dip-' + idDip + '">' + dipInputDesc + '</p></div></li>');
 
-
-    $('#diplome').val('');
-    $('#etablissement').val('');
-    $('#ville-dip').val('');
-    $('#desc-dip').val('');
-    $('#date-begin-dip').val('');
-    $('#date-end-dip').val('');
-    idDip++;
+        $('#diplome').val('');
+        $('#etablissement').val('');
+        $('#ville-dip').val('');
+        $('#desc-dip').val('');
+        $('#date-begin-dip').val('');
+        $('#date-end-dip').val('');
+        idDip++;
+    }
 }
 
 function addExp() {
@@ -119,24 +118,18 @@ function addExp() {
     var myIframe = $('#myIframeCv').contents().find('#iframe-list-exp');
 
 
-    // AJOUT INDEX
-    $('#list-exp').append('<li id="li-exp-' + idExp + '"><div class="container-list-exp"><span>' + expInputRole + '</span><p>' + expInputEnt + '</p></div></li>');
-    // AJOUT DANS L'IFRAME
-    myIframe.append('<li id="li-exp-' + idExp + '"><div class="container-list-exp"><p id="cv-title-exp-' + idExp + '">' + expInputRole + '</p><p id="cv-subtitle-exp-' + idExp + '">' + expInputEnt + '</p><p id="cv-ville-exp-' + idExp + '">' + expInputVille + '</p><p id="cv-date-begin-exp-' + idExp + '">' + expInputDate1 + '</p><p id="cv-date-end-exp-' + idExp + '">' + expInputDate2 + '</p><p id="cv-desc-exp-' + idExp + '">' + expInputDesc + '</p></div></li>');
+    if (expInputRole !== '' && expInputEnt !== '') {
+        $('#list-exp').append('<li id="li-exp-' + idExp + '"><div class="container-list"><div class="list-preview"><span>' + expInputRole + '</span><p>' + expInputEnt + '</p></div><div><button>Modifier</button><button onclick="deleteExp('+idExp+')">Supprimer</button></div></div></li>');
+        myIframe.append('<li id="li-exp-' + idExp + '"><div class="container-list-exp"><p id="cv-title-exp-' + idExp + '">' + expInputRole + '</p><p id="cv-subtitle-exp-' + idExp + '">' + expInputEnt + '</p><p id="cv-ville-exp-' + idExp + '">' + expInputVille + '</p><p id="cv-date-begin-exp-' + idExp + '">' + expInputDate1 + '</p><p id="cv-date-end-exp-' + idExp + '">' + expInputDate2 + '</p><p id="cv-desc-exp-' + idExp + '">' + expInputDesc + '</p></div></li>');
 
-
-    // RESET DU FORMULAIRE
-
-
-    $('#title-exp').val('');
-    $('#subtitle-exp').val('');
-    $('#ville-exp').val('');
-    $('#desc-exp').val('');
-    $('#date-begin-exp').val('');
-    $('#date-end-exp').val('');
-    idExp++;
-
-
+        $('#title-exp').val('');
+        $('#subtitle-exp').val('');
+        $('#ville-exp').val('');
+        $('#desc-exp').val('');
+        $('#date-begin-exp').val('');
+        $('#date-end-exp').val('');
+        idExp++;
+    }
 }
 
 function addComp() {
@@ -215,6 +208,17 @@ function deleteLangue(num) {
 
 }
 
+function deleteExp(num) {
+    console.log('exp')
+    $('#li-exp-' + num).remove();
+    $('#myIframeCv').contents().find('#li-exp-' + num).remove();
+}
+
+function deleteDip(num) {
+    console.log('dip')
+    $('#li-dip-' + num).remove();
+    $('#myIframeCv').contents().find('#li-dip-' + num).remove();
+}
 
 /*****************************
  *  FONCTIONS CHANGEMENT DIRECT AVEC IFRAME
