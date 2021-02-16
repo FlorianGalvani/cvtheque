@@ -104,7 +104,7 @@ get_header(); ?>
 
                     <div class="form-group">
                         <label for="link">Lien</label>
-                        <input id="link" name="link" type="text" onkeyup="swicthTxt('link', 'Lien')"
+                        <input id="link" name="link" type="text" onkeyup="swicthTxt('link', '')"
                                placeholder="ex: linkedin.com/watibogoss" value="">
                     </div>
 
