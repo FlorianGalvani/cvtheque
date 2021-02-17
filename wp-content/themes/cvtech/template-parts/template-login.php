@@ -54,6 +54,7 @@ get_header(); ?>
     <input type="submit" name="submitconnexion" value="Se connecter" />
   </form>
 
+
   <section id="section2-login">
     <a href="<?php echo home_url('reset-password'); ?>">
       <div class="box box1">
@@ -87,6 +88,7 @@ get_header(); ?>
       </div>
     </a>
   </section>
+
 </div>
 
 <?php
