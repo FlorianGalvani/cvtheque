@@ -44,7 +44,6 @@ if (!empty($_POST['submitinscription'])) {
         $errors['user_email'] = 'Cet email est deja utilisé';
     }
     $errors = validPass($errors, $user_pass, 'user_pass', $user_pass2, 2, 100);
-    // $errors = validPassword($errors, $user_pass, $user_pass2, 'user_pass', 'user_pass2', 2, 100);
 
     // VERIFICATION EMAIL
 
