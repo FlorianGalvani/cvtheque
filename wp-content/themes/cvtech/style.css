@@ -1019,6 +1019,13 @@ SECTION 4
 	text-align: center;
 	margin-bottom: 15px;
 }
+#recruteur h2 {
+	font-size: 30px;
+	color: #fff;
+	text-transform: uppercase;
+	font-weight: 600;
+	margin: 20px 0 0 20px;
+}
 
 table {
 	width: 100%;
