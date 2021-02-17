@@ -18,7 +18,7 @@ if (!empty($_POST)) {
                 'user_registered' => current_time('mysql'),
             ));
             if (is_wp_error($user)) {
-                $error = $user->get_error_message();
+                $error = $user-> get_error_message();
             } else {
                 $msg = 'Vous êtes maintenant inscrit';
                 $headers = 'From: ' . get_option('admin_email') . "\r\n";
@@ -40,7 +40,11 @@ if (!empty($_POST['submitinscription'])) {
 
     $errors = ValidationText($errors, $user_login, 'user_login', 4, 50);
     $errors = emailValidation($errors, $user_email, 'user_email');
+    if (email_exists($user_email)) {
+        $errors['user_email'] = 'Cet email est deja utilisé';
+    }
     $errors = validPass($errors, $user_pass, 'user_pass', $user_pass2, 2, 100);
+    // $errors = validPassword($errors, $user_pass, $user_pass2, 'user_pass', 'user_pass2', 2, 100);
 
     // VERIFICATION EMAIL
 
@@ -96,6 +100,7 @@ if (!empty($_POST['submitinscription'])) {
             <!-- PASSWORD1 -->
             <div class="form-group2">
                 <label for="user_pass">Mot de passe</label>
+                <span class="error"><?php if (!empty($errors['user_pass'])) {echo $errors['user_pass'];}?></span>
                 <input type="password" name="user_pass" id="user_pass" class="form-control" value="" autocomplete="off" />
             </div>
             <!-- PASSWORD2 -->

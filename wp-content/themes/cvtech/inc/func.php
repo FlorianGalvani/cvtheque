@@ -329,10 +329,10 @@ add_action('send_headers', 'site_rooter');
 		$url = str_replace($root, '', $_SERVER['REQUEST_URI']);
 		$url = explode('/',$url);
 		if(count($url) == 1 && $url[0] == 'login'){
-			require 'wp-content\themes\cvtech\template-parts\template-login.php';
+			require get_template_directory(). '/template-parts/template-login.php';
 			die();
 		} else if(count($url) == 1 && $url[0] == 'profil'){
-			require 'wp-content\themes\cvtech\template-parts\template-profil.php';
+			require get_template_directory().'/template-parts/template-profil.php';
 			die();
 		} else if(count($url) == 1 && $url[0] == 'logout'){
 			wp_logout();
@@ -340,7 +340,7 @@ add_action('send_headers', 'site_rooter');
 			die();
 		} else if(count($url) == 1 && $url[0] == 'register'){
 			wp_logout();
-			require 'wp-content\themes\cvtech\template-parts\template-register.php';
+			require get_template_directory().'/template-parts/template-register.php';
 			die();
 		}
 }
