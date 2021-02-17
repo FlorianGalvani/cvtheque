@@ -33,13 +33,6 @@ if (!empty($_POST)) {
 /* } */
 
 $errors = array();
-
-            }
-        }
-    }
-}
-
-$errors = array();
 if (!empty($_POST['submitinscription'])) {
     // FAILLE XSS
     $user_login   = cleanXss($_POST['user_login']);
