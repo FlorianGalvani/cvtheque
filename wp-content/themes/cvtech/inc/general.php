@@ -149,3 +149,14 @@ function candidate_info()
 
 
 /////// FIN AJAX ///////
+/* function user_role() { 
+    $options = get_option('recruit'); ?>
+    <input type="checkbox" name="recruit" id="recruit" class="form-control" value="" />
+    <?php
+    if( $options['recruit'] == '1' ) { 
+        add_role('recruteur','Recruter',get_role('contributor')->capabilities);
+    } 
+    else { 
+        //do nothing
+    }
+}    */

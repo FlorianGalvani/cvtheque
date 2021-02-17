@@ -208,6 +208,11 @@ h2 {
 	font-family: 'Roboto', sans-serif;
 	font-weight: 400;
 }
+.form-group3 {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
 
 /* FORMULAIRE DE CONNEXION MODAL */
 
