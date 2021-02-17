@@ -5,9 +5,6 @@ Template Name: Home
 
 get_header(); ?>
 
-
-
-
 <!-- BLOBS START -->
 <img src="<?php echo get_template_directory_uri() . '/asset/img/blobs1.svg'; ?>" alt="" class="blobs1">
 <img src="<?php echo get_template_directory_uri() . '/asset/img/blobs2.svg'; ?>" alt="" class="blobs2">
