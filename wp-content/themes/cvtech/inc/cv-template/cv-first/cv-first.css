@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+ul, li {
+    list-style: none;
+    line-height: .5;
+}
+
+#wrapper {
+    width: 969px;
+    margin: 0 auto;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+h1 {
+    font-size: 36.3px;
+    color: #fff;
+    letter-spacing: 10px;
+}
+
+h2 {
+    font-size: 12.1px;
+    color: #263547;
+}
+
+.info {
+    background-color: #fd4345;
+    padding: 50px 0 50px 50px;
+    text-transform: uppercase;
+    line-height: 1;
+}
+
+.info h1 {
+    margin: 50px 0 0 0;
+}
+
+.container {
+    display: flex;
+}
+
+.comp {
+    width: 25%;
+    background-color: #263547;
+    padding: 20px 20px 60px 20px;
+    
+}
+
+.comp h2 {
+    font-size: 16px;
+    color: #fd4345;
+    text-transform: uppercase;
+}
+
+.comp ul, .data p {
+    font-size: 13px;
+    color: #fff;
+    line-height: 1.5;
+}
+
+.block {
+    margin-bottom: 100px;
+}
+
+.data p {
+    line-height: .5;
+}
+
+.langue-perso {
+    line-height: .1;
+}
+
+.langue-perso ul {
+    font-weight: 200;
+}
+
+.profil {
+    width: 75%;
+    background-color: #fff;
+    padding: 20px 20px 60px 20px;
+}
+
+.profil h2 {
+    font-size: 16px;
+    color: #263547;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.profil p {
+    font-size: 13px;
+    color: #263547;
+    line-height: 1.5;
+}
+
+.profilContent {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.profilBlock {
+    padding: 10px 0;
+}
+
+.ligne {
+    width: 100%;
+    height: 3px;
+    border-radius: 10px;
+    background-color: #fd4345;
+}
+.container-list-exp {
+    display: flex;
+    flex-direction: column-reverse;
+}
+.container-list-dip {
+    display: flex;
+    flex-direction: column-reverse;
+}
+.left-list {
+    display: flex;
+    width: 60%;
+    justify-content: space-between;
+    opacity: .7;
+    margin-top: -10px;
+}
+.date-list {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+}
+.title-list p {
+    line-height: .5;
+    font-weight: 600;
+}

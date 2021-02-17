@@ -1,0 +1,264 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+*:focus {
+    outline: none;
+}
+
+button{
+    background: rgba(0,0,0,0);
+    border: none;
+    cursor: pointer;
+}
+
+#cvmaker1{
+    display: flex;
+    flex-direction: column;
+    z-index: 5;
+    position: relative;
+    color: #333333;
+}
+.progress-bar{
+    display: flex;
+    background-color: pink;
+}
+.progress{
+    width: 20%;
+    text-align: center;
+}
+
+.prog1{background-color: lightblue;}
+
+.page-cv{
+    display: flex;
+    height: 83vh;
+    
+}
+.form-cv{
+    width: 50%;
+    overflow: scroll;
+    text-align: center;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+}
+
+
+.template-cv{
+   /* width: 35%; */
+    background-color: #ececec;
+    /*display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; */
+    width: 50%;
+    height: 100%;
+    padding: 0;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+
+
+#myIframeCv {
+    /* position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;   */
+    width: 150%;
+    height: 200%;
+    border: 0;
+
+    -ms-transform: scale(0.25);
+    -moz-transform: scale(0.25);
+    -o-transform: scale(0.25);
+    -webkit-transform: scale(0.25);
+    transform: scale(0.65);
+
+    -ms-transform-origin: 0 0;
+    -moz-transform-origin: 0 0;
+    -o-transform-origin: 0 0;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+}
+
+
+form{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+#f-coordonnee{padding-bottom: 25px;}
+.formulaire{
+    width: 100%;
+}
+.form-group-little{
+    display: flex;
+    justify-content: space-between;
+    margin: 25px 0;
+    width: 100%;
+}
+.form-group{
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    width: 100%;
+}
+.little-part{
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    width: 48%;
+}
+
+.form-cv input{
+    padding: 9px 34px 9px 19px;
+    border-radius: 3px;
+    background-color: #F3F3F3;
+    border: 1px solid #f3F3F3;
+    transition: .3s;
+}
+.form-cv input:hover{
+    background-color: #fdfdfd;
+}
+.form-cv label{
+    text-align: start;
+    margin:0 0 5px 20px;
+}
+.form-cv input[type=submit]:hover{
+    cursor: pointer;
+    background-color: #333333;
+}
+
+/* ===============
+Container LIST
+=============== */
+#list-experience, #list-formation{
+    width: 50%;
+}
+.container-list{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #F3F3F3;
+    padding: 10px 35px;
+    border-radius: 5px;
+    height: 40px;
+    margin-top: 30px;
+}
+.add-list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: 2px dashed #F3F3F3;
+    padding: 9px 34px;
+    border-radius: 3px;
+    height: 40px;
+    margin-top: 30px;
+    cursor: pointer;
+    transition: .3s;
+}
+.add-list:hover{
+    background: rgb(243, 243, 243);
+}
+.list-preview{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 55%;
+}
+.list-button button{
+    margin-right: 10px;
+    font-size: 20px;
+    transition: .3s;
+    color: #333333;
+}
+.list-button button:hover{
+    color: rgba(51,51,51, .5);
+    opacity: 50%;
+}
+.next-prev{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.next-btn, .prev-btn{
+    font-size: 35px;
+    color: #474747;
+    transition: .3s;
+}
+.next-btn:hover, .prev-btn:hover{
+    opacity: 60%;
+}
+
+#list-experience li:nth-child(even), #list-formation li:nth-child(even){
+    margin: 25px 0;
+}
+.list-preview span{
+    font-weight: bold;
+}
+.list-preview p{
+    font-size: 12px;
+}
+.comp-langue{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+#form_4-comp{
+    width: 100%;
+}
+#form_2, #form_3, #comp-langue, #list-experience, #list-formation{
+    display: none;
+    position: relative;
+}

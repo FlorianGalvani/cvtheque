@@ -9,7 +9,6 @@ function check_form(success, errors) {
 }
 function next_form(params) {   
   $('#form_candidat_loading').css('display', 'none');
-
 }
 
 $(document).ready(function () {
@@ -18,11 +17,13 @@ $(document).ready(function () {
     var candidate_info = {
       nom: $('#nom').val(),
       prenom: $('#prenom').val(),
+      metier: $('#metier').val(),
+      ville: $('#ville').val(),
       naissance: $('#naissance').val(),
-      adresse: $('#adresse').val(),
+      address: $('#adresse').val(),
       email: $('#email').val(),
-      telephone: $('#telephone').val(),
-      permis: $('#permis').val()
+      telephone: $('#phone').val(),
+      //permis: $('#permis').val()
     }
     $.ajax({
       url: ajaxurl['ajax_url'],
@@ -41,12 +42,27 @@ $(document).ready(function () {
         ajax_errors_check(response['success'],response['errors']);
       },
       error: function (response) {
-        
       }
     })
   });
 });
 
 
+// Tableau Cv recruteur
+$(window).on("load resize ", function() {
+  var scrollWidth = $('.tbl-content').width() - $('.tbl-content table').width();
+  $('.tbl-header').css({'padding-right':scrollWidth});
+}).resize();
 
+// hover btn voir espace recruteur
+
+
+$('#see').hover(function() {
+  $( '#eye' ).css('display','inline');
+  $("#see").css('display','none');
+  $("#eye").on('mouseout', function(){
+    $("#eye").css('display','none');
+    $("#see").css('display','inline');
+  });
+})
 
