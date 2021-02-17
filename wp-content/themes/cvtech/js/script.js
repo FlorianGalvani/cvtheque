@@ -55,8 +55,6 @@ $(window).on("load resize ", function() {
 }).resize();
 
 // hover btn voir espace recruteur
-
-
 $('#see').hover(function() {
   $( '#eye' ).css('display','inline');
   $("#see").css('display','none');
@@ -66,3 +64,12 @@ $('#see').hover(function() {
   });
 })
 
+// MENU BURGER
+function myFunction() {
+  var x = document.getElementById("myLinks");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
