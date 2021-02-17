@@ -280,7 +280,7 @@ get_header(); ?>
 
 
             <div id="comp-langue">
-                <form method="post" id="form_4-comp" action="">
+                <form method="post" id="form_4-comp">
 
                     <div class="form-group">
                         <label for="competence">Compétences</label>
@@ -317,7 +317,7 @@ get_header(); ?>
 
                 <div class="next-prev">
                     <button class="prev-cl" id="prev-dip"><i class="fas fa-arrow-circle-left"></i></button>
-                    <button class="next-cl" id="next-dip"><i class="fas fa-arrow-circle-right"></i></button>
+                    <button class="next-cl" id="form_finish" type="submit" formaction="<?php echo get_template_directory_uri() . '/js/ajax_candidate.php'; ?>"> VALIDER <!--<i class="fas fa-arrow-circle-right">--></i></button>
                 </div>
             </div>
 
