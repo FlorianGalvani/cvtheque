@@ -129,10 +129,6 @@ h2 {
 
 /* COMMUN CSS END  */
 
-/* BURGER START */
-
-/* BURGER END */
-
 /* Style form Candidat */
 
 .form_candidate_box {
@@ -321,6 +317,8 @@ h2 {
 
 .logo {
 	width: auto;
+	position: relative;
+	z-index: 8;
 }
 
 .logo img {
@@ -450,6 +448,8 @@ h2 {
 	max-width: 1353px;
 	width: 100%;
 	margin: 0 auto;
+	position: relative;
+	z-index: 8;
 }
 
 .info-banner {
@@ -534,6 +534,75 @@ h2 {
 }
 
 /* BANNER END */
+
+/* BURGER START */
+
+#sideNav {
+	width: 100%;
+	height: auto;
+	position: fixed;
+	right: 0;
+	top: -100%;
+	background-image: linear-gradient(to right, #6D678E 0%, #F6B5CC 100%);
+	z-index: 9;
+	transition: 0.5s;
+	display: none;
+}
+
+#sideNav nav ul {
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	z-index: 10;
+}
+
+#sideNav nav ul li {
+	list-style: none;
+	margin: 20px 20px;
+}
+
+#sideNav nav ul li a {
+	text-decoration: none;
+	color: #f1f1f1;
+	font-weight: bold;
+}
+
+#menuBtn {
+	width: 50px;
+	height: 50px;
+	background: #6D678E;
+	text-align: center;
+	position: fixed;
+	right: 30px;
+	top: 20px;
+	border-radius: 50px;
+	z-index: 10;
+	cursor: pointer;
+	display: none;
+}
+
+#menuBtn img {
+	width: 20px;
+	margin-top: 15px;
+}
+#close {
+	display: none;
+}
+
+@media screen and (max-width: 640px) {
+	#sideNav {
+		display: block;
+	}
+	#menuBtn {
+		display: block;
+	}
+	.nav {
+		display: none;
+	}
+}
+
+/* BURGER END */
 
 /* ==================
 HOME START
@@ -651,7 +720,7 @@ SECTION 2 & 3
 }
 
 .link-seemore2 {
-	width: 65%;
+	width: 20%;
 	margin-top: 30px;
 }
 
@@ -660,7 +729,7 @@ SECTION 2 & 3
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	width: 60%;
+	width: 100%;
 	margin-top: 30px;
 }
 
@@ -688,48 +757,48 @@ SECTION 4
 }
 
 .blob1 {
+	top: 10%;
+	left: 40%;
+}
+
+.blob2 {
+	top: 0;
+	right: 0;
+}
+
+.blob3 {
+	top: 30%;
+	right: 0%;
+}
+
+.blob4 {
+	top: 70%;
+	right: 0;
+}
+
+.blob5 {
+	bottom: -20%;
+	left: 50%;
+}
+
+.blob6 {
+	top: 50%;
+	left: 10%;
+}
+
+.blob7 {
 	top: 15%;
 	left: 0;
 }
 
-.blob2 {
-	top: 8%;
-	left: 40%;
-}
-
-.blob3 {
-	top: 0;
-	right: 10%;
-}
-
-.blob4 {
-	top: 60%;
-	left: 10%;
-}
-
-.blob5 {
-	top: 40%;
+.blob8 {
+	bottom: 10%;
 	left: 30%;
 }
 
-.blob6 {
-	top: 35%;
-	right: 25%;
-}
-
-.blob7 {
-	top: 30%;
-	right: 0;
-}
-
-.blob8 {
-	bottom: 0;
-	left: 45%;
-}
-
 .blob9 {
-	bottom: 5%;
-	right: 8%;
+	bottom: 15%;
+	right: 20%;
 }
 
 .blob img {
@@ -762,7 +831,11 @@ SECTION 4
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	/* position: relative; */
 }
+/* .box-ent img {
+	position: absolute;
+} */
 
 /* HOME END */
 
@@ -1271,7 +1344,7 @@ RESPONSIVE
 		position: relative;
 	}
 	.left-container, .right-avantage {
-		width: 50%;
+		width: 100%;
 		z-index: 1;
 		margin: 0 auto;
 	}
@@ -1284,7 +1357,19 @@ RESPONSIVE
 		width: 100%;
 	}
 	.right-avantage a {
-		width: 30%;
+		width: auto;
+	}
+	.left-avantage img {
+		width: 70%;
+	}
+	.container-ent {
+		max-width: 95vw;
+	}
+	.box-ent img{
+		width: 90%;
+	}
+	.link-seemore2 {
+		width: 40%;
 	}
 }
 
@@ -1308,14 +1393,66 @@ RESPONSIVE
 		width: 100%;
 		text-align: center;
 	}
-	.link-seemore a {
+	.link-seemore  {
 		width: 40%;
 		margin: auto;
+	}
+	.info-banner {
+		display: flex;
+		flex-direction: column-reverse;
+	}
+	
+}
+
+@media screen and (max-width: 700px) {
+	.blob5 {
+		left: 0;
+	}
+	.blob9 {
+		display: none;
+	}
+	.blob8 {
+		display: none;
+	}
+	.blob1 {
+		display: none;
+	}
+	.img-info {
+		width: 95%;
+		margin-right: 0;
+	}
+	.text-info {
+		width: 95%;
+	}
+	.text-info h1 {
+		width: auto;
+	}
+	.img-info img {
+		width: 95%;
+	}
+	.fourth {
+		display: none;
+	}
+	.second {
+		display: none;
+	}
+	.container-ent {
+		display: flex;
+		flex-flow: row wrap;
+	}
+	.box-ent {
+		height: 80px;
 	}
 }
 
 @media only screen and (max-width: 400px) {
 	h3 {
 		font-size: 14px
+	}
+	.link-seemore {
+		width: 60%;
+	}
+	.link-seemore2 {
+		width: 60%;
 	}
 }

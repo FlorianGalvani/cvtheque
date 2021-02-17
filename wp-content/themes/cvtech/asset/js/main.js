@@ -269,3 +269,44 @@ function swicthTxt(data, datacv) {
     }
 
 }
+
+// Tableau Cv recruteur
+$(window).on("load resize ", function() {
+    var scrollWidth = $('.tbl-content').width() - $('.tbl-content table').width();
+    $('.tbl-header').css({'padding-right':scrollWidth});
+  }).resize();
+  
+  // hover btn voir espace recruteur
+  $('#see').hover(function() {
+    $( '#eye' ).css('display','inline');
+    $("#see").css('display','none');
+    $("#eye").on('mouseout', function(){
+      $("#eye").css('display','none');
+      $("#see").css('display','inline');
+    });
+  })
+  
+  // MENU BURGER
+  var menuBtn = document.getElementById("menuBtn");
+  var sideNav = document.getElementById("sideNav");
+  var menu = document.getElementById("menu");
+  sideNav.style.top = "-100%";
+  menuBtn.onclick = function () {
+    if (sideNav.style.top == "-100%") {
+      sideNav.style.top = "0";
+    //   menu.src = "../../wp-content/themes/cvtech/asset/img/close.png";
+    $('#open').css('display', 'none');
+    $('#close').css('display', 'inline');
+    } else {
+      sideNav.style.top = "-100%";
+    //   menu.src = "../../wp-content/themes/cvtech/asset/img/menu.png";
+    $('#open').css('display', 'inline');
+    $('#close').css('display', 'none');
+    }
+  };
+  
+  // SMOOTH BURGER
+  var scroll = new SmoothScroll('a[href*="#"]', {
+    speed: 1500,
+    speedAsDuration: true,
+  });

@@ -136,7 +136,7 @@ get_header(); ?>
 
 <div class="section-grey">
   <div class="container-blob">
-    <h3>Nous aidons des milliers de personnes</h3>
+    <h3>Nous aidons des milliers de personnes à trouver un emploi<br> en les mettant en relations avec différentes entreprises</h3>
     <div class="box-blob">
       <div class="blob blob1"><img src="<?php echo get_template_directory_uri() . '/asset/img/vector/vector-1.png'; ?>" alt=""></div>
       <div class="blob blob2"><img src="<?php echo get_template_directory_uri() . '/asset/img/vector/vector-2.png'; ?>" alt=""></div>
