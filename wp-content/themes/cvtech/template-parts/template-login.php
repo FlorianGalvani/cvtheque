@@ -55,7 +55,7 @@ get_header(); ?>
   </form>
 
   <section id="section2-login">
-    <a href="<?php echo home_url('mot-de-passe-oublie'); ?>">
+    <a href="<?php echo home_url('reset-password'); ?>">
       <div class="box box1">
         <p class="titre">
           <svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">

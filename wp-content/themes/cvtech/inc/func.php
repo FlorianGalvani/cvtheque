@@ -322,6 +322,16 @@ function ipfromHex($hex)
     $ip = hexdec($hex[0].$hex[1]) .'.'. hexdec($hex[2].$hex[3]) .'.'. hexdec($hex[4].$hex[5]) .'.'. hexdec($hex[6].$hex[7]);
     return $ip;
 }
+function isActual($token_at) {
+  $token_at = strtotime($token_at);
+  $actualTime = strtotime(date('Y-m-d H:i:s'));
+  $interval = $actualTime - $token_at;
+  if ($interval > 600) {
+    return false;
+  } else {
+    return true;
+  }
+}
 
 add_action('send_headers', 'site_rooter');
 	function site_rooter(){
