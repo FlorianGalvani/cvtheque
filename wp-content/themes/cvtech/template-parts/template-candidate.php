@@ -12,11 +12,11 @@ get_header(); ?>
 <div id="cvmaker1" class="container-cvmaker">
 
     <div class="progress-bar">
-        <div class="progress prog1">1</div>
-        <div class="progress prog2">2</div>
-        <div class="progress prog3">3</div>
-        <div class="progress prog4">4</div>
-        <div class="progress prog5">5</div>
+        <div class="progress prog1"></div>
+        <div class="progress prog2"></div>
+        <div class="progress prog3"></div>
+        <div class="progress prog4"></div>
+        <div class="progress prog5"></div>
     </div>
 
     <div class="page-cv">
@@ -316,8 +316,8 @@ get_header(); ?>
                 </form>
 
                 <div class="next-prev">
-                    <button class="prev-cl" id="prev-dip"><i class="fas fa-arrow-circle-left"></i></button>
-                    <button class="next-cl" id="form_finish" type="submit" formaction="<?php echo get_template_directory_uri() . '/js/ajax_candidate.php'; ?>"> VALIDER <!--<i class="fas fa-arrow-circle-right">--></i></button>
+                    <button class="prev-btn" id="prev-cl"><i class="fas fa-arrow-circle-left"></i></button>
+                    <button class="next-btn" id="form_finish" type="submit" formaction="<?php echo get_template_directory_uri() . '/js/ajax_candidate.php'; ?>"><i class="fas fa-check-circle"></i></button>
                 </div>
             </div>
 
