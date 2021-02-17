@@ -316,8 +316,8 @@ get_header(); ?>
                 </form>
 
                 <div class="next-prev">
-                    <button class="prev-cl" id="prev-dip"><i class="fas fa-arrow-circle-left"></i></button>
-                    <button class="next-cl" id="form_finish" type="submit" formaction="<?php echo get_template_directory_uri() . '/js/ajax_candidate.php'; ?>"> VALIDER <!--<i class="fas fa-arrow-circle-right">--></i></button>
+                    <button class="prev-btn" id="prev-cl"><i class="fas fa-arrow-circle-left"></i></button>
+                    <button class="next-btn" id="form_finish" type="submit" formaction="<?php echo get_template_directory_uri() . '/js/ajax_candidate.php'; ?>"><i class="fas fa-check-circle"></i></button>
                 </div>
             </div>
 
