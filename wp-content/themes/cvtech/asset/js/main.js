@@ -7,21 +7,21 @@ $(document).ready(function () {
 
         $('#form_1').css('display', 'none');
         $('#list-experience').css('display', 'block');
-        $('.prog2').css('backgroundColor', 'lightblue');
+        $('.prog2').css('backgroundColor', '#6D678E');
     })
     $('#next-exp').on('click', function (e) {
         e.preventDefault();
 
         $('#list-experience').css('display', 'none');
         $('#list-formation').css('display', 'block');
-        $('.prog3').css('backgroundColor', 'lightblue');
+        $('.prog3').css('backgroundColor', '#6D678E');
     })
     $('#next-dip').on('click', function (e) {
         e.preventDefault();
 
         $('#list-formation').css('display', 'none');
         $('#comp-langue').css('display', 'flex');
-        $('.prog4').css('backgroundColor', 'lightblue');
+        $('.prog4').css('backgroundColor', '#6D678E');
     })
 
     // BTN FORMULAIRE PREV
@@ -30,21 +30,21 @@ $(document).ready(function () {
 
         $('#list-experience').css('display', 'none');
         $('#form_1').css('display', 'flex');
-        $('.prog2').css('backgroundColor', 'pink');
+        $('.prog2').css('backgroundColor', '#F6B5CC');
     })
     $('#prev-dip').on('click', function (e) {
         e.preventDefault();
 
         $('#list-formation').css('display', 'none');
         $('#list-experience').css('display', 'block');
-        $('.prog3').css('backgroundColor', 'pink');
+        $('.prog3').css('backgroundColor', '#F6B5CC');
     })
     $('#prev-cl').on('click', function (e) {
         e.preventDefault();
 
-        $('#list-formation').css('display', 'none');
-        $('#list-experience').css('display', 'block');
-        $('.prog3').css('backgroundColor', 'pink');
+        $('#comp-langue').css('display', 'none');
+        $('#list-formation').css('display', 'block');
+        $('.prog4').css('backgroundColor', '#F6B5CC');
     })
 
 // COMPETENCES ******************************************************************************
@@ -269,39 +269,3 @@ function swicthTxt(data, datacv) {
     }
 
 }
-
-// Js pour drag drop photo
-
-var j = 0;
-var z = 0; // indexes du FormData
-var formDat = new FormData(); // création de notre objet FormData
-$("#inputImg").on("change", function (e) {
-  var files = e.target.files;
-  //on boucle sur le nombre de fichiers du FL
-  for (var i = 0; i < files.length; i++) {
-    // A chaque fichier...
-    formDat.append(z++, files[i]); // on rentre dans le FomData son index (la même valeur que l'ID donnée à la preview correspondante et le nom du fichier
-    var reader = new FileReader();
-    //on ajoute à la suite chaque nouvelle image renvoyée par readAsDataUrl
-    reader.onload = function (event) {
-      $("#tt").append(
-        '<img id="_' +
-          j +
-          '" class="prev_img" src="' +
-          event.target.result +
-          '" style="width:150px;height:100px;margin-left:3px;position:relative;z-index:2;"/>'
-      );
-      j++;
-    };
-    //on lit chaque nouvelle image de la boucle
-    reader.readAsDataURL(e.target.files[i]);
-
-    $(document).on("click", ".prev_img", function () {
-      // en cas de click sur une image preview :
-      var delId = $(this).prop("id").substr(1); //on récupère l'id sans le _
-      formDat.delete(delId); // on la détruit dans le formdata
-      $(this).remove(); //on la détruit dans l'affichage des images preview
-    });
-    console.log(formDat);
-  }
-});
