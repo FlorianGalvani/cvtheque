@@ -2,14 +2,16 @@
 /*
 Template Name: Register
 */
-$error = false;
+
+/* $error = false;
+
 if (!empty($_POST)) {
     $p = $_POST;
     if ($p['user_pass'] != $p['user_pass2']) {
         $error = 'Les deux mots de passe ne correspondent pas';
     } else {
         if (!is_email($p['user_email'])) {
-            $error = 'Veuillez entre un email valide';
+            $error = 'Veuillez entrer un email valide';
         } else {
             $user = wp_insert_user(array(
                 'user_login' => $p['user_login'],
@@ -19,18 +21,18 @@ if (!empty($_POST)) {
             ));
             if (is_wp_error($user)) {
                 $error = $user-> get_error_message();
-            } else {
+            } /* else {
                 $msg = 'Vous êtes maintenant inscrit';
                 $headers = 'From: ' . get_option('admin_email') . "\r\n";
                 wp_mail($p['user_email'], 'Inscription réussie', $msg, $headers);
                 $p = array();
-            }
-        }
-    }
-}
+
+            } */
+/*         }
+    } */
+/* } */
 
 $errors = array();
-$success = false;
 if (!empty($_POST['submitinscription'])) {
     // FAILLE XSS
     $user_login   = cleanXss($_POST['user_login']);
@@ -44,8 +46,6 @@ if (!empty($_POST['submitinscription'])) {
         $errors['user_email'] = 'Cet email est deja utilisé';
     }
     $errors = validPass($errors, $user_pass, 'user_pass', $user_pass2, 2, 100);
-    // $errors = validPassword($errors, $user_pass, $user_pass2, 'user_pass', 'user_pass2', 2, 100);
-
     // VERIFICATION EMAIL
 
     //
@@ -55,15 +55,12 @@ if (!empty($_POST['submitinscription'])) {
         $hash_password = wp_hash_password($user_pass);
         // INSERT EN BDD
         global $wpdb;
-        $wpdb->insert('wp_cvtechusers', array(
-            'user_login' => $user_login,
-            'user_email' => $user_email,
+        $wpdb->insert('wp_cvthequeusers', array(
+            'user_login' => $_POST['user_login'],
             'user_pass' => $hash_password,
-            'user_nicename' => $user_login,
+            'user_email' => $_POST['user_email'],
             'user_registered' => current_time('mysql'),
-            'display_name' => $user_login,
         ));
-        $success = true;
     }
 }
 

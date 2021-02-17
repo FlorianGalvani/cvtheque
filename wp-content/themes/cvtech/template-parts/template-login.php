@@ -53,6 +53,42 @@ get_header(); ?>
     <label for="remember"> Se souvenir de moi</label>
     <input type="submit" name="submitconnexion" value="Se connecter" />
   </form>
+
+
+  <section id="section2-login">
+    <a href="<?php echo home_url('reset-password'); ?>">
+      <div class="box box1">
+        <p class="titre">
+          <svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+            <circle cx="8.5" cy="7" r="4"></circle>
+            <line x1="18" y1="8" x2="23" y2="13"></line>
+            <line x1="23" y1="8" x2="18" y2="13"></line>
+          </svg>
+          <span>Mot de passe oublié ?</span>
+        </p>
+        <p class="text">Si vous avez oublier votre mot de passe, pas de panique, vous avez juste à cliquer ici !
+        </p>
+
+      </div>
+    </a>
+    <a href="register.php">
+      <div class="box box2">
+        <p class="titre">
+          <svg xmlns="" width="29" height="29" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+            <circle cx="8.5" cy="7" r="4"></circle>
+            <line x1="20" y1="8" x2="20" y2="14"></line>
+            <line x1="23" y1="11" x2="17" y2="11"></line>
+          </svg>
+          <span>Pas encore Inscrit ?</span>
+        </p>
+        <p class="text">Si vous n'êtes pas encore inscrit, cliquez ici !
+        </p>
+      </div>
+    </a>
+  </section>
+
 </div>
 
 <?php
