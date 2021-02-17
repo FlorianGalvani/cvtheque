@@ -1,26 +1,50 @@
 $(document).ready(function () {
 
-    // BTN FORMULAIRE
+
+    // BTN FORMULAIRE NEXT
     $('#submitted-form_1').on('click', function (e) {
         e.preventDefault();
 
         $('#form_1').css('display', 'none');
         $('#list-experience').css('display', 'block');
-        $('.prog2').css('backgroundColor', 'lightblue');
+        $('.prog2').css('backgroundColor', '#6D678E');
     })
     $('#next-exp').on('click', function (e) {
         e.preventDefault();
 
         $('#list-experience').css('display', 'none');
         $('#list-formation').css('display', 'block');
-        $('.prog3').css('backgroundColor', 'lightblue');
+        $('.prog3').css('backgroundColor', '#6D678E');
     })
     $('#next-dip').on('click', function (e) {
         e.preventDefault();
 
         $('#list-formation').css('display', 'none');
         $('#comp-langue').css('display', 'flex');
-        $('.prog4').css('backgroundColor', 'lightblue');
+        $('.prog4').css('backgroundColor', '#6D678E');
+    })
+
+    // BTN FORMULAIRE PREV
+    $('#prev-exp').on('click', function (e) {
+        e.preventDefault();
+
+        $('#list-experience').css('display', 'none');
+        $('#form_1').css('display', 'flex');
+        $('.prog2').css('backgroundColor', '#F6B5CC');
+    })
+    $('#prev-dip').on('click', function (e) {
+        e.preventDefault();
+
+        $('#list-formation').css('display', 'none');
+        $('#list-experience').css('display', 'block');
+        $('.prog3').css('backgroundColor', '#F6B5CC');
+    })
+    $('#prev-cl').on('click', function (e) {
+        e.preventDefault();
+
+        $('#comp-langue').css('display', 'none');
+        $('#list-formation').css('display', 'block');
+        $('.prog4').css('backgroundColor', '#F6B5CC');
     })
 
 // COMPETENCES ******************************************************************************
@@ -35,6 +59,8 @@ $(document).ready(function () {
     })
 
 // EXPERIENCES ******************************************************************************
+
+
     $('#btn-exp').on('click', function (e) {
         e.preventDefault();
 
@@ -53,6 +79,8 @@ $(document).ready(function () {
     })
 
     // FORMATIONS ******************************************************************************
+
+
     $('#btn-dip').on('click', function (e) {
         e.preventDefault();
 
@@ -94,7 +122,7 @@ function addDip() {
 
 
     if(dipInputRole !== '' && dipInputEnt !== '') {
-        $('#list-dip').append('<li id="li-dip-' + idDip + '"><div class="container-list"><div class="list-preview"><span>' + dipInputRole + '</span><p>' + dipInputEnt + '</p></div><div><button>Modifier</button><button onclick="deleteDip('+idDip+')">Supprimer</button></div></div></li>');
+        $('#list-dip').append('<li id="li-dip-' + idDip + '"><div class="container-list"><div class="list-preview"><span>' + dipInputRole + '</span><p>' + dipInputEnt + '</p></div><div class="list-button"><button><i class="fas fa-pen"></i></button><button onclick="deleteDip('+idDip+')"><i class="fas fa-trash"></i></button></div></div></li>');
         myIframe.append('<li id="li-dip-' + idDip + '"><div class="container-list-dip"><div class="left-list"><div class="date-list"><p id="cv-date-begin-dip-' + idDip + '">' + dipInputDate1 + '</p><p id="cv-date-end-dip-' + idDip + '">' + dipInputDate2 + '</p></div><div class="ville-list"><p id="cv-ville-dip-' + idDip + '">' + dipInputVille + '</p></div></div><div class="content-list"><div class="title-list"><p id="cv-diplome-' + idDip + '">' + dipInputRole + '</p><p id="cv-etablissement-' + idDip + '">' + dipInputEnt + '</p></div><div class="desc-list"><p id="cv-desc-dip-' + idDip + '">' + dipInputDesc + '</p></div></div></div></li>');
 
         $('#diplome').val('');
@@ -119,7 +147,7 @@ function addExp() {
 
 
     if (expInputRole !== '' && expInputEnt !== '') {
-        $('#list-exp').append('<li id="li-exp-' + idExp + '"><div class="container-list"><div class="list-preview"><span>' + expInputRole + '</span><p>' + expInputEnt + '</p></div><div><button>Modifier</button><button onclick="deleteExp('+idExp+')">Supprimer</button></div></div></li>');
+        $('#list-exp').append('<li id="li-exp-' + idExp + '"><div class="container-list"><div class="list-preview"><span>' + expInputRole + '</span><p>' + expInputEnt + '</p></div><div class="list-button"><button><i class="fas fa-pen"></i></button><button onclick="deleteExp('+idExp+')"><i class="fas fa-trash"></i></button></div></div></li>');
         myIframe.append('<li id="li-exp-' + idExp + '"><div class="container-list-exp"><div class="left-list"><div class="date-list"><p id="cv-date-begin-dip-' + idExp + '">' + expInputDate1 + '</p><p id="cv-date-end-dip-' + idExp + '">' + expInputDate2 + '</p></div><div class="ville-list"><p id="cv-ville-dip-' + idExp + '">' + expInputVille + '</p></div></div><div class="content-list"><div class="title-list"><p id="cv-diplome-' + idExp + '">' + expInputRole + '</p><p id="cv-etablissement-' + idExp + '">' + expInputEnt + '</p></div><div class="desc-list"><p id="cv-desc-dip-' + idExp + '">' + expInputDesc + '</p></div></div></div></li>');
 
         $('#title-exp').val('');
@@ -241,39 +269,3 @@ function swicthTxt(data, datacv) {
     }
 
 }
-
-// Js pour drag drop photo
-
-var j = 0;
-var z = 0; // indexes du FormData
-var formDat = new FormData(); // création de notre objet FormData
-$("#inputImg").on("change", function (e) {
-  var files = e.target.files;
-  //on boucle sur le nombre de fichiers du FL
-  for (var i = 0; i < files.length; i++) {
-    // A chaque fichier...
-    formDat.append(z++, files[i]); // on rentre dans le FomData son index (la même valeur que l'ID donnée à la preview correspondante et le nom du fichier
-    var reader = new FileReader();
-    //on ajoute à la suite chaque nouvelle image renvoyée par readAsDataUrl
-    reader.onload = function (event) {
-      $("#tt").append(
-        '<img id="_' +
-          j +
-          '" class="prev_img" src="' +
-          event.target.result +
-          '" style="width:150px;height:100px;margin-left:3px;position:relative;z-index:2;"/>'
-      );
-      j++;
-    };
-    //on lit chaque nouvelle image de la boucle
-    reader.readAsDataURL(e.target.files[i]);
-
-    $(document).on("click", ".prev_img", function () {
-      // en cas de click sur une image preview :
-      var delId = $(this).prop("id").substr(1); //on récupère l'id sans le _
-      formDat.delete(delId); // on la détruit dans le formdata
-      $(this).remove(); //on la détruit dans l'affichage des images preview
-    });
-    console.log(formDat);
-  }
-});

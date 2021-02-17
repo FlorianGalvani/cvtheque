@@ -95,7 +95,7 @@ table {
 body {
 	position: relative;
 	font-family: 'Montserrat', sans-serif;
-	height: 100vh;
+	/* height: 100vh; */
 	line-height: 1.6;
 	/*overflow-x: hidden;*/
 }
@@ -128,6 +128,10 @@ h2 {
 }
 
 /* COMMUN CSS END  */
+
+/* BURGER START */
+
+/* BURGER END */
 
 /* Style form Candidat */
 
@@ -490,6 +494,7 @@ h2 {
 	padding: 10px 20px;
 	border-radius: 50px;
 	color: #fff;
+
 	background-color: #6D678E;
 	text-transform: uppercase;
 	font-size: 15px;
@@ -499,6 +504,7 @@ h2 {
 	background-color: #F6B5CC;
 	transition: .3s;
 }
+
 .link {
 	display: flex;
 	justify-content: space-between;
