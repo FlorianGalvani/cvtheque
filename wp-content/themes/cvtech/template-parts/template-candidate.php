@@ -229,8 +229,6 @@ get_header(); ?>
                                 <button type="button" class="continue-btn-style" id="submitted-form_2">Continuer</button>
                             </div>
 
-
-
                     </div>
 
 
@@ -252,49 +250,6 @@ get_header(); ?>
                                     <button type="button"><i class="fas fa-trash"></i></button>
                                 </div>
 
-                <div class="form-group-little">
-                    <div class="little-part">
-                        <label for="title-exp">Poste/Titre</label>
-                        <input type="text" id="title-exp" name="title-exp" placeholder="ex: Développeur Web" value="">
-                    </div>
-
-                    <div class="little-part">
-                        <label for="subtitle-exp">Entreprise</label>
-                        <input type="text" id="subtitle-exp" name="subtitle-exp" placeholder="ex: Nom de l'entreprise">
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label for="ville-exp">Lieu</label>
-                    <input type="text" id="ville-exp" name="ville-exp" placeholder="ex: Paris">
-                </div>
-
-                <div class="form-group-little">
-                    <div class="little-part">
-                        <label for="date-begin-exp">Début</label>
-
-                        <input type="text" id="date-begin-exp" name="date-begin-exp"
-                               placeholder="ex: Jan - 2010">
-                    </div>
-
-                    <div class="little-part">
-                        <label for="date-end-exp">Fin</label>
-
-                        <input type="text" id="date-end-exp" name="date-end-exp"
-                               placeholder="ex: Fév - 2011">
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label for="desc-exp">Description</label>
-                    <textarea name="desc-exp" id="desc-exp" cols="30" rows="10"></textarea>
-                </div>
-
-                <div class="form-group-submit">
-                    <input type="submit" id="submitted-form_2" name="submitted-form_2" value="Continuer">
-                </div>
-
-
                             </div>
                         </li>
                     </ul>
@@ -302,12 +257,10 @@ get_header(); ?>
                         <span>Ajouter une nouvelle formation</span>
                     </div>
 
-
                     <div class="next-prev">
                         <button type="button" class="prev-btn" id="prev-dip"><i class="fas fa-arrow-circle-left"></i></button>
                         <button type="button" class="next-btn" id="next-dip"><i class="fas fa-arrow-circle-right"></i></button>
                     </div>
-
                 </div>
 
                 <div class="form-div" id="form_3">
@@ -322,15 +275,7 @@ get_header(); ?>
                             <label for="etablissement">Etablissement</label>
                             <input type="text" id="etablissement" name="etablissement" placeholder="ex: Lycée Maitre GIMS">
                         </div>
-
                     </div>
-
-                    </li>
-                </ul>
-                <div id="btn-dip" class="add-list">
-                    <span>Ajouter une nouvelle formation</span>
-                </div>
-
 
                     <div class="form-group">
                         <label for="ville-dip">Lieu</label>
@@ -345,7 +290,6 @@ get_header(); ?>
                                    placeholder="ex: Jan - 2010">
 
                         </div>
-
 
                         <div class="little-part">
                             <label for="date-end-dip">Fin</label>
@@ -363,55 +307,12 @@ get_header(); ?>
 
                     <div class="form-group-submit">
                         <button type="button" class="continue-btn-style" id="submitted-form_3">Continuer</button>
-
-                <div class="form-group-little">
-                    <div class="little-part">
-                        <label for="diplome">Diplôme</label>
-                        <input type="text" id="diplome" name="diplome" placeholder="ex: Bac ES">
                     </div>
 
-                    <div class="little-part">
-                        <label for="etablissement">Etablissement</label>
-                        <input type="text" id="etablissement" name="etablissement" placeholder="ex: Lycée Maitre GIMS">
-                    </div>
                 </div>
 
-                <div class="form-group">
-                    <label for="ville-dip">Lieu</label>
-                    <input type="text" id="ville-dip" name="ville-dip" placeholder="ex: Paris">
-                </div>
-
-                <div class="form-group-little">
-                    <div class="little-part">
-                        <label for="date-begin-dip">Début</label>
-
-                        <input type="text" id="date-begin-dip" name="date-begin-dip"
-                               placeholder="ex: Jan - 2010">
-
-                    </div>
-
-                    <div class="little-part">
-                        <label for="date-end-dip">Fin</label>
-
-                        <input type="text" id="date-end-dip" name="date-end-dip"
-                               placeholder="ex: Fév - 2011">
 
 
-                    </div>
-
-
-                </div>
-
-                <!--                FORMULAIRE NUMERO 2 - EXPERIENCE-->
-
-                <div class="form-group">
-                    <label for="desc-dip">Description</label>
-                    <textarea name="" id="desc-dip" cols="30" rows="10"></textarea>
-                </div>
-
-                <div class="form-group-submit">
-                    <input type="submit" id="submitted-form_3" name="submitted-form_3" value="Continuer">
-                </div>
 
                   
 
