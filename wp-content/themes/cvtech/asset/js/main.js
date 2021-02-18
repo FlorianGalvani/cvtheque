@@ -1,5 +1,14 @@
 $(document).ready(function () {
 
+// NE PAS VALIDER LE FORMULAIRE AVEC ENTER
+    $(window).keydown(function(event){
+        if(event.keyCode === 13) {
+            event.preventDefault();
+            return false;
+        }
+    });
+
+
 
     // BTN FORMULAIRE NEXT
     $('#submitted-form_1').on('click', function (e) {
@@ -44,7 +53,7 @@ $(document).ready(function () {
         e.preventDefault();
 
         $('#list-experience').css('display', 'none');
-        $('#form_1').css('display', 'flex');
+        $('#form_1').css('display', 'block');
         $('.prog2').css('backgroundColor', '#F6B5CC');
     })
     $('#prev-dip').on('click', function (e) {
@@ -80,16 +89,16 @@ $(document).ready(function () {
         e.preventDefault();
 
         $('#list-experience').css('display', 'none');
-        $('#form_2').css('display', 'flex');
+        $('#form_2').css('display', 'block');
 
         $('#submitted-form_2').on('click', function (e) {
             e.preventDefault();
             addExp();
 
-            $('#list-experience').css('display', 'block');
             $('#form_2').css('display', 'none');
-        })
+            $('#list-experience').css('display', 'block');
 
+        })
 
     })
 
@@ -100,7 +109,7 @@ $(document).ready(function () {
         e.preventDefault();
 
         $('#list-formation').css('display', 'none');
-        $('#form_3').css('display', 'flex');
+        $('#form_3').css('display', 'block');
 
 
         $('#submitted-form_3').on('click', function (e) {
@@ -112,14 +121,6 @@ $(document).ready(function () {
         })
 
     })
-
-
-
-    // CUSTOM IFRAME
-
-
-
-
 
 });
 /* * * * * * * * * * * * * * * * * *
@@ -255,8 +256,13 @@ function addExp() {
 
 
     if (expInputRole !== '' && expInputEnt !== '') {
+
         $('#list-exp').append('<li id="li-exp-' + idExp + '"><div class="container-list"><div class="list-preview"><span>' + expInputRole + '</span><p>' + expInputEnt + '</p></div><div class="list-button"><button><i class="fas fa-pen"></i></button><button onclick="deleteExp('+idExp+')"><i class="fas fa-trash"></i></button></div></div></li>');
         myIframe.append('<li id="li-exp-' + idExp + '"><div class="container-list-exp"><div class="left-list"><div class="date-list"><p id="cv-date-begin-dip-' + idExp + '">' + expInputDate1 + '</p><p id="cv-date-end-dip-' + idExp + '">' + expInputDate2 + '</p></div><div class="ville-list"><p id="cv-ville-dip-' + idExp + '">' + expInputVille + '</p></div></div><div class="content-list"><div class="title-list"><p id="cv-diplome-' + idExp + '">' + expInputRole + '</p><p id="cv-etablissement-' + idExp + '">' + expInputEnt + '</p></div><div class="desc-list"><p id="cv-desc-dip-' + idExp + '">' + expInputDesc + '</p></div></div></div></li>');
+
+
+        // $('#form_2').append('<div id="content-exp-' + idExp + '"><div class="form-group-little"><div class="little-part"><label for="title-exp' + idExp +'">Poste/Titre</label><input type="text" id="title-exp' + idExp +'" name="title-exp' + idExp +'" placeholder="ex: Développeur Web"></div><div class="little-part"><label for="subtitle-exp' + idExp +'">Entreprise</label><input type="text" id="subtitle-exp' + idExp +'" name="subtitle-exp' + idExp +'" placeholder="ex: Nom de l\'entreprise"></div></div><div class="form-group"><label for="ville-exp' + idExp +'">Lieu</label><input type="text" id="ville-exp' + idExp +'" name="ville-exp' + idExp +'" placeholder="ex: Paris"></div><div class="form-group-little"><div class="little-part"><label for="date-begin-exp' + idExp +'">Début</label><input type="text" id="date-begin-exp' + idExp +'" name="date-begin-exp' + idExp +'" placeholder="ex: Jan - 2010"></div><div class="little-part"><label for="date-end-exp' + idExp +'">Fin</label><input type="text" id="date-end-exp' + idExp +'" name="date-end-exp' + idExp +'" placeholder="ex: Fév - 2011"></div></div><div class="form-group"><label for="desc-exp' + idExp +'">Description</label><textarea name="desc-exp' + idExp +'" id="desc-exp' + idExp +'" cols="30" rows="10"></textarea></div></div>')
+        // $('#content-exp-' + (idExp - 1)).hide();
 
         $('#title-exp').val('');
         $('#subtitle-exp').val('');
@@ -264,6 +270,7 @@ function addExp() {
         $('#desc-exp').val('');
         $('#date-begin-exp').val('');
         $('#date-end-exp').val('');
+
         idExp++;
     }
 }
@@ -286,8 +293,8 @@ function addComp() {
             alert('deja fait');
 
         } else {
-            $('#list-comp').prepend('<li id="li-comp-' + idC + '" class="item-comp"><p>' + input + '</p><button onclick="deleteComp('+idC+')">Supprimer</button></li>');
-            myIframe.prepend('<li id="li-comp-' + idC + '" class="item-comp"><p>' + input + '</p></li>')
+            $('#list-comp').prepend('<li id="li-comp-' + idC + '" class="item-bubble"><p>' + input + '</p><button onclick="deleteComp('+idC+')"><i class="fas fa-times"></i></button></li>');
+            myIframe.prepend('<li id="li-comp-' + idC + '" class="item-bubble"><p>' + input + '</p></li>')
             $('#competence').val('');
             idC++;
 
@@ -316,8 +323,8 @@ function addLangue() {
             alert('deja fait');
 
         } else {
-            $('#list-langue').prepend('<li id="li-langue-' + idL + '" class="item-langue"><p>' + input + '</p><button onclick="deleteLangue('+idL+')">Supprimer</button></li>');
-            myIframe.prepend('<li id="li-langue-' + idL + '" class="item-langue"><p>' + input + '</p></li>');
+            $('#list-langue').prepend('<li id="li-langue-' + idL + '" class="item-bubble"><p>' + input + '</p><button onclick="deleteLangue('+idL+')"><i class="fas fa-times"></i></button></li>');
+            myIframe.prepend('<li id="li-langue-' + idL + '" class="item-bubble"><p>' + input + '</p></li>');
             $('#langue').val('');
             idL++;
 
@@ -392,7 +399,7 @@ $(window).on("load resize ", function() {
   var menu = document.getElementById("menu");
   sideNav.style.top = "-100%";
   menuBtn.onclick = function () {
-    if (sideNav.style.top == "-100%") {
+    if (sideNav.style.top === "-100%") {
       sideNav.style.top = "0";
     //   menu.src = "../../wp-content/themes/cvtech/asset/img/close.png";
     $('#open').css('display', 'none');

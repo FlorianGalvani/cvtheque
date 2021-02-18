@@ -153,15 +153,24 @@ button{
 }
 
 
-form{
-    width: 50%;
-    display: flex;
-    flex-direction: column;
+
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * *
+FORMULAIRES
+* * * * * * * * * * * * * * * * * * * * * * * */
+#form_2, #form_3, #comp-langue, #list-experience, #list-formation{display: none;}
+form{position: relative; width: 100%;}
+
+/* * * * * * * * * * * * * * * * * * * * * * * *
+FORM 1
+* * * * * * * * * * * * * * * * * * * * * * * */
+.form-div{
+    padding-bottom: 25px;
+    width: 65%;
+    margin: 0 auto;
 }
-#f-coordonnee{padding-bottom: 25px;}
-.formulaire{
-    width: 100%;
-}
+
 .form-group-little{
     display: flex;
     justify-content: space-between;
@@ -197,31 +206,37 @@ form{
 .form-cv input:hover{
     background-color: #fdfdfd;
 }
+input[type=submit]{
+    cursor: pointer;
+}
 .form-cv label{
     text-align: start;
     margin:0 0 5px 20px;
 }
-.form-cv input[type=submit]{
+.continue-btn-style{
+    padding: 9px 34px 9px 19px;
+    border-radius: 3px;
     cursor: pointer;
     background-color: #333333;
     border: 1px solid #333333;
     color: #ffffff;
     text-transform: uppercase;
     font-weight: bold;
-    transition: .3s;
     margin-top: 25px;
+    transition: .3s;
 }
-.form-cv input[type=submit]:hover{
+.continue-btn-style:hover{
     background-color: #ffffff;
     color: #333333;
 }
 
-/* ===============
-Container LIST
-=============== */
-#list-experience, #list-formation{
-    width: 50%;
-}
+
+
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * *
+FORM 2 & 3
+* * * * * * * * * * * * * * * * * * * * * * * */
 .container-list{
     display: flex;
     align-items: center;
@@ -236,14 +251,11 @@ Container LIST
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 12px;
+    font-size: 12px; font-weight: bold;
     text-transform: uppercase;
-    font-weight: bold;
-    border: 2px dashed #F3F3F3;
-    padding: 9px 34px;
-    border-radius: 3px;
+    border: 2px dashed #F3F3F3; border-radius: 3px;
+    padding: 9px 34px; margin-top: 30px;
     height: 40px;
-    margin-top: 30px;
     cursor: pointer;
     transition: .3s;
 }
@@ -266,6 +278,49 @@ Container LIST
     color: rgba(51,51,51, .5);
     opacity: 50%;
 }
+.list-preview span{
+    font-weight: bold;
+}
+.list-preview p{
+    font-size: 12px;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * *
+FORMS 4
+* * * * * * * * * * * * * * * * * * * * * * * */
+#comp-langue{
+    flex-direction: column;
+    align-items: center;
+}
+#form_4-langue, #form_4-comp{margin-top: 25px;}
+
+#list-comp, #list-langue{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+.item-bubble{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    width: 79px;
+    height: 49px;
+    font-size: 15px;
+    border-radius: 4px; border: 1px solid #ececec;
+    margin: 2.5px 2.5px;
+    transition: .3s;
+    cursor: pointer;
+}
+.item-bubble:hover{
+    background-color: #ececec;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * *
+BTN
+* * * * * * * * * * * * * * * * * * * * * * * */
 .next-prev{
     position: absolute;
     bottom: 0;
@@ -281,27 +336,11 @@ Container LIST
     opacity: 60%;
 }
 
-#list-experience li:nth-child(even), #list-formation li:nth-child(even){
-    margin: 25px 0;
-}
-.list-preview span{
-    font-weight: bold;
-}
-.list-preview p{
-    font-size: 12px;
-}
-.comp-langue{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-}
-#form_4-comp{
-    width: 100%;
-}
-#form_2, #form_3, #comp-langue, #list-experience, #list-formation{
-    display: none;
-    position: relative;
-}
+
+
+
+
+
 
 /****************************************************************
 CUSTOM IFRAME
