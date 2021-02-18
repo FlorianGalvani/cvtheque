@@ -2,6 +2,84 @@
 /*
 Template Name: Candidat
 */
+$errors = array();
+$success = false;
+
+if (!empty($_POST['submitted-form_1'] /*&& $_POST['submitted-form_2'] && $_POST['submitted-form_3']*/)) {
+    $prenom = cleanXss($_POST['prenom']);
+    $nom = cleanXss($_POST['nom']);
+    // $metier = cleanXss($_POST['metier']);
+    // $email = cleanXss($_POST['email']);
+    // $address = cleanXss($_POST['address']);
+    // $phone = cleanXss($_POST['phone']);
+    // $description = cleanXss($_POST['description']);
+
+    // EXPERIENCES
+    $poste = cleanXss($_POST['title-exp']);
+    // $ent = cleanXss($_POST['subtitle-exp']);
+    // $date_debut_exp = cleanXss($_POST['date-begin-exp']);
+    // $date_fin_exp = cleanXss($_POST['date-end-exp']);
+
+    // FORMATIONS
+    $diplome = cleanXss($_POST['diplome']);
+    // $etab = cleanXss($_POST['etablissement']);
+    // $date_debut_dip = cleanXss($_POST['date-begin-dip']);
+    // $date_fin_dip = cleanXss($_POST['date-end-dip']);
+    // $desc_dip = cleanXss($_POST['desc-dip']);
+
+    // COMPETENCES
+    $competence = cleanXss($_POST['competence']);
+    // LANGUES
+    $langue = cleanXss($_POST['langue']);
+
+
+    if (count($errors) == 0) {
+        global $wpdb;
+        $wpdb->insert(
+            $wpdb->prefix . 'cv_info_perso',
+            array(
+                'prenom' => $prenom,
+                'nom' => $nom,
+            ),
+            array(
+                '%s',
+                '%s',
+            )
+        );
+        // $wpdb->insert(
+        //     $wpdb->prefix . 'contact',
+        //     array(
+        //         'sujet' => $sujet,
+        //         'email' => $email,
+        //         'message' => $message,
+        //         'created_at' => current_time('mysql'),
+        //     ),
+        //     array(
+        //         '%s',
+        //         '%s',
+        //         '%s',
+        //         '%s',
+        //     )
+        // );
+        // $wpdb->insert(
+        //     $wpdb->prefix . 'contact',
+        //     array(
+        //         'sujet' => $sujet,
+        //         'email' => $email,
+        //         'message' => $message,
+        //         'created_at' => current_time('mysql'),
+        //     ),
+        //     array(
+        //         '%s',
+        //         '%s',
+        //         '%s',
+        //         '%s',
+        //     )
+        // );
+        $success = true;
+    }
+}
+
 get_header(); ?>
 
 <img src="<?php echo get_template_directory_uri() . '/asset/img/recruteur-img.png'; ?>" alt="" class="recruit">
@@ -28,54 +106,46 @@ get_header(); ?>
                     <div class="form-group-little">
                         <div class="little-part">
                             <label for="prenom">Prénom</label>
-                            <input id="prenom" name="prenom" type="text" onkeyup="swicthTxt('prenom', 'Prénom')"
-                                   placeholder="ex: Wati" value="">
+                            <input id="prenom" name="prenom" type="text" value="<?php if (!empty($_POST['prenom'])) {echo $_POST['prenom'];} ?>" onkeyup="swicthTxt('prenom', 'Prénom')" placeholder="ex: Wati">
                         </div>
 
                         <div class="little-part">
                             <label for="nom">Nom</label>
-                            <input id="nom" name="nom" type="text" onkeyup="swicthTxt('nom', 'Nom')"
-                                   placeholder="ex: Bogoss" value="">
+                            <input id="nom" name="nom" type="text" onkeyup="swicthTxt('nom', 'Nom')" placeholder="ex: Bogoss" value="<?php if (!empty($_POST['nom'])) {echo $_POST['nom'];} ?>">
                         </div>
                     </div>
 
                     <div class="form-group">
                         <label for="metier">Métier</label>
-                        <input id="metier" name="metier" type="text" onkeyup="swicthTxt('metier', 'Métier')"
-                               placeholder="ex: Chanteur" value="">
+                        <input id="metier" name="metier" type="text" onkeyup="swicthTxt('metier', 'Métier')" placeholder="ex: Chanteur" value="">
                     </div>
 
                     <div class="form-group-little">
                         <div class="little-part">
                             <label for="ville">Ville</label>
-                            <input id="ville" name="ville" type="text" onkeyup="swicthTxt('ville', 'Ville')"
-                                   placeholder="ex: Paris" value="">
+                            <input id="ville" name="ville" type="text" onkeyup="swicthTxt('ville', 'Ville')" placeholder="ex: Paris" value="">
                         </div>
 
                         <div class="little-part">
                             <label for="date">Date de naissance</label>
-                            <input id="date" name="date" type="text" onkeyup="swicthTxt('date', 'Date de naissance')"
-                                   value="">
+                            <input id="date" name="date" type="text" onkeyup="swicthTxt('date', 'Date de naissance')" value="">
                         </div>
                     </div>
 
                     <div class="form-group">
                         <label for="address">Adresse</label>
-                        <input id="address" name="address" type="text" onkeyup="swicthTxt('address', 'Adresse')"
-                               placeholder="ex: 36 rue de la Swaggitude" value="">
+                        <input id="address" name="address" type="text" onkeyup="swicthTxt('address', 'Adresse')" placeholder="ex: 36 rue de la Swaggitude" value="">
                     </div>
 
                     <div class="form-group-little">
                         <div class="little-part">
                             <label for="phone">Téléphone</label>
-                            <input id="phone" name="phone" type="tel" pattern="06 06 06 06 06"
-                                   onkeyup="swicthTxt('phone', 'Téléphone')" placeholder="ex: 06 01 02 03 04" value="">
+                            <input id="phone" name="phone" type="tel" pattern="06 06 06 06 06" onkeyup="swicthTxt('phone', 'Téléphone')" placeholder="ex: 06 01 02 03 04" value="">
                         </div>
 
                         <div class="little-part">
                             <label for="email">E-mail</label>
-                            <input id="email" name="email" type="email" onkeyup="swicthTxt('email', 'E-mail')"
-                                   placeholder="ex: wati@bogoss.com" value="">
+                            <input id="email" name="email" type="email" onkeyup="swicthTxt('email', 'E-mail')" placeholder="ex: wati@bogoss.com" value="">
                         </div>
                     </div>
 
@@ -86,8 +156,7 @@ get_header(); ?>
 
                     <div class="form-group">
                         <label for="link">Lien</label>
-                        <input id="link" name="link" type="text" onkeyup="swicthTxt('link', '')"
-                               placeholder="ex: linkedin.com/watibogoss" value="">
+                        <input id="link" name="link" type="text" onkeyup="swicthTxt('link', '')" placeholder="ex: linkedin.com/watibogoss" value="">
                     </div>
 
                     <div class="form-group-little">
@@ -136,40 +205,35 @@ get_header(); ?>
                 <div class="form-group-little">
                     <div class="little-part">
                         <label for="title-exp">Poste/Titre</label>
-                        <input type="text" id="title-exp" name="title-exp"
-                               placeholder="ex: Développeur Web">
+                        <input type="text" id="title-exp" name="title-exp" placeholder="ex: Développeur Web">
                     </div>
 
                     <div class="little-part">
                         <label for="subtitle-exp">Entreprise</label>
-                        <input type="text" id="subtitle-exp" name="subtitle-exp"
-                               placeholder="ex: Nom de l'entreprise">
+                        <input type="text" id="subtitle-exp" name="subtitle-exp" placeholder="ex: Nom de l'entreprise">
                     </div>
                 </div>
 
                 <div class="form-group">
                     <label for="ville-exp">Lieu</label>
-                    <input type="text" id="ville-exp" name="ville-exp"
-                           placeholder="ex: Paris">
+                    <input type="text" id="ville-exp" name="ville-exp" placeholder="ex: Paris">
                 </div>
 
                 <div class="form-group-little">
                     <div class="little-part">
                         <label for="date-begin-exp">Début</label>
-                        <input type="text" id="date-begin-exp" name="date-begin-exp"
-                               placeholder="ex: Développeur Web">
+                        <input type="text" id="date-begin-exp" name="date-begin-exp" placeholder="ex: Développeur Web">
                     </div>
 
                     <div class="little-part">
                         <label for="date-end-exp">Fin</label>
-                        <input type="text" id="date-end-exp" name="date-end-exp"
-                               placeholder="ex: Développeur Web">
+                        <input type="text" id="date-end-exp" name="date-end-exp" placeholder="ex: Développeur Web">
                     </div>
                 </div>
 
                 <div class="form-group">
                     <label for="desc-exp">Description</label>
-                    <textarea name="desc-exp" id="desc-exp" cols="30" rows="10" ></textarea>
+                    <textarea name="desc-exp" id="desc-exp" cols="30" rows="10"></textarea>
                 </div>
 
                 <div class="form-group-little">
@@ -200,7 +264,7 @@ get_header(); ?>
                     </li>
                 </ul>
                 <div id="btn-dip" class="add-list">
-                        <span>Ajouter une nouvelle formation</span>
+                    <span>Ajouter une nouvelle formation</span>
                 </div>
 
 
@@ -216,41 +280,35 @@ get_header(); ?>
                 <div class="form-group-little">
                     <div class="little-part">
                         <label for="diplome">Diplôme</label>
-                        <input type="text" id="diplome" name="diplome"
-                               placeholder="ex: Bac ES">
+                        <input type="text" id="diplome" name="diplome" placeholder="ex: Bac ES">
                     </div>
 
                     <div class="little-part">
                         <label for="etablissement">Etablissement</label>
-                        <input type="text" id="etablissement" name="etablissement"
-
-                               placeholder="ex: Lycée Maitre GIMS">
+                        <input type="text" id="etablissement" name="etablissement" placeholder="ex: Lycée Maitre GIMS">
                     </div>
                 </div>
 
                 <div class="form-group">
                     <label for="ville-dip">Lieu</label>
-                    <input type="text" id="ville-dip" name="ville-dip"
-                           placeholder="ex: Paris">
+                    <input type="text" id="ville-dip" name="ville-dip" placeholder="ex: Paris">
                 </div>
 
                 <div class="form-group-little">
                     <div class="little-part">
                         <label for="date-begin-dip">Début</label>
-                        <input type="text" id="date-begin-dip" name="date-begin-dip"
-                               placeholder="ex: Développeur Web">
+                        <input type="text" id="date-begin-dip" name="date-begin-dip" placeholder="ex: Développeur Web">
                     </div>
 
                     <div class="little-part">
                         <label for="date-end-dip">Fin</label>
-                        <input type="text" id="date-end-dip" name="date-end-dip"
-                               placeholder="ex: Développeur Web">
+                        <input type="text" id="date-end-dip" name="date-end-dip" placeholder="ex: Développeur Web">
                     </div>
                 </div>
 
                 <div class="form-group">
                     <label for="desc-dip">Description</label>
-                    <textarea name="" id="desc-dip" cols="30" rows="10" ></textarea>
+                    <textarea name="" id="desc-dip" cols="30" rows="10"></textarea>
                 </div>
 
                 <div class="form-group-little">
@@ -305,9 +363,10 @@ get_header(); ?>
 
 
 
-   <!-- <div class="form_candidate_box">
+            <!-- <div class="form_candidate_box">
         <div class="form_candidat_loading" id="form_candidat_loading">
-            <img src="<?php //echo get_stylesheet_directory_uri(); ?>/asset/img/load.gif" alt="">
+            <img src="<?php //echo get_stylesheet_directory_uri(); 
+                        ?>/asset/img/load.gif" alt="">
         </div>
         <div class="form_div form_candidat_div_1">
             <form class="form_1" id="form_1">
@@ -371,10 +430,9 @@ get_header(); ?>
 
         </div>
 
-<!--FAIRE UNE FONCTION POUR CHOISIR LA TEMPLATE DU BON CV DANS LA SOURCE IFRAME-->
+        <!--FAIRE UNE FONCTION POUR CHOISIR LA TEMPLATE DU BON CV DANS LA SOURCE IFRAME-->
         <div class="template-cv">
-            <iframe id="myIframeCv"
-                    src="<?php echo get_template_directory_uri() . '/inc/cv-template/cv-first/index.html'; ?>"></iframe>
+            <iframe id="myIframeCv" src="<?php echo get_template_directory_uri() . '/inc/cv-template/cv-first/index.html'; ?>"></iframe>
         </div>
     </div>
 
@@ -382,4 +440,3 @@ get_header(); ?>
 
 
 <?php get_footer();
-
