@@ -3,6 +3,7 @@
 Template Name: Candidat
 */
 
+
 $errors = array();
 $success = false;
 
@@ -76,39 +77,39 @@ get_header(); ?>
     <div class="page-cv">
         <div class="form-cv">
 
+
             <form id="formulaire-de-cv" action="" method="post">
 
                 <!--                FORMULAIRE NUMERO 1 - INFOS PERSOS-->
 
                 <div class="form-div" id="form_1">
+
                     <div class="form-group-little">
                         <div class="little-part">
                             <label for="prenom">Prénom</label>
-                            <input id="prenom" name="prenom" type="text" onkeyup="swicthTxt('prenom', 'Prénom')"
-                                   placeholder="ex: Wati" value="">
+                            <input id="prenom" name="prenom" type="text" value="" onkeyup="swicthTxt('prenom', 'Prénom')" placeholder="ex: Wati">
                         </div>
 
                         <div class="little-part">
                             <label for="nom">Nom</label>
-                            <input id="nom" name="nom" type="text" onkeyup="swicthTxt('nom', 'Nom')"
-                                   placeholder="ex: Bogoss" value="">
+                            <input id="nom" name="nom" type="text" onkeyup="swicthTxt('nom', 'Nom')" placeholder="ex: Bogoss" value="">
+                            
                         </div>
                     </div>
 
                     <div class="form-group">
                         <label for="metier">Métier</label>
-                        <input id="metier" name="metier" type="text" onkeyup="swicthTxt('metier', 'Métier')"
-                               placeholder="ex: Chanteur" value="">
+                        <input id="metier" name="metier" type="text" onkeyup="swicthTxt('metier', 'Métier')" placeholder="ex: Chanteur" value="">
                     </div>
 
                     <div class="form-group-little">
                         <div class="little-part">
                             <label for="ville">Ville</label>
-                            <input id="ville" name="ville" type="text" onkeyup="swicthTxt('ville', 'Ville')"
-                                   placeholder="ex: Paris" value="">
+                            <input id="ville" name="ville" type="text" onkeyup="swicthTxt('ville', 'Ville')" placeholder="ex: Paris" value="">
                         </div>
 
                         <div class="little-part">
+
                             <label for="age">Age</label>
                             <input id="age" name="age" type="text" onkeyup="swicthTxt('age', 'Age')" placeholder="ex: 18 ans"
                                    value="">
@@ -117,8 +118,7 @@ get_header(); ?>
 
                     <div class="form-group">
                         <label for="address">Adresse</label>
-                        <input id="address" name="address" type="text" onkeyup="swicthTxt('address', 'Adresse')"
-                               placeholder="ex: 36 rue de la Swaggitude" value="">
+                        <input id="address" name="address" type="text" onkeyup="swicthTxt('address', 'Adresse')" placeholder="ex: 36 rue de la Swaggitude" value="">
                     </div>
 
                     <div class="form-group-little">
@@ -130,8 +130,7 @@ get_header(); ?>
 
                         <div class="little-part">
                             <label for="email">E-mail</label>
-                            <input id="email" name="email" type="email" onkeyup="swicthTxt('email', 'E-mail')"
-                                   placeholder="ex: wati@bogoss.com" value="">
+                            <input id="email" name="email" type="email" onkeyup="swicthTxt('email', 'E-mail')" placeholder="ex: wati@bogoss.com" value="">
                         </div>
                     </div>
 
@@ -142,8 +141,7 @@ get_header(); ?>
 
                     <div class="form-group">
                         <label for="link">Lien</label>
-                        <input id="link" name="link" type="text" onkeyup="swicthTxt('link', '')"
-                               placeholder="ex: linkedin.com/watibogoss" value="">
+                        <input id="link" name="link" type="text" onkeyup="swicthTxt('link', '')" placeholder="ex: linkedin.com/watibogoss" value="">
                     </div>
 
                     <div class="form-group-submit">
@@ -154,6 +152,7 @@ get_header(); ?>
                 <!--                FORMULAIRE NUMERO 2 - EXPERIENCE-->
 
                 <div class="form-div" id="list-experience">
+
 
                         <ul id="list-exp">
                             <li>
@@ -231,6 +230,7 @@ get_header(); ?>
                             </div>
 
 
+
                     </div>
 
 
@@ -251,6 +251,49 @@ get_header(); ?>
                                     <button type="button"><i class="fas fa-pen"></i></button>
                                     <button type="button"><i class="fas fa-trash"></i></button>
                                 </div>
+
+                <div class="form-group-little">
+                    <div class="little-part">
+                        <label for="title-exp">Poste/Titre</label>
+                        <input type="text" id="title-exp" name="title-exp" placeholder="ex: Développeur Web" value="">
+                    </div>
+
+                    <div class="little-part">
+                        <label for="subtitle-exp">Entreprise</label>
+                        <input type="text" id="subtitle-exp" name="subtitle-exp" placeholder="ex: Nom de l'entreprise">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="ville-exp">Lieu</label>
+                    <input type="text" id="ville-exp" name="ville-exp" placeholder="ex: Paris">
+                </div>
+
+                <div class="form-group-little">
+                    <div class="little-part">
+                        <label for="date-begin-exp">Début</label>
+
+                        <input type="text" id="date-begin-exp" name="date-begin-exp"
+                               placeholder="ex: Jan - 2010">
+                    </div>
+
+                    <div class="little-part">
+                        <label for="date-end-exp">Fin</label>
+
+                        <input type="text" id="date-end-exp" name="date-end-exp"
+                               placeholder="ex: Fév - 2011">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="desc-exp">Description</label>
+                    <textarea name="desc-exp" id="desc-exp" cols="30" rows="10"></textarea>
+                </div>
+
+                <div class="form-group-submit">
+                    <input type="submit" id="submitted-form_2" name="submitted-form_2" value="Continuer">
+                </div>
+
 
                             </div>
                         </li>
@@ -279,7 +322,15 @@ get_header(); ?>
                             <label for="etablissement">Etablissement</label>
                             <input type="text" id="etablissement" name="etablissement" placeholder="ex: Lycée Maitre GIMS">
                         </div>
+
                     </div>
+
+                    </li>
+                </ul>
+                <div id="btn-dip" class="add-list">
+                    <span>Ajouter une nouvelle formation</span>
+                </div>
+
 
                     <div class="form-group">
                         <label for="ville-dip">Lieu</label>
@@ -294,6 +345,7 @@ get_header(); ?>
                                    placeholder="ex: Jan - 2010">
 
                         </div>
+
 
                         <div class="little-part">
                             <label for="date-end-dip">Fin</label>
@@ -311,11 +363,57 @@ get_header(); ?>
 
                     <div class="form-group-submit">
                         <button type="button" class="continue-btn-style" id="submitted-form_3">Continuer</button>
+
+                <div class="form-group-little">
+                    <div class="little-part">
+                        <label for="diplome">Diplôme</label>
+                        <input type="text" id="diplome" name="diplome" placeholder="ex: Bac ES">
                     </div>
+
+                    <div class="little-part">
+                        <label for="etablissement">Etablissement</label>
+                        <input type="text" id="etablissement" name="etablissement" placeholder="ex: Lycée Maitre GIMS">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="ville-dip">Lieu</label>
+                    <input type="text" id="ville-dip" name="ville-dip" placeholder="ex: Paris">
+                </div>
+
+                <div class="form-group-little">
+                    <div class="little-part">
+                        <label for="date-begin-dip">Début</label>
+
+                        <input type="text" id="date-begin-dip" name="date-begin-dip"
+                               placeholder="ex: Jan - 2010">
+
+                    </div>
+
+                    <div class="little-part">
+                        <label for="date-end-dip">Fin</label>
+
+                        <input type="text" id="date-end-dip" name="date-end-dip"
+                               placeholder="ex: Fév - 2011">
+
+
+                    </div>
+
 
                 </div>
 
                 <!--                FORMULAIRE NUMERO 2 - EXPERIENCE-->
+
+                <div class="form-group">
+                    <label for="desc-dip">Description</label>
+                    <textarea name="" id="desc-dip" cols="30" rows="10"></textarea>
+                </div>
+
+                <div class="form-group-submit">
+                    <input type="submit" id="submitted-form_3" name="submitted-form_3" value="Continuer">
+                </div>
+
+                  
 
                 <div id="comp-langue">
 
@@ -364,8 +462,8 @@ get_header(); ?>
 
 
 
-            </form>
 
+            </form>
         </div>
 
 <!--FAIRE UNE FONCTION POUR CHOISIR LA TEMPLATE DU BON CV DANS LA SOURCE IFRAME-->
@@ -404,7 +502,6 @@ get_header(); ?>
 
             <iframe id="myIframeCv"
                     src="<?php echo get_template_directory_uri() . '/inc/cv-template/cv-first/index.html'; ?>"></iframe>
-
     </div>
 
         <div id="page-succes" style="display: none;">
@@ -416,4 +513,3 @@ get_header(); ?>
 
 
 <?php get_footer();
-
