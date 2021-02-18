@@ -28,13 +28,13 @@ get_header(); ?>
     <div class="section1-box">
         <div class="section1-title">
             <h3>Sollicitez avec succès</h3>
-            <p>Grâce à Cv & toi, vous aurez un CV professionnel prêt à être envoyé à tout instant. Vous pouvez le rédigiez aisément vous-même et le partager dans notre bibliothèque pour le rendre visible auprès des recruteurs: votre Cv attirera l’attention !</p>
+            <p>Grâce à Cv & toi, vous aurez un CV professionnel prêt à être envoyé à tout instant. Vous pouvez le rédigez aisément vous-même et le partager dans notre bibliothèque pour le rendre visible auprès des recruteurs: votre Cv attirera l’attention !</p>
         </div>
         <div class="section1-content">
             <h4>Rédiger un CV professionnel soi-même</h4>
             <p><i class="far fa-check-square"></i> La rédaction d’un CV professionnel est une tâche facile grâce à notre outil truffé de conseils et d’astuces.</p>
             <p><i class="far fa-check-square"></i> En 15 minutes seulement, rédigez vous-même un CV professionnel qui attire l’attention du recruteur</p>
-            <p><i class="far fa-check-square"></i> Les Cv que vous avez rédigés sont sauvegardés dans votre environnement personnel sécurisé. Ainsi, vous pourrez les modifier et les télécharger en tout lieu et à tout instant</p>
+            <p><i class="far fa-check-square"></i> Les Cv que vous avez rédigés sont sauvegardés dans votre environnement personnel. Ainsi, vous pourrez les modifier et les télécharger en tout lieu et à tout instant</p>
             <p><i class="far fa-check-square"></i> Accédez à la fonction de rédaction de lettres de solicitation convaincantes et faites les correspondre avec votre CV</p>
             <p><i class="far fa-check-square"></i> Accès à toutes les confctionnalités </p>
         </div>
@@ -48,11 +48,11 @@ get_header(); ?>
     <div class="section2-box">
         <div class="section2-title">
             <h3>Plus de 110.920 utilisateurs ont déjà rédigé un CV</h3>
-            <p>Avec notre outil de rédaction Cv & toi, vous serz en mesure de pouvoir rédiger, aisément et de manière rapide, un CV pertinent professionnel et convaincant, en 15 minutes seulement.</p>
+            <p>Avec notre outil de rédaction Cv & toi, vous serez en mesure de pouvoir rédiger, aisément et de manière rapide, un CV pertinent professionnel et convaincant, en 15 minutes seulement.</p>
         </div>
         <div class="section2-content">
             <a href="<?php echo esc_url(home_url('candidat')); ?>" class="btn-banner">Créer un CV</a>
-            <p>Et offrez-vous 65% de chance supplémentaire d’être vue par un recruteur et de décrocher un emploi</p>
+            <p>Et offrez-vous 65% de chance supplémentaire d’être vue par un recruteur et de décrocher un emploi.</p>
         </div>
     </div>
 </section>

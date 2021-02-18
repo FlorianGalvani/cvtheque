@@ -1158,11 +1158,7 @@ td {
     overflow: scroll;
 }
 
-#eye {
-	display: none;
-}
-
-#see, #eye {
+.see{
 	width: auto;
 }
 /* .table {

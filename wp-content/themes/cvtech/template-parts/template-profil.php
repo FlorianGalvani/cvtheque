@@ -30,129 +30,70 @@ get_header(); ?>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>michel</td>
-                        <td>devenir un vrai michel devenir un vrai michel devenir un vrai michel devenir un vrai michel</td>
-                        <td>michel1, michel2, michel3</td>
-                        <td>michmich, michmich2</td>
-                        <td>mich mich mich mich</td>
+                        <td>Pierre Dupont</td>
+                        <td>Extrêmement motivé pour développer constamment mes compétences et évoluer professionnellement. Je suis confiant vis-à-vis de ma capacité à proposer des idées intéressantes pour des campagnes publicitaires inoubliables.</td>
+                        <td>Assistant marketing et communications
+
+                            Communications de Condorcet
+
+                            Maintenir et organiser de nombreux dossiers de bureau - Tenir constamment à jour les listes de contacts et les listes de diffusion de l'entreprise - Surveiller la couverture de presse</td>
+                        <td>Expert Marketing INSEEC</td>
+                        <td>Gestion d'équipe, Communication, Autonome</td>
                         <td>
                             <div class="see-more">
-                                <a href="" id="eye"><i class="fas fa-eye"></i></a>
-                                <a href="" id="see">voir</i></a>
+                                <a href="" class="see">voir</i></a>
                             </div>
                         </td>
                     </tr>
                     <tr>
-                        <td>AAC</td>
-                        <td>AUSTRALIAN COMPANY </td>
-                        <td>$1.38</td>
-                        <td>+2.01</td>
-                        <td>-0.36%</td>
-                        <td>
-                        <div class="see-more">
-                                <a href="" id="eye"><i class="fas fa-eye"></i></a>
-                                <a href="" id="see">voir</i></a>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>AAC</td>
-                        <td>AUSTRALIAN COMPANY </td>
-                        <td>$1.38</td>
-                        <td>+2.01</td>
-                        <td>-0.36%</td>
-                        <td>
-                        <div class="see-more">
-                                <a href="" id="eye"><i class="fas fa-eye"></i></a>
-                                <a href="" id="see">voir</i></a>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>AAC</td>
-                        <td>AUSTRALIAN COMPANY </td>
-                        <td>$1.38</td>
-                        <td>+2.01</td>
-                        <td>-0.36%</td>
-                        <td>
-                        <div class="see-more">
-                                <a href="" id="eye"><i class="fas fa-eye"></i></a>
-                                <a href="" id="see">voir</i></a>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>AAC</td>
-                        <td>AUSTRALIAN COMPANY </td>
-                        <td>$1.38</td>
-                        <td>+2.01</td>
-                        <td>-0.36%</td>
-                        <td>
-                        <div class="see-more">
-                                <a href="" id="eye"><i class="fas fa-eye"></i></a>
-                                <a href="" id="see">voir</i></a>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>AAC</td>
-                        <td>AUSTRALIAN COMPANY </td>
-                        <td>$1.38</td>
-                        <td>+2.01</td>
-                        <td>-0.36%</td>
-                        <td>
-                        <div class="see-more">
-                                <a href="" id="eye"><i class="fas fa-eye"></i></a>
-                                <a href="" id="see">voir</i></a>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>AAC</td>
-                        <td>AUSTRALIAN COMPANY </td>
-                        <td>$1.38</td>
-                        <td>+2.01</td>
-                        <td>-0.36%</td>
-                        <td>
-                        <div class="see-more">
-                                <a href="" id="eye"><i class="fas fa-eye"></i></a>
-                                <a href="" id="see">voir</i></a>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>AAC</td>
-                        <td>AUSTRALIAN COMPANY </td>
-                        <td>$1.38</td>
-                        <td>+2.01</td>
-                        <td>-0.36%</td>
-                        <td>
-                        <div class="see-more">
-                                <a href="" id="eye"><i class="fas fa-eye"></i></a>
-                                <a href="" id="see">voir</i></a>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>AAC</td>
-                        <td>AUSTRALIAN COMPANY </td>
-                        <td>$1.38</td>
-                        <td>+2.01</td>
-                        <td>-0.36%</td>
-                        <td>
-                        <div class="see-more">
-                                <a href="" id="eye"><i class="fas fa-eye"></i></a>
-                                <a href="" id="see">voir</i></a>
-                            </div>
-                        </td>
-                    </tr>
-                    
-                    
+                        <td>Hannelore Martinez</td>
+                        <td>Après 2 ans d'études à l'institut Supérieur des Arts appliqués à Paris et plus de 6 ans d'expérience dans le domaine du retail luxe, je souhaiterais aujourd'hui rejoindre une nouvelle équipe en Asie au sein de laquelle je saurais être force d'éxécution et atteindre les objectifs fixés</td>
+                        <td>Assistant Communication
 
+                            Gourmet, Paris
+
+                            Création d'un portfolio de 200 clients: Développer un site internet jeune, moderne et facile d'utilisation. Travailler en étroite collaboration avec le Web-Developpeur & le Web designer
+                        </td>
+                        <td>Master en Business International Antipolis, France, SKEMA BUSINESS SCHOOL</td>
+                        <td>Pack Office, Internet, Zoho CRM, Espagnol</td>
+                        <td>
+                            <div class="see-more">
+                                <a href="" class="see">voir</i></a>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Mireille Mercier</td>
+                        <td>Pharmacienne de formation, j'évolue tout d'abord dans le milieu militaire (incluant sur des théatres d'opération extérieurs) avant d'entrer dans l'industrie parmaceutique. Ma recherche est de reprendre la gestion d'une pharmacie en région lyonnaise, au sein d'un groupement de pharmacies.</td>
+                        <td>Pharmacienne
+
+                        Pharmacie de l'orée du Bois, Lyon
+
+                        Au sein de cette petite pharmacie, je suis en charge des missions suivantes: gestion administrative, préparation, analyse, exercice pharmaceutique, pharmacovigilance.
+                        </td>
+                        <td>DU Micro-biologie appliquée, Université Lille 2</td>
+                        <td>Pharmacologie, Micro-biologie, G-Stock Pharma</td>
+                        <td>
+                            <div class="see-more">
+                                <a href="" class="see">voir</i></a>
+                            </div>
+                        </td>
+                    </tr>
+                    <!-- <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>
+                            <div class="see-more">
+                                <a href="" class="see">voir</i></a>
+                            </div>
+                        </td>
+                    </tr> -->
                 </tbody>
             </table>
         </div>
-        
     </div>
 </section>
 
