@@ -2,84 +2,56 @@
 /*
 Template Name: Candidat
 */
-$errors = array();
-$success = false;
 
-if (!empty($_POST['submitted-form_1'] /*&& $_POST['submitted-form_2'] && $_POST['submitted-form_3']*/)) {
-    $prenom = cleanXss($_POST['prenom']);
-    $nom = cleanXss($_POST['nom']);
-    // $metier = cleanXss($_POST['metier']);
-    // $email = cleanXss($_POST['email']);
-    // $address = cleanXss($_POST['address']);
-    // $phone = cleanXss($_POST['phone']);
-    // $description = cleanXss($_POST['description']);
+// $errors = array();
+// $success = false;
 
-    // EXPERIENCES
-    $poste = cleanXss($_POST['title-exp']);
-    // $ent = cleanXss($_POST['subtitle-exp']);
-    // $date_debut_exp = cleanXss($_POST['date-begin-exp']);
-    // $date_fin_exp = cleanXss($_POST['date-end-exp']);
+// // if (!empty($_POST['submitted-form_1'] && $_POST['submitted-form_2'] && $_POST['submitted-form_3'])) {
+// if (!empty($_POST['submitted-form_1'])) {
+    
+//     $prenom = cleanXss($_POST['prenom']);
+//     $nom = cleanXss($_POST['nom']);
+//     $metier = cleanXss($_POST['metier']);
+//     $email = cleanXss($_POST['email']);
+//     $address = cleanXss($_POST['address']);
+//     $phone = cleanXss($_POST['phone']);
+//     $description = cleanXss($_POST['description']);
+//     // $errors = ValidationText($errors, $nom, 'nom', 2, 200);
+//     // EXPERIENCES
+//     $poste = cleanXss($_POST['title-exp']);
+//     // $ent = cleanXss($_POST['subtitle-exp']);
+//     // $date_debut_exp = cleanXss($_POST['date-begin-exp']);
+//     // $date_fin_exp = cleanXss($_POST['date-end-exp']);
 
-    // FORMATIONS
-    $diplome = cleanXss($_POST['diplome']);
-    // $etab = cleanXss($_POST['etablissement']);
-    // $date_debut_dip = cleanXss($_POST['date-begin-dip']);
-    // $date_fin_dip = cleanXss($_POST['date-end-dip']);
-    // $desc_dip = cleanXss($_POST['desc-dip']);
+//     // FORMATIONS
+//     $diplome = cleanXss($_POST['diplome']);
+//     // $etab = cleanXss($_POST['etablissement']);
+//     // $date_debut_dip = cleanXss($_POST['date-begin-dip']);
+//     // $date_fin_dip = cleanXss($_POST['date-end-dip']);
+//     // $desc_dip = cleanXss($_POST['desc-dip']);
 
-    // COMPETENCES
-    $competence = cleanXss($_POST['competence']);
-    // LANGUES
-    $langue = cleanXss($_POST['langue']);
-
-
-    if (count($errors) == 0) {
-        global $wpdb;
-        $wpdb->insert(
-            $wpdb->prefix . 'cv_info_perso',
-            array(
-                'prenom' => $prenom,
-                'nom' => $nom,
-            ),
-            array(
-                '%s',
-                '%s',
-            )
-        );
-        // $wpdb->insert(
-        //     $wpdb->prefix . 'contact',
-        //     array(
-        //         'sujet' => $sujet,
-        //         'email' => $email,
-        //         'message' => $message,
-        //         'created_at' => current_time('mysql'),
-        //     ),
-        //     array(
-        //         '%s',
-        //         '%s',
-        //         '%s',
-        //         '%s',
-        //     )
-        // );
-        // $wpdb->insert(
-        //     $wpdb->prefix . 'contact',
-        //     array(
-        //         'sujet' => $sujet,
-        //         'email' => $email,
-        //         'message' => $message,
-        //         'created_at' => current_time('mysql'),
-        //     ),
-        //     array(
-        //         '%s',
-        //         '%s',
-        //         '%s',
-        //         '%s',
-        //     )
-        // );
-        $success = true;
-    }
-}
-
+//     // COMPETENCES
+//     $competence = cleanXss($_POST['competence']);
+//     // LANGUES
+//     $langue = cleanXss($_POST['langue']);
+    
+//     // if (count($errors) == 0) {
+//         global $wpdb;
+//         $wpdb->insert(
+//             'wp_cvtechcv_info_perso',
+//             array(
+//                 'prenom' => $prenom,
+//                 'nom' => $nom,
+//             ),
+//             array(
+//                 '%s',
+//                 '%s',
+//             )
+//         );
+//         $success = true;
+//     // }
+// }
+// debug($_POST);
 get_header(); ?>
 
 <img src="<?php echo get_template_directory_uri() . '/asset/img/recruteur-img.png'; ?>" alt="" class="recruit">
@@ -100,18 +72,17 @@ get_header(); ?>
     <div class="page-cv">
         <div class="form-cv">
             <form method="post" id="form_1">
-
                 <div id="f-coordonnee" class="formulaire">
-
                     <div class="form-group-little">
                         <div class="little-part">
                             <label for="prenom">Prénom</label>
-                            <input id="prenom" name="prenom" type="text" value="<?php if (!empty($_POST['prenom'])) {echo $_POST['prenom'];} ?>" onkeyup="swicthTxt('prenom', 'Prénom')" placeholder="ex: Wati">
+                            <input id="prenom" name="prenom" type="text" value="" onkeyup="swicthTxt('prenom', 'Prénom')" placeholder="ex: Wati">
                         </div>
 
                         <div class="little-part">
                             <label for="nom">Nom</label>
-                            <input id="nom" name="nom" type="text" onkeyup="swicthTxt('nom', 'Nom')" placeholder="ex: Bogoss" value="<?php if (!empty($_POST['nom'])) {echo $_POST['nom'];} ?>">
+                            <input id="nom" name="nom" type="text" onkeyup="swicthTxt('nom', 'Nom')" placeholder="ex: Bogoss" value="">
+                            
                         </div>
                     </div>
 
@@ -162,12 +133,9 @@ get_header(); ?>
                     </div>
 
                     <div class="form-group-submit">
-                        <input type="submit" id="submitted-form_1" value="Continuer">
+                        <input type="submit" name="submitted-form_1" id="submitted-form_1" value="Continuer">
                     </div>
-
                 </div>
-
-
             </form>
 
 
@@ -207,7 +175,7 @@ get_header(); ?>
                 <div class="form-group-little">
                     <div class="little-part">
                         <label for="title-exp">Poste/Titre</label>
-                        <input type="text" id="title-exp" name="title-exp" placeholder="ex: Développeur Web">
+                        <input type="text" id="title-exp" name="title-exp" placeholder="ex: Développeur Web" value="">
                     </div>
 
                     <div class="little-part">
@@ -243,7 +211,7 @@ get_header(); ?>
                 </div>
 
                 <div class="form-group-submit">
-                    <input type="submit" id="submitted-form_2" value="Continuer">
+                    <input type="submit" id="submitted-form_2" name="submitted-form_2" value="Continuer">
                 </div>
 
             </form>
@@ -323,7 +291,7 @@ get_header(); ?>
                 </div>
 
                 <div class="form-group-submit">
-                    <input type="submit" id="submitted-form_3" value="Continuer">
+                    <input type="submit" id="submitted-form_3" name="submitted-form_3" value="Continuer">
                 </div>
 
             </form>
