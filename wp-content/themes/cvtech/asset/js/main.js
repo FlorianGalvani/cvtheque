@@ -23,6 +23,21 @@ $(document).ready(function () {
         $('#comp-langue').css('display', 'flex');
         $('.prog4').css('backgroundColor', '#6D678E');
     })
+    $('#form_finish').on('click', function(e) {
+        e.preventDefault();
+        console.log('ok')
+        $('.template-cv').css('display', 'none');
+        $('.form-cv').css('display', 'none');
+        $('#page-succes').css('display', 'flex');
+        $('.prog5').css('backgroundColor', '#6D678E');
+
+        $('#btn-continue').on('click', function (e) {
+            e.preventDefault();
+
+            // REDIRECTION
+            document.location.href="../";
+        })
+    })
 
     // BTN FORMULAIRE PREV
     $('#prev-exp').on('click', function (e) {
@@ -99,8 +114,101 @@ $(document).ready(function () {
     })
 
 
-});
 
+    // CUSTOM IFRAME
+
+
+
+
+
+});
+/* * * * * * * * * * * * * * * * * *
+ * FONCTION SELECT
+* * * * * * * * * * * * * * * * * */
+function verifSelect(id)
+{
+    var select = document.getElementById(id)
+    select.style.backgroundColor = '#ffffff';
+    var value = select.value
+    var myIframe = $('#myIframeCv').contents();
+    if (value !== '') {
+        if (value === 'red') {
+            select.style.backgroundColor = '#fd4345'
+            myIframe.find('.info').css('backgroundColor', '#fd4345')
+            myIframe.find('.title-left').css('color', '#fd4345')
+            myIframe.find('.ligne').css('backgroundColor', '#fd4345')
+        }
+        else if (value === 'blue') {
+            select.style.backgroundColor = '#263547'
+            myIframe.find('.info').css('backgroundColor', '#263547')
+            myIframe.find('.title-left').css('color', '#263547')
+            myIframe.find('.ligne').css('backgroundColor', '#263547')
+        }
+        else if (value === 'black') {
+            select.style.backgroundColor = '#333333'
+            myIframe.find('.info').css('backgroundColor', '#333333')
+            myIframe.find('.title-left').css('color', '#333333')
+            myIframe.find('.ligne').css('backgroundColor', '#333333')
+        }
+        else if (value === 'yellow') {
+            select.style.backgroundColor = '#FFC300'
+            myIframe.find('.info').css('backgroundColor', '#FFC300')
+            myIframe.find('.title-left').css('color', '#FFC300')
+            myIframe.find('.ligne').css('backgroundColor', '#FFC300')
+        }
+        else if (value === 'green') {
+            select.style.backgroundColor = '#DAF7A6'
+            myIframe.find('.info').css('backgroundColor', '#DAF7A6')
+            myIframe.find('.title-left').css('color', '#DAF7A6')
+            myIframe.find('.ligne').css('backgroundColor', '#DAF7A6')
+        }
+        else if (value === 'purple') {
+            select.style.backgroundColor = '#7D3C98'
+            myIframe.find('.info').css('backgroundColor', '#7D3C98')
+            myIframe.find('.title-left').css('color', '#7D3C98')
+            myIframe.find('.ligne').css('backgroundColor', '#7D3C98')
+        }
+    }
+}
+function verifSelect2(id)
+{
+    var select = document.getElementById(id)
+    select.style.backgroundColor = '#fff'
+    var value = select.value
+    var myIframe = $('#myIframeCv').contents();
+    if (value!== '') {
+        if (value === 'red') {
+            select.style.backgroundColor = '#fd4345'
+            myIframe.find('.comp').css('backgroundColor', '#fd4345')
+            myIframe.find('.title-middle').css('color', '#fd4345')
+        }
+        else if (value === 'blue') {
+            select.style.backgroundColor = '#263547'
+            myIframe.find('.comp').css('backgroundColor', '#263547')
+            myIframe.find('.title-middle').css('color', '#263547')
+        }
+        else if (value === 'black') {
+            select.style.backgroundColor = '#333333'
+            myIframe.find('.comp').css('backgroundColor', '#333333')
+            myIframe.find('.title-middle').css('color', '#333333')
+        }
+        else if (value === 'yellow') {
+            select.style.backgroundColor = '#FFC300'
+            myIframe.find('.comp').css('backgroundColor', '#FFC300')
+            myIframe.find('.title-middle').css('color', '#FFC300')
+        }
+        else if (value === 'green') {
+            select.style.backgroundColor = '#DAF7A6'
+            myIframe.find('.comp').css('backgroundColor', '#DAF7A6')
+            myIframe.find('.title-middle').css('color', '#DAF7A6')
+        }
+        else if (value === 'purple') {
+            select.style.backgroundColor = '#7D3C98'
+            myIframe.find('.comp').css('backgroundColor', '#7D3C98')
+            myIframe.find('.title-middle').css('color', '#7D3C98')
+        }
+    }
+}
 
 /*****************************
  *  FONCTIONS AJOUT
