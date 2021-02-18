@@ -103,8 +103,31 @@ button{
     overflow-x: hidden;
     box-sizing: border-box;
 }
-
-
+#page-succes{
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+#page-succes h1{
+    font-size: 60px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+#page-succes button{
+    background-color: #333333;
+    border: 1px solid #333333;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #ffffff;
+    padding: 14px 34px;
+    border-radius: 3px;
+    transition: .3s;
+}
+#page-succes button:hover{
+    background-color: #ffffff;
+    color: #333333;
+}
 
 #myIframeCv {
     /* position: absolute;
@@ -145,6 +168,12 @@ form{
     margin: 25px 0;
     width: 100%;
 }
+.from-group-submit{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 25px 0;
+}
 .form-group{
     display: flex;
     flex-direction: column;
@@ -172,9 +201,19 @@ form{
     text-align: start;
     margin:0 0 5px 20px;
 }
-.form-cv input[type=submit]:hover{
+.form-cv input[type=submit]{
     cursor: pointer;
     background-color: #333333;
+    border: 1px solid #333333;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: .3s;
+    margin-top: 25px;
+}
+.form-cv input[type=submit]:hover{
+    background-color: #ffffff;
+    color: #333333;
 }
 
 /* ===============
@@ -262,4 +301,42 @@ Container LIST
 #form_2, #form_3, #comp-langue, #list-experience, #list-formation{
     display: none;
     position: relative;
+}
+
+/****************************************************************
+CUSTOM IFRAME
+*****************************************************************/
+.custom-iframe{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.color-iframe{
+    display: flex;
+    flex-direction: column;
+}
+.color-bg-iframe{
+    width: 20px; height: 20px;
+    border-radius: 50%;
+}
+.hide-color{
+    display: none;
+}
+#red-top{background-color: #fd4345;}
+#blue-top{background-color: #263547;}
+#black-top{background-color: #333333;}
+#yellow-top{background-color: #FFC300;}
+#green-top{background-color: #DAF7A6;}
+#purple-top{background-color: #7D3C98;}
+
+#blue-text{background-color: #263547;}
+#red-text{background-color: #fd4345;}
+#black-text{background-color: #333333;}
+#yellow-text{background-color: #FFC300;}
+#green-text{background-color: #DAF7A6;}
+#purple-text{background-color: #7D3C98;}
+select{
+    padding:10px 20px;
+    border-radius: 5px;
+    border:solid 1px lightgrey;
 }

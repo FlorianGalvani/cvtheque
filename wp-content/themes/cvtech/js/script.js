@@ -50,36 +50,36 @@ $(document).ready(function () {
   //   })
   // });
 
-  $('#form_finish').on('click', function (e) {
-    console.log('soumis')
-    e.preventDefault()
-
-    let btnForm = $('#form_finish');
-    let form1 = $('#form_1');
-    let form2 = $('#form_2');
-    let form3 = $('#form_3');
-    let form4 = $('#form_4-comp');
-    let form5 = $('#form_4-langue');
-
-    $.ajax({
-      method: 'POST',
-      url: btnForm.attr('formaction'),
-      data: btnForm.serialize(),
-      dataType: 'json',
-      beforeSend: function () {
-        console.log('avant')
-      },
-      success: function (response) {
-        console.log('success')
-      },
-      errors: function() {
-        console.log('erreur');
-      }
-    })
-
-
-
-  })
+  // $('#form_finish').on('click', function (e) {
+  //   console.log('soumis')
+  //   e.preventDefault()
+  //
+  //   let btnForm = $('#form_finish');
+  //   let form1 = $('#form_1');
+  //   let form2 = $('#form_2');
+  //   let form3 = $('#form_3');
+  //   let form4 = $('#form_4-comp');
+  //   let form5 = $('#form_4-langue');
+  //
+  //   $.ajax({
+  //     method: 'POST',
+  //     url: btnForm.attr('formaction'),
+  //     data: btnForm.serialize(),
+  //     dataType: 'json',
+  //     beforeSend: function () {
+  //       console.log('avant')
+  //     },
+  //     success: function (response) {
+  //       console.log('success')
+  //     },
+  //     errors: function() {
+  //       console.log('erreur');
+  //     }
+  //   })
+  //
+  //
+  //
+  // })
 });
 
 
