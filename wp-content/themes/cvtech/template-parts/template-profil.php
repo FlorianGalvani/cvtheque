@@ -9,10 +9,10 @@ if ($user->ID == 0) {
 get_header(); ?>
 <img src="<?php echo get_template_directory_uri() . '/asset/img/recruteur-img.png'; ?>" alt="" class="recruit">
 
-<h2>Mon espace personnel</h2>
 
 
 <section id="recruteur">
+    <h1>Mon espace personnel</h1>
     <!--for demo wrap-->
     <h1>cv mis en ligne</h1>
     <div class="tbl-header">
