@@ -21,24 +21,6 @@ get_header(); ?>
 
     <div class="page-cv">
         <div class="form-cv">
-            <!-- <form id="svg_f1" enctype="multipart/form-data">
-            <div id="cont2">
-              <div
-                id="dash2"
-                
-              >
-                <input
-                  type="file"
-                  id="inputImg"
-                  name="svg_file[]"
-                  id="svg_file"
-
-                  multiple
-                />
-                <div id="tt"></div>
-              </div>
-            </div>
-          </form> -->
             <form method="post" id="form_1">
 
                 <div id="f-coordonnee" class="formulaire">

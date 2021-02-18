@@ -27,7 +27,7 @@ get_header(); ?>
       <h1>Créateur de CV en ligne</h1>
       <p>Choisissez l’un de nos modèles de CV Modifiez votre CV depuis n’importe quel appareil Suivez les exemples et conseils de nos experts Téléchargez-le en PDF ou TXT ou partagez-le en ligne.</p>
       <div class="link">
-        <a href="#" class="btn-banner">Créer votre cv</a>
+        <a href="<?php echo esc_url(home_url('candidat')); ?>" class="btn-banner">Créer votre cv</a>
         <a class="video-btn" data-fancybox href="https://www.youtube.com/watch?v=QWUPm0ND7HY">
           <i class="fas fa-play-circle"></i>
           Watch our story

@@ -21,10 +21,10 @@
             <div class="bloc footer-services">
                 <h3>Liens rapides</h3>
                 <ul class="liste-services">
-                    <li><a href="#">Créer son CV</a></li>
-                    <li><a href="#">Nos formations </a></li>
+                    <li><a href="<?php echo esc_url(home_url('candidat')); ?>">Créer son CV</a></li>
+                    <li><a href="#">Nos formations</a></li>
                     <li><a href="#">F.A.Q</a></li>
-                    <li><a href="#">Politique de confidentialité </a></li>
+                    <li><a href="#">Politique de confidentialité</a></li>
                     
                 </ul>
             </div>
@@ -32,7 +32,7 @@
             <div class="bloc footer-contact">
                 <h3>Restons en contact</h3>
                 <a href="tel:55-55-55-55-55">55-55-55-55-55</a>
-                <a href="mailto:supportclient@contact.com">supportclient@contact.com</a>
+                <a href="mailto:supportclient@contact.com">supportclient@cvtoi.com</a>
                 <p>XX rue de la république, 76000 Rouen</p>
             </div>
 

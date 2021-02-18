@@ -51,7 +51,7 @@ get_header(); ?>
             <p>Avec notre outil de rédaction Cv & toi, vous serz en mesure de pouvoir rédiger, aisément et de manière rapide, un CV pertinent professionnel et convaincant, en 15 minutes seulement.</p>
         </div>
         <div class="section2-content">
-            <a href="#">Créer un CV</a>
+            <a href="<?php echo esc_url(home_url('candidat')); ?>" class="btn-banner">Créer un CV</a>
             <p>Et offrez-vous 65% de chance supplémentaire d’être vue par un recruteur et de décrocher un emploi</p>
         </div>
     </div>
