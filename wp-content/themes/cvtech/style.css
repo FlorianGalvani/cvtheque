@@ -100,6 +100,18 @@ body {
 	/*overflow-x: hidden;*/
 }
 
+body::-webkit-scrollbar {
+	width: 6px;
+}
+
+body::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+	-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
 a {
 	text-decoration: none;
 	cursor: pointer;
@@ -1096,14 +1108,14 @@ SECTION 4
 	margin-bottom: 15px;
 }
 
-table {
+/* table {
 	width: 100%;
 	table-layout: fixed;
-}
+} */
 
-.tbl-header {
+/* .tbl-header {
 	background-color: rgba(255, 255, 255, 0.3);
-}
+} */
 
 .tbl-content {
 	height: 300px;
@@ -1127,7 +1139,7 @@ td {
 	vertical-align: middle;
 	font-weight: 300;
 	font-size: 12px;
-	color: #fff;
+	/* color: #fff; */
 	border-bottom: solid 1px rgba(255, 255, 255, 0.1);
 	width: auto;
 }
@@ -1137,11 +1149,13 @@ td {
 	background: linear-gradient(to right, #6D678E, #F6B5CC);
 	position: relative;
 	z-index: 4;
-	/* height: 100vh; */
+	margin: 100px auto;
 }
 
-#recruteur {
-	margin: 100px;
+.table {
+	width: 95%;
+    margin: 45px auto;
+    overflow: scroll;
 }
 
 #eye {
@@ -1151,18 +1165,64 @@ td {
 #see, #eye {
 	width: auto;
 }
+/* .table {
+	display: flex;
+	justify-content: center;
+}
+.tbl-header {
+	width: 15%;
+}
+thead tr {
+	display: flex;
+	flex-direction: column;
+	height: auto;
+} */
 
+/* tbody {
+	display: flex;
+} */
+/* tbody tr {
+	display: flex;
+	flex-direction: column;
+
+} */
+
+/* .tbl-content {
+	display: flex;
+} */
+table {
+    /* background-color: #fff; */
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    border-radius: 5px;
+    /* box-shadow: 0 1px 22px -12px #101413; */
+	
+}
+
+th, td {
+    padding: 10px 15px;
+}
+
+th {
+    background-color: rgba(255, 255, 255, 0.3);
+    text-transform: uppercase;
+}
+
+tr:nth-child(odd) {
+    /* background-color: #ececec; */
+}
 /* for custom scrollbar for webkit browser*/
 
-::-webkit-scrollbar {
+.table::-webkit-scrollbar {
 	width: 6px;
 }
 
-::-webkit-scrollbar-track {
+.table::-webkit-scrollbar-track {
 	-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
 }
 
-::-webkit-scrollbar-thumb {
+.table::-webkit-scrollbar-thumb {
 	-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
 }
 
@@ -1471,6 +1531,9 @@ RESPONSIVE
 	.three {
 		bottom: 0;
 	}
+	.img-info-about {
+		opacity: .4;
+	}
 }
 
 @media screen and (max-width: 700px) {
@@ -1602,7 +1665,7 @@ RESPONSIVE
 		margin-top: 10px;
 	}
 	.section2-content p {
-		margin-top: 40px;
+		margin: 40px 0;
 	}
 	.section1-box {
 		height: auto;

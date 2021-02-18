@@ -55,7 +55,7 @@ if (!empty($_POST['submitinscription'])) {
         $hash_password = wp_hash_password($user_pass);
         // INSERT EN BDD
         global $wpdb;
-        $wpdb->insert('wp_cvthequeusers', array(
+        $wpdb->insert('wp_cvtechusers', array(
             'user_login' => $_POST['user_login'],
             'user_pass' => $hash_password,
             'user_email' => $_POST['user_email'],
@@ -66,9 +66,7 @@ if (!empty($_POST['submitinscription'])) {
 
 ?>
 <?php get_header(); ?>
-<?php if ($success) { ?>
-    <p class="success">Votre inscription a été effectuée avec succès !</p>
-<?php } else { ?>
+
     <img src="<?php echo get_template_directory_uri() . '/asset/img/blobs1.svg'; ?>" alt="" class="blobs1">
     <img src="<?php echo get_template_directory_uri() . '/asset/img/blobs2.svg'; ?>" alt="" class="blobs2">
     <div class="register">
@@ -107,7 +105,7 @@ if (!empty($_POST['submitinscription'])) {
             </div>
             <input type="submit" name="submitinscription" value="Je m'inscris" />
         </form>
-    <?php } ?>
+   
     </div>
     <?php
     get_footer(); ?>
