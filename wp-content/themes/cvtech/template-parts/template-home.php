@@ -28,7 +28,7 @@ get_header(); ?>
       <p>Choisissez l’un de nos modèles de CV. Modifiez votre CV depuis n’importe quel appareil. Suivez les exemples et conseils de nos experts. Téléchargez-le en PDF, TXT ou partagez-le en ligne.</p>
       <div class="link">
         <a href="<?php echo esc_url(home_url('candidat')); ?>" class="btn-banner">Créer votre cv</a>
-        <a class="video-btn" data-fancybox href="https://www.youtube.com/watch?v=QWUPm0ND7HY">
+        <a class="video-btn" data-fancybox href="https://youtu.be/AyRxj5jyRQU">
           <i class="fas fa-play-circle"></i>
           Vidéo de présentation
         </a>
